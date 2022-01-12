@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// 預設 先方著
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// 首頁
+Route::get('/index', function () {
+    return view('index');
+});
+// 寵物照片
+Route::get('/adoption_pic', function () {
+    return view('adoption_pic');
+});
+// 最新消息
+Route::get('/news', function () {
+    return view('news');
+});
+
+
