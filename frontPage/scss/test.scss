@@ -1,28 +1,7 @@
 // @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-$background: #b2b1cf;
-// $white: #fff;
-body {
-    background-color: $background;
-    font-family: "Montserrat", sans-serif;
-}
-// .container {
-//     height: 70px;
-//     padding: 55px;
-//     position: fixed;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     margin: auto;
-//     text-align: center;
-// }
 
 .menu {
-    // z-index: 999;
-    // position: fixed;
-    // padding: 0;
-    // margin: 0;
     list-style-type: none;
     .share {
         i.fa {
@@ -73,19 +52,6 @@ body {
                     }
                 }
             }
-            // &.top {
-            //     .submenu {
-            //         @for $i from 1 through 5 {
-            //             li:nth-child(#{$i}) {
-            //                 opacity: 1;
-            //                 top: #{-$i * 51}px;
-            //                 transition-delay: #{$i * 0.08}s;
-            //                 transform: rotateY(0deg);
-            //                 border-bottom: 1px dashed darken($white, 15%);
-            //             }
-            //         }
-            //     }
-            // }
         }
     }
     .submenu {
@@ -128,26 +94,9 @@ body {
                 }
             }
         }
-        // @for $i from 1 through 4 {
-        //     li:nth-child(#{$i}) {
-        //         transform: rotateX(#{$i * 45}deg);
-        //     }
-        // }
     }
-    // &.topLeft {
-    //     top: 10px;
-    //     left: 10px;
-    // }
-    // &.topRight {
-    //     top: 10px;
-    //     right: 10px;
-    // }
     &.bottomLeft {
         bottom: 10px;
         left: 10px;
     }
-    // &.bottomRight {
-    //     bottom: 10px;
-    //     right: 10px;
-    // }
 }

@@ -1,114 +1,34 @@
-body{
-    background-color: #e4405f !important;
+ul {
+    list-style: none;
 }
+
 p {
     margin: 0px;
     font-size: 20px;
 }
+.babysitter {
+    ul {
+        @media (max-width: 992px) {
+            justify-content: center !important;
+        }
+        @media (max-width: 768px) {
+            font-size: 16px !important;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px !important;
+        }
+    }
+}
 
-.babysitter_content {
-    background-color: #3b5999;
-    .container {
-        background-color: cornflowerblue;
-        .menu {
-            background-color: chocolate;
-            list-style-type: none;
-            .share {
-                .fas {
-                    height: 150px;
-                    width: 150px;
-                    text-align: center;
-                    line-height: 50px;
-                    background-color: #fff;
-                    border-radius: 2px;
-                }
-                &:hover {
-                    &.bottom {
-                        .submenu {
-                            @for $i from 1 through 5 {
-                                li:nth-child(#{$i}) {
-                                    opacity: 1;
-                                    top: #{$i * 50}px;
-                                    transform: rotate(0deg);
-                                    border-top: 1px dashed darken($white, 20%);
-                                    transition-delay: #{$i * 0.08}s;
-                                }
-                            }
-                        }
-                    }
-                    &.left {
-                        .submenu {
-                            @for $i from 1 through 5 {
-                                li:nth-child(#{$i}) {
-                                    opacity: 1;
-                                    left: #{-$i * 51}px;
-                                    transform: rotate(0deg);
-                                    transition-delay: #{$i * 0.5}s;
-                                    border-right: 1px dashed darken($white, 20%);
-                                }
-                            }
-                        }
-                    }
-                    &.right {
-                        .submenu {
-                            @for $i from 1 through 5 {
-                                li:nth-child(#{$i}) {
-                                    opacity: 1;
-                                    left: #{$i * 50}px;
-                                    transform: rotate(0deg);
-                                    transition-delay: #{$i * 0.08}s;
-                                    border-left: 1px dashed darken($white, 20%);
-                                }
-                            }
-                        }
-                    }
-                }
+.babysitter_content{
+    .row{
+        img{
+            @media (max-width: 768px) {
+                
+                width: 100%;
+                height: 100%;
             }
-            .submenu {
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                li {
-                    transition: all ease-in-out 0.5s;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                    opacity: 0;
-                    a {
-                        color: #212121;
-                        &:hover {
-                            i.fa {
-                                color: #fff;
-                            }
-                            &.facebook {
-                                i.fa {
-                                    background-color: #3b5999;
-                                }
-                            }
-                            &.twitter {
-                                i.fa {
-                                    background-color: #55acee;
-                                }
-                            }
-                            &.googlePlus {
-                                i.fa {
-                                    background-color: #dd4b39;
-                                }
-                            }
-                            &.instagram {
-                                i.fa {
-                                    background-color: #e4405f;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            &.bottomLeft {
-                bottom: 10px;
-                left: 10px;
-            }
+
         }
     }
 }
