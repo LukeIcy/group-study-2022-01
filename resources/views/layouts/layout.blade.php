@@ -66,7 +66,7 @@
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="./team-img/icon/8.png" width="50px" alt="">
-                                        <span class="mx-2 fw-bold" style="font-size: 16px;">寵物保母</span>
+                                        <span class="mx-2 fw-bold" style="font-size: 16px;">寵物褓姆</span>
                                     </a>
                                 </li>
                                 <li>
