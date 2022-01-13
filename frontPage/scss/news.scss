@@ -1,25 +1,51 @@
+
 ul {
     list-style: none;
 }
 
+.news {
+    .news_title {
+        .row {
+            h1 {
+                @media (max-width: 1200px) {
+                    font-size: 60px !important;
+                }
+            }
+            img {
+                @media (max-width: 992px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 .news_content {
+    .row {
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+        img {
+            box-shadow: 3px 3px 12px #34495e;
+        }
+    }
     .outline {
         a {
             color: black;
             text-decoration: none;
             font-weight: 600;
             &:hover {
-                color: rgb(255, 145, 0);
+                font-size: 110%;
+                text-shadow: 3px 3px 10px #747474;
+                color: #d56246;
             }
         }
     }
-    h5{
+    h5 {
         background-color: #d56246;
     }
 }
-
-
-
 
 // 按鈕區塊
 .btn-group {
