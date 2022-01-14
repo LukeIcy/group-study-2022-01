@@ -16,25 +16,25 @@
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="./team-img/information/01.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=1" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/02.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=2" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/03.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=3" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/04.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=4" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/05.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=5" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/06.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=6" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/07.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=7" />
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -43,25 +43,25 @@
                     <div thumbsSlider="" class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="./team-img/information/01.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=1" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/02.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=2" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/03.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=3" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/04.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=4" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/05.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=5" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/06.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=6" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="./team-img/information/07.jpg" />
+                                <img src="https://picsum.photos/300?ramdon=7" />
                             </div>
                         </div>
                     </div>
