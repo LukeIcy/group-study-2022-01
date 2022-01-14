@@ -32,8 +32,18 @@ Route::get('/adoption_pic', function () {
 Route::get('/news', function () {
     return view('news');
 });
+// 前台動物資訊&申請表
+Route::get('apply', function ()
+{
+    return view('frontpage.animal_information');
+});
 
-
+// 後台頁面-申請表列表
+Route::prefix('admin')->middleware('auth')->group(function ()
+{
+    Route::get('/', [\App\Http\Controllers\ApplyController::class, 'index']);
+    Route::post('store', [\App\Http\Controllers\ApplyController::class, 'store']);
+});
 
 Auth::routes();
 
