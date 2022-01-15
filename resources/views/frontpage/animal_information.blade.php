@@ -152,13 +152,13 @@
                             <div class="agree d-flex justify-content-lg-between">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="contract" value="agree"
-                                        id="flexCheckDefault">
+                                        id="flexCheckDefault" required>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         我同意所有上述的認養條件。
                                     </label><br>
                                     <p class="px-2">若不同意就無需填寫申請單</p>
                                     <input class="form-check-input" type="checkbox" name="age" value="ok"
-                                        id="flexCheckChecked">
+                                        id="flexCheckChecked" required>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         是否年滿20歲
                                     </label>
@@ -182,7 +182,7 @@
                                 <div class="mb-3">
                                     <label for="name" class="form-label">姓名<span class="text-danger mx-2">*</span>
                                         務必是本人申請認養，謝絕代認養</label>
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="請填寫真實姓名">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="請填寫真實姓名" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="phone" class="form-label">聯絡電話<span
@@ -193,21 +193,21 @@
                                 <div class="mb-3">
                                     <label for="line" class="form-label">使用的通訊軟體<span
                                             class="text-danger mx-2">*</span></label>
-                                    <input type="text" name="line" id="line" class="form-control" placeholder="line 帳號">
+                                    <input type="text" name="line" id="line" class="form-control" placeholder="line 帳號" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="fbName" class="form-label">Facebook名稱與連結<span
                                             class="text-danger">*</span></label>
-                                    <input type="text" name="fbName" id="fbName" class="form-control">
+                                    <input type="text" name="fbName" id="fbName" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="address" class="form-label">居住地區<span class="text-danger mx-2">*</span></label>
-                                    <input type="text" name="address" id="address" class="form-control">
+                                    <input type="text" name="address" id="address" class="form-control" required>
                                 </div>
                                 <div class="mb-5">
                                     <label for="myself" class="form-label">自我介紹<span
                                             class="text-danger mx-2">*</span></label>
-                                    <textarea class="form-control mb-3" name="myself" id="myself" rows="3"></textarea>
+                                    <textarea class="form-control mb-3" name="myself" id="myself" rows="3" required></textarea>
                                     <h5>附註：</h5>
                                     <p>有『一個禮拜』的試養期，若無法與貓咪適應或其他理由，請務必把貓咪送還給我，所支付的結紮&預防針費用將返還給您。</p>
                                 </div>
