@@ -13,7 +13,7 @@
 @section('main')
     <div class="container">
         <div class="row">
-            <table id="test" class="table table-light table-striped table-hover align-middle mt-5">
+            <table id="backstage_table" class="table table-light table-striped table-hover align-middle mt-5">
                 <thead class="table-primary">
                     <tr>
                         <th class="text-center">id</th>
@@ -48,15 +48,5 @@
 @endsection
 
 @section('js')
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- dataTable -->
-    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#test').DataTable();
-        });
-    </script>
 @endsection
