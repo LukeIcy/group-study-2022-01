@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ApplyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,10 +61,10 @@ Route::get('apply', function ()
 });
 
 // 後台頁面-申請表列表
-Route::prefix('admin')->middleware('auth')->group(function ()
+Route::prefix('admin')->group(function ()
 {
-    Route::get('/', [\App\Http\Controllers\ApplyController::class, 'index']);
-    Route::post('store', [\App\Http\Controllers\ApplyController::class, 'store']);
+    Route::get('/', [ApplyController::class, 'index']);
+    Route::post('store', [ApplyController::class, 'store']);
 });
 
 
