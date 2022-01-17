@@ -27,6 +27,10 @@ p {
   }
 }
 
+.babysitter_content .row a {
+  text-decoration: none;
+}
+
 .babysitter_content .row img {
   -webkit-box-shadow: 3px 3px 12px #34495e;
           box-shadow: 3px 3px 12px #34495e;

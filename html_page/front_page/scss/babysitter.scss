@@ -6,6 +6,7 @@ p {
     margin: 0px;
     font-size: 20px;
 }
+
 .babysitter {
     ul {
         @media (max-width: 992px) {
@@ -20,15 +21,17 @@ p {
     }
 }
 
-.babysitter_content{
-    .row{
-        img{
+.babysitter_content {
+    .row {
+        a {
+            text-decoration: none;
+        }
+        img {
             box-shadow: 3px 3px 12px #34495e;
             @media (max-width: 768px) {
                 width: 100%;
                 height: 100%;
             }
-
         }
     }
 }
