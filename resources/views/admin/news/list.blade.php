@@ -20,10 +20,6 @@
 		td{
 			text-align: center;
 		};
-		/* .image{
-			width: 200px;
-			height: 200px;
-		} */
 	</style>
 @endsection
 
@@ -48,7 +44,9 @@
                 <td>{{$item->id}}</td>
                 <td>{{$item->title}}</td>
                 <td>{{$item->content}}</td>
-				<td><img src="{{$item->image}}" alt="" class="image"></td>
+				<td>
+					<div class="card-img-top" style="background-image: url({{$item->image}}); width:50px; height:50px; background-size: cover"></div>
+				</td>
                 <td>{{$item->created_at}}</td>
 				<td>{{$item->updated_at}}</td>
                 <td class="d-flex justify-content-center" >

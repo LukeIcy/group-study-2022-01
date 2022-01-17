@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\News;
+use App\Http\Controllers\FilesController;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -30,19 +31,23 @@ class PostController extends Controller
     // 儲存最新消息(後台)
     public function store(Request $request)
     {
-        // 老方法
-        // News::create([
-        //     'title' => $request->title,
-        //     'content' => $request->content,
-        //     'image' => $request->image,
-        //     'created_at' => \Carbon\Carbon::now(),
-        //     'updated_at' => \Carbon\Carbon::now(),
-        // ]);
+        // 目前上傳的圖檔的確會到新設的資料夾
+        // 但是這個變數要帶入到 'image' => $request->image, 裡面
+        // 才能讓資料表的路徑生效
+        $path = FilesController::imgUpload($request->image,'posts');
 
-        News::create($request->all());
+        // 老方法  本來要淘汰了 沒想到還是回來用他了...     
+        News::create([
+            'title' => $request->title,
+            'content' => $request->content,
+            'image' => $path,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+        ]);
 
-        // 下面是報錯原因
-        // return view('admin.newslist');
+        // 新方法 更好用 可惜這邊不能用 因為要儲存圖片
+        // News::create($request->all());
+
         return redirect()->route('news.list');
     }
 
@@ -56,7 +61,16 @@ class PostController extends Controller
 
     public function update($id,Request $request)
     {
-        News::find($id)->update($request->all());
+        $path = FilesController::imgUpload($request->image,'posts');
+        
+        // 好用的新方法 可惜因為有圖片 先轉用舊方法
+        // News::find($id)->update($request->all());
+
+        $news = News::find($id);
+        $news->title = $request->title;
+        $news->content = $request->content;
+        $news->image = $path;
+        $news->save();
 
         return redirect()->route('news.list');
     }

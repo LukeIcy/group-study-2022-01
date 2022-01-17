@@ -6,8 +6,6 @@
 
 @section('main')
     <div class="container">
-        {{-- <form action="{{route('news.store')}}" method="POST"> --}}
-        {{-- 用下面這條會報錯419，但是我要傳圖片啊... --}}
         <div class="row">
             <div class="col-8 mx-auto">
                 <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
