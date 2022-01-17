@@ -1,7 +1,10 @@
 form {
   width: 100%;
-  background-color: lightblue;
-  padding: 50px;
+  /* background-color: lightblue; */
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 32px;
+
 }
 
 form .row {
@@ -40,4 +43,16 @@ form .row.btn a {
   border-color: #767676;
   -o-border-image: initial;
      border-image: initial;
+}
+
+label, input{
+  font-size: 18px;
+}
+
+.btn_group > a{
+   font-size: 18px;
+}
+
+.btn_group > button{
+  font-size: 18px;
 }

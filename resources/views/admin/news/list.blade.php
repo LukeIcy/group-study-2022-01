@@ -28,28 +28,31 @@
 @endsection
 
 @section('main')
-<button><a href="{{route('news.create')}}">新增最新消息</a></button>
 <div class="container">
-	<table id="backstage_table" class="display">
+	<a href="{{route('news.create')}}" class="btn btn-success mb-3">新增最新消息</a>
+	<table id="backstage_table" class="pt-3">
 		<thead>
 			<tr>
+				<th style="width: 60px">id</th>
+				<th>標題</th>
+				<th>最新消息內容</th>
 				<th>圖片</th>
-				<th>名稱</th>
-				<th>發布時間</th>
-				<th>修改時間</th>
-				<th>操作</th>
+				<th style="width: 120px">發布時間</th>
+				<th style="width: 120px">修改時間</th>
+				<th style="width: 120px">操作</th>
 			</tr>
 		</thead>
 		<tbody>
-
             @foreach ($newsuse as $item)
             <tr>
-                <td><img src="{{$item->image}}" alt="" class="image"></td>
+                <td>{{$item->id}}</td>
                 <td>{{$item->title}}</td>
+                <td>{{$item->content}}</td>
+				<td><img src="{{$item->image}}" alt="" class="image"></td>
                 <td>{{$item->created_at}}</td>
 				<td>{{$item->updated_at}}</td>
-                <td>
-					<a href="{{route('news.edit', ['id' =>$item->id])}}"  class="btn btn-outline-info">編輯</a>
+                <td class="d-flex justify-content-center" >
+					<a href="{{route('news.edit', ['id' =>$item->id])}}"  class="btn btn-outline-info" style="margin-right: 16px">編輯</a>
 					{{-- 新方法 用js把你按鈕下面的表單送出 --}}
 					<button href="" class="delete-btn btn btn-outline-danger">刪除</button>
 					<form action="{{route('news.destroy', ['id' =>$item->id])}}" method="post" class="d-none">
@@ -72,13 +75,10 @@ const deleteElements = document.querySelectorAll('.delete-btn');
 deleteElements.forEach(function(deleteElement){
 	deleteElement.addEventListener('click',function () {
 		if (confirm('是否確定刪除此筆資料?')) {
-			this.nextElementSibling.submit();			
+			this.nextElementSibling.submit();
 		}
 	});
 });
 </script>
- 
+
 @endsection
-
-
-

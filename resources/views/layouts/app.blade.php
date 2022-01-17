@@ -37,6 +37,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/admin">申請表列表</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/news/list">最新消息列表</a>
+                        </li>
 
                     </ul>
 
@@ -95,7 +98,7 @@
 		$(document).ready( function () {
 		$('#backstage_table').DataTable();
 		} );
-	</script>  
+	</script>
         @yield('js')
 </body>
 </html>
