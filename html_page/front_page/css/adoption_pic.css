@@ -29,10 +29,10 @@ a {
   border-top-left-radius: 10px;
 }
 
-p {
+.card p {
   padding: 0px;
   margin: 0px;
-  color: #242323;
+  color: #232324;
 }
 
 .btn-group .btngroup--btn {
