@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-8">
                         <h5 class="bg-gradient text-white bg-opacity-75 d-inline-flex p-2 bd-highlight text-center mb-4">
-                            最新消息</h5>
+                            {{$item->type}}</h5>
                         <h3 class="outline mb-4"><a href="#" target="_self">{{ $item->title }}</a></h3>
                         <h6 class="text-success mb-3">{{ $item->created_at }}</h6>
                         <p class="news_content">{{ $item->content }}</p>
