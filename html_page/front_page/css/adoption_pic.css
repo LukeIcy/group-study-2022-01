@@ -28,6 +28,14 @@ a:hover {
   border: unset;
 }
 
+.card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform: 0.3s;
+          transform: 0.3s;
+  opacity: 0.8;
+}
+
 .card .pic img {
   height: 260px;
   border-top-right-radius: 10px;
