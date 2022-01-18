@@ -6,6 +6,10 @@
 
 a {
     text-decoration: none;
+    color: rgb(35, 35, 36);
+    &:hover {
+        color: rgb(0, 153, 255);
+    }
 }
 
 .banner {
@@ -32,6 +36,17 @@ a {
         padding: 0px;
         margin: 0px;
         color: rgb(35, 35, 36);
+        display: flex;
+        &:hover {
+            color: rgb(0, 153, 255);
+        }
+        span {
+            margin-left: 120px;
+            i {
+                font-size: 24px;
+                color: crimson;
+            }
+        }
     }
 }
 

@@ -7,6 +7,11 @@
 
 a {
   text-decoration: none;
+  color: #232324;
+}
+
+a:hover {
+  color: #0099ff;
 }
 
 .banner h2 {
@@ -33,6 +38,22 @@ a {
   padding: 0px;
   margin: 0px;
   color: #232324;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card p:hover {
+  color: #0099ff;
+}
+
+.card p span {
+  margin-left: 120px;
+}
+
+.card p span i {
+  font-size: 24px;
+  color: crimson;
 }
 
 .btn-group .btngroup--btn {
