@@ -6,7 +6,6 @@
     <!-- dataTable -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 	<style>
-		/* 這個表格真的是莫名其妙 有時置中 有時不置中 */
 		#backstage_table thead{
 			background-color: rgb(110, 66, 66);
 			color: white;

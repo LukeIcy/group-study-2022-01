@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ApplyController;
 
 /*
@@ -16,7 +17,10 @@ use App\Http\Controllers\ApplyController;
 |
 */
 
-// 預設 先方著
+// user系統加入的
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// 預設 先放著
 Route::get('/', function () {
     return view('welcome');
 });
@@ -32,11 +36,9 @@ Route::get('/adoption_pic', function () {
 });
 
 
-
-// 最新消息
-// 前台
+// 最新消息 - 前台
 Route::get('/news',[PostController::class,'index'])->name('news.index');
-// 後台
+// 最新消息 - 後台
 // 列表頁
 Route::get('/news/list',[PostController::class,'list'])->name('news.list');
 // 新增頁
@@ -50,7 +52,19 @@ Route::patch('/news/{id}/update',[PostController::class,'update'])->name('news.u
 // 刪除
 Route::delete('/news/{id}',[PostController::class,'destroy'])->name('news.destroy');
 
-
+// 使用者 - 後台
+// 列表頁
+Route::get('/user/list',[UserController::class,'list'])->name('user.list');
+// 新增頁
+Route::get('/user/create',[UserController::class,'create'])->name('user.create');
+// 儲存新增
+Route::post('/user/store',[UserController::class,'store'])->name('user.store');
+// 編輯頁
+Route::get('/user/{id}/edit',[UserController::class,'edit'])->name('user.edit');
+// 儲存編輯
+Route::patch('/user/{id}/update',[UserController::class,'update'])->name('user.update');
+// 刪除
+Route::delete('/user/{id}',[UserController::class,'destroy'])->name('user.destroy');
 
 
 
@@ -69,5 +83,3 @@ Route::prefix('admin')->group(function ()
 
 
 
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

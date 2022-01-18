@@ -50,7 +50,6 @@
             <div class="container">
 
                 @foreach ($news as $item)    
-
                 <div class="row">
                     <div class="col-4">
                         <img class="w-100" src="{{$item->image}}" alt="">
