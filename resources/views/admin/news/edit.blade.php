@@ -18,7 +18,7 @@
                     </div>
                     <div class="row custom">
                         <label for="content" class="form-label">文章內容</label>
-                        <textarea name="content" id="content" class="form-control">{{$news->content}}</textarea>
+                        <textarea rows="20" name="content" id="content" class="form-control">{{$news->content}}</textarea>
                     </div>
                     <div class="row mb-3">
                         <label for="image" class="form-label">圖片上傳</label>
