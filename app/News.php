@@ -17,7 +17,7 @@ class News extends Model
     protected $table = 'news';
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -25,6 +25,6 @@ class News extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title', 'content', 'image', 'created_at', 'updated_at'];
+    protected $fillable = ['title', 'content', 'image', 'created_at', 'updated_at', 'type',];
 
 }

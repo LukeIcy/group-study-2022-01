@@ -41,7 +41,7 @@ class PostController extends Controller
         if ($request->image){
             $path = FilesController::imgUpload($request->image,'posts');
         };
-        // 下面是老方法  本來要淘汰了 沒想到還是回來用他了...     
+        // 下面是老方法  本來要淘汰了 沒想到還是回來用他了...
         News::create([
             'title' => $request->title,
             'type' => $request->type,//新增的，享用來做文章分類
@@ -50,7 +50,7 @@ class PostController extends Controller
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
-
+        
         // 新方法 更好用 可惜這邊不能用 因為要儲存圖片
         // News::create($request->all());
 

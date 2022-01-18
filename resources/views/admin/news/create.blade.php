@@ -21,7 +21,7 @@
                         <option value="寵物保姆">寵物保姆</option>
                         <option value="動保法律">動保法律</option>
                         <option value="一起回家故事">一起回家故事</option>
-                      </select>
+                    </select>
                     {{-- 文章類型end --}}
                     <div class="row custom">
                         <label for="content" class="form-label">文章內容</label>
