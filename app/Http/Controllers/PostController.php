@@ -34,9 +34,14 @@ class PostController extends Controller
         // 目前上傳的圖檔的確會到新設的資料夾
         // 但是這個變數要帶入到 'image' => $request->image, 裡面
         // 才能讓資料表的路徑生效
-        $path = FilesController::imgUpload($request->image,'posts');
 
-        // 老方法  本來要淘汰了 沒想到還是回來用他了...     
+        // 如果你只有輸入標題跟內文，沒有上傳圖片，FilesController::imgUpload會報錯，
+        // 因為他需要有檔案才能生成路徑，所以必須要用if排除這個狀況
+        $path = null;
+        if ($request->image){
+            $path = FilesController::imgUpload($request->image,'posts');
+        };
+        // 下面是老方法  本來要淘汰了 沒想到還是回來用他了...     
         News::create([
             'title' => $request->title,
             'content' => $request->content,
@@ -61,12 +66,17 @@ class PostController extends Controller
 
     public function update($id,Request $request)
     {
-        $path = FilesController::imgUpload($request->image,'posts');
-        
+
+        $news = News::find($id);
+
+        $path = $news->image;
+        if ($request->image){
+            $path = FilesController::imgUpload($request->image,'posts');
+        };
+
         // 好用的新方法 可惜因為有圖片 先轉用舊方法
         // News::find($id)->update($request->all());
 
-        $news = News::find($id);
         $news->title = $request->title;
         $news->content = $request->content;
         $news->image = $path;
