@@ -45,14 +45,12 @@
                 <td>{{$item->created_at}}</td>
                 <td>之後會放權限</td>
 				{{-- <td>{{($item->role)}}</td> --}}
-
                 <td>
-
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
 						重設密碼
 					</button>					
-					<!-- Modal -->
+					<!-- Modal 永遠都只能抓到第一筆的id-->
 					<form action="/user/{{$item->id}}/update" method="post">
 						@csrf
 						@method('PATCH')
@@ -77,8 +75,7 @@
 							</div>
 						</div>
 					</form>
-					{{-- Modal end --}}
-					
+					{{-- Modal end --}}					
 					<button type="button" class="btn btn-outline-info disabled" aria-disabled="true">凍結</button>
 					<button type="button" class="delete-btn btn btn-outline-danger">刪除</button>
 					<form action="{{route('user.destroy', ['id' =>$item->id])}}" method="post" class="d-none">

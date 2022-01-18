@@ -43,12 +43,11 @@
                 <td>{{$item->id}}</td>
                 <td>{{$item->title}}</td>
                 <td>
-
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 						文章內容
 					</button>					
-					<!-- Modal -->
+					<!-- Modal 永遠都只能抓到第一筆的id-->
 					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
@@ -62,7 +61,7 @@
 							</div>
 						</div>
 					</div>
-
+					<!-- Modal end-->
 				</td>
 				<td>
 					<div class="card-img-top" style="background-image: url({{$item->image}}); width:50px; height:50px; background-size: cover"></div>

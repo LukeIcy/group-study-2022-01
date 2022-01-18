@@ -14,7 +14,7 @@
                         <label for="title" class="form-label">文章標題</label>
                         <input type="text" id="title" name="title" class="form-control">
                     </div>
-                    {{-- 文章類型 不知道是不是被select包住 傳不出來--}}
+                    {{-- 文章類型 不知道是不是被select包住 值傳不出來--}}
                     <select class="form-select" aria-label="Default select example" name="type">
                         <option selected>文章類型</option>
                         <option value="最新消息">最新消息</option>
