@@ -28,13 +28,13 @@
 	<table id="backstage_table" class="pt-3">
 		<thead>
 			<tr>
-				<th style="width: 60px">id</th>
-				<th>標題</th>
-				<th>最新消息內容</th>
-				<th>圖片</th>
+				<th style="width: 40px">id</th>
+				<th style="width: 300px">標題</th>
+				<th style="width: 80px">文章內容</th>
+				<th style="width: 60px">圖片</th>
+				<th style="width: 80px">類型</th>
 				<th style="width: 120px">發布時間</th>
-				<th style="width: 120px">修改時間</th>
-				<th style="width: 120px">操作</th>
+				<th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -42,15 +42,36 @@
             <tr>
                 <td>{{$item->id}}</td>
                 <td>{{$item->title}}</td>
-                <td>{{$item->content}}</td>
+                <td>
+
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+						文章內容
+					</button>					
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">文章內容</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									{{$item->content}}
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</td>
 				<td>
 					<div class="card-img-top" style="background-image: url({{$item->image}}); width:50px; height:50px; background-size: cover"></div>
 				</td>
-                <td>{{$item->created_at}}</td>
-				<td>{{$item->updated_at}}</td>
-                <td class="d-flex justify-content-center" >
-					<a href="{{route('news.edit', ['id' =>$item->id])}}"  class="btn btn-outline-info" style="margin-right: 16px">編輯</a>
-					{{-- 新方法 用js把你按鈕下面的表單送出 --}}
+                <td>{{$item->type}}</td>
+				<td>{{$item->created_at}}</td>
+                <td>
+					<a href="{{route('news.edit', ['id' =>$item->id])}}"  class="btn btn-outline-info">編輯</a>
+					{{-- 新方法 神技 用js把你按鈕下面的表單送出 --}}
 					<button href="" class="delete-btn btn btn-outline-danger">刪除</button>
 					<form action="{{route('news.destroy', ['id' =>$item->id])}}" method="post" class="d-none">
 						@csrf

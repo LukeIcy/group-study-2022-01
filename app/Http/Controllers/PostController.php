@@ -44,6 +44,7 @@ class PostController extends Controller
         // 下面是老方法  本來要淘汰了 沒想到還是回來用他了...     
         News::create([
             'title' => $request->title,
+            'type' => $request->type,//新增的，享用來做文章分類
             'content' => $request->content,
             'image' => $path,
             'created_at' => \Carbon\Carbon::now(),
