@@ -38,7 +38,7 @@ Route::get('/adoption_pic', function () {
 
 // 最新消息 - 前台
 Route::get('/news',[PostController::class,'index'])->name('news.index');
-// 文章列表 - 後台
+// 最新消息 - 後台
 // 列表頁
 Route::get('/news/list',[PostController::class,'list'])->name('news.list');
 // 新增頁
