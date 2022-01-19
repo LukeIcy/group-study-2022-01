@@ -11,9 +11,14 @@ class PostController extends Controller
     //最新消息
     public function index()
     {
-        // $news = News::get();
-        // 下面開始使用paginate()，laravel內建的分頁功能
-        $news = News::paginate(1);
+        // $news = News::get();未啟用分頁功能前的原版
+        // where('type', '最新消息')->透過where文章分流
+
+        // 下面開始使用paginate(number)，laravel內建的分頁功能，會出現上一頁、下一頁、頁碼12345...
+        // simplePaginate(number); 這個是簡單分頁的方式，只會出現上一頁跟下一頁的按鈕
+        // cursorPaginate(number);這個不知道是什麼，還沒測
+        // number = 你一頁想放幾篇文章的數量，下面就是想放5篇文章
+        $news = News::where('type', '最新消息')->paginate(5);
         return view('frontpage.post.news',compact('news'));
     }
 
