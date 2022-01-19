@@ -47,7 +47,7 @@
 					<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#catch{{$item->id}}">
 						文章內容
 					</button>					
-					<!-- Modal 永遠都只能抓到第一筆的id-->
+					<!-- Modal 要把按鈕跟裡面的div填入{{$item->id}}互相對應到 才能抓到每一筆資料-->
 					<div class="modal fade" id="catch{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
