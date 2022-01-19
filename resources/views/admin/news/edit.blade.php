@@ -16,14 +16,14 @@
                         <label for="title" class="form-label">文章標題</label>
                         <input type="text" id="title" name="title" class="form-control" value="{{$news->title}}">
                     </div>
-                    {{-- <select class="form-select" aria-label="Default select example" name="type">
-                        <option selected>文章類型</option>
-                        <option value="{{$news->type}}">{{$news->type}}</option>
-                        <option value="最新消息">最新消息</option>
-                        <option value="寵物保姆">寵物保姆</option>
-                        <option value="動保法律">動保法律</option>
-                        <option value="一起回家故事">一起回家故事</option>
-                    </select> --}}
+                    
+                    <select class="form-select" aria-label="Default select example" name="type">
+                        {{-- if type = 醉心消息 --}}
+                        <option value="最新消息" @if($news->type == "最新消息") selected @endif>最新消息</option>
+                        <option value="寵物保姆" @if($news->type == "寵物保母") selected @endif>寵物保姆</option>
+                        <option value="動保法律" @if($news->type == "動保法律") selected @endif>動保法律</option>
+                        <option value="一起回家故事" @if($news->type == "一起回家故事") selected @endif>一起回家故事</option>
+                    </select>
                     <div class="row custom">
                         <label for="content" class="form-label">文章內容</label>
                         <textarea rows="20" name="content" id="content" class="form-control">{{$news->content}}</textarea>
