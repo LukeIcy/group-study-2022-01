@@ -24,7 +24,7 @@
 
 @section('main')
 <div class="container">
-	<a href="{{route('news.create')}}" class="btn btn-success mb-3">新增最新消息</a>
+	<a href="{{route('news.create')}}" class="btn btn-success mb-3">新增文章</a>
 	<table id="backstage_table" class="pt-3">
 		<thead>
 			<tr>
@@ -44,11 +44,11 @@
                 <td>{{$item->title}}</td>
                 <td>
 					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#catch{{$item->id}}">
 						文章內容
 					</button>					
 					<!-- Modal 永遠都只能抓到第一筆的id-->
-					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal fade" id="catch{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
