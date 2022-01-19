@@ -47,14 +47,14 @@
 				{{-- <td>{{($item->role)}}</td> --}}
                 <td>
 					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					<button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#catch{{$item->id}}">
 						重設密碼
 					</button>					
 					<!-- Modal 永遠都只能抓到第一筆的id-->
 					<form action="/user/{{$item->id}}/update" method="post">
 						@csrf
 						@method('PATCH')
-						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal fade" id="catch{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
