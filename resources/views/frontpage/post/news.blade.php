@@ -73,11 +73,13 @@
                 </div>
                 <hr class="my-5">
             @endforeach
-
+        {{-- 以下測試paginate的分頁按鈕功能 感覺不錯 不過他是套用bootstrap4 哭了--}}
+        {{$news->links()}}
         </div>
 
+
         <!-- 按鈕區塊 -->
-        <div class="py-5 mb-5">
+        {{-- <div class="py-5 mb-5">
             <div class="btn-toolbar mb-3 d-flex justify-content-center" role="toolbar"
                 aria-label="Toolbar with button groups">
                 <div class="btn-group rounded-pill" role="group" aria-label="First group">
@@ -92,7 +94,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 @endsection
 
