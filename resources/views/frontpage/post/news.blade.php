@@ -73,7 +73,7 @@
                 </div>
                 <hr class="my-5">
             @endforeach
-        {{-- 以下測試paginate的分頁按鈕功能 感覺不錯 不過他是套用bootstrap4 哭了--}}
+        {{-- 以下測試paginate的分頁按鈕功能 --}}
         {{$news->links()}}
         </div>
 
