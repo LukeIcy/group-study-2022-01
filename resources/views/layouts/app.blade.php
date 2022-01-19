@@ -38,7 +38,7 @@
                             <a class="nav-link" href="/admin">申請表列表</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/news/list">最新消息列表</a>
+                            <a class="nav-link" href="/news/list">文章列表</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/user/list">使用者列表</a>
