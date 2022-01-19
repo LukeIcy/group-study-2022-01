@@ -18,9 +18,9 @@
                     </div>
                     
                     <select class="form-select" aria-label="Default select example" name="type">
-                        {{-- if type = 醉心消息 --}}
+                        {{-- 用運@if@endif 讓資料選擇selected --}}
                         <option value="最新消息" @if($news->type == "最新消息") selected @endif>最新消息</option>
-                        <option value="寵物保姆" @if($news->type == "寵物保母") selected @endif>寵物保姆</option>
+                        <option value="寵物保姆" @if($news->type == "寵物保姆") selected @endif>寵物保姆</option>
                         <option value="動保法律" @if($news->type == "動保法律") selected @endif>動保法律</option>
                         <option value="一起回家故事" @if($news->type == "一起回家故事") selected @endif>一起回家故事</option>
                     </select>
