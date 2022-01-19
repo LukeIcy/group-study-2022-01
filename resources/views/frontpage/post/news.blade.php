@@ -74,20 +74,6 @@
                 <hr class="my-5">
             @endforeach
 
-            <div class="row">
-                <div class="col-4">
-                    <img class="w-100" src="./team-img/news_pic/3.png" alt="">
-                </div>
-                <div class="col-8">
-                    <h5 class="bg-gradient text-white bg-opacity-75 d-inline-flex p-2 bd-highlight text-center mb-4">
-                        最新消息</h5>
-                    <h3 class="outline mb-4"><a href="#" target="_self">讓你白帥帥 SPA洗浴</a></h3>
-                    <h4 class="text-danger mb-3 fs-3">2022.12.29</h4>
-                    <p>這個是留存的範例，之後會移除</p>
-                </div>
-            </div>
-            <hr class="my-5">
-
         </div>
 
         <!-- 按鈕區塊 -->

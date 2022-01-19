@@ -79,6 +79,7 @@ class PostController extends Controller
         // News::find($id)->update($request->all());
 
         $news->title = $request->title;
+        $news->type = $request->type;
         $news->content = $request->content;
         $news->image = $path;
         $news->save();
