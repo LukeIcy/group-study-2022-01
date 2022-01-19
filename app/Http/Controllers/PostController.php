@@ -11,24 +11,26 @@ class PostController extends Controller
     //最新消息
     public function index()
     {
-        $news = News::get();
+        // $news = News::get();
+        // 下面開始使用paginate()，laravel內建的分頁功能
+        $news = News::paginate(1);
         return view('frontpage.post.news',compact('news'));
     }
 
-    // 最新消息列表(後台)
+    // 文章列表(後台)
     public function list()
     {
         $newsuse = News::get();
         return view('admin.news.list',compact('newsuse'));
     }
 
-    // 新增最新消息(後台)
+    // 新增文章(後台)
     public function create()
     {
         return view('admin.news.create');
     }
 
-    // 儲存最新消息(後台)
+    // 儲存文章(後台)
     public function store(Request $request)
     {
         // 目前上傳的圖檔的確會到新設的資料夾
@@ -57,7 +59,7 @@ class PostController extends Controller
         return redirect()->route('news.list');
     }
 
-    // 編輯最新消息(後台)
+    // 編輯文章(後台)
     public function edit($id)
     {
         $news = News::find($id);
