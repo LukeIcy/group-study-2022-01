@@ -88,6 +88,7 @@
                         {{-- 下面是原本的註冊登入按鈕 --}}
                         {{-- <button type="button" class="btn btn-light btn-sm px-3"
                             style="color: #647D5C;border-radius: 6px;font-size: 16px;">註冊/登入</button> --}}
+                        
                         {{-- 下面是後台加上程式碼的註冊跟登入按鈕 --}}
                         @guest
                             @if (Route::has('login'))
@@ -123,7 +124,7 @@
                             </div>
                         </li>
                     @endguest
-
+                   {{-- 上面是後台加上程式碼的註冊跟登入按鈕 --}}
 
                     </li>
                 </ul>

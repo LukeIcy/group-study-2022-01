@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    //最新消息
+    //最新消息(前台)
     public function index()
     {
         // $news = News::get();未啟用分頁功能前的原版
