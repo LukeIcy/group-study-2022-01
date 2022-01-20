@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人資料_會員中心</title>
+    <title>送養紀錄_會員中心</title>
     <!-- bootstrap Core CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -15,15 +15,6 @@
     <!-- index css -->
     <link rel="stylesheet" href="./css/layout.css">
     <style>
-        input {
-            border-radius: unset !important;
-            border: 1px solid black !important;
-        }
-
-        textarea {
-            border-radius: unset !important;
-            border: 1px solid black !important;
-        }
 
         .pic {
             width: 100px;
@@ -139,9 +130,9 @@
                     </div>
                     <div class="col-12 col-md-8 d-flex align-items-end">
                         <a class="btn rounded-0 fw-bold" href="#" role="button"
-                            style="width: 160px;background-color: #d56246;color: #fff;font-size: 18px;">個人資料</a>
+                            style="width: 160px;background-color: #d56246;font-size: 18px;">個人資料</a>
                         <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
+                            style="width: 160px;background-color: #d56246;font-size: 18px;color: #fff;">送養紀錄</a>
                         <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">我要送養</a>
                         <a class="text-dark fw-bolder fs-6 text-decoration-none ms-auto none" href="./index.html">
@@ -151,35 +142,13 @@
                 </div>
             </div>
         </section>
+
         <hr class="first_line">
+
+        <!-- 送養紀錄 -->
         <section class="member_centre_form">
             <div class="container">
-                <form action="" method="post">
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label for="name" class="form-label fw-bold fs-5 m-0">姓名</label>
-                            <input type="text" name="name" id="name" class="form-control mb-3">
-                            <label for="halfwaySeniority" class="form-label fw-bold fs-5 m-0">中途資歷</label>
-                            <input type="text" name="halfwaySeniority" id="halfwaySeniority" class="form-control mb-3">
-                            <label for="halfwayList" class="form-label fw-bold fs-5 m-0">中途項目<span
-                                    class="fs-6">(簡述中途工作內容)</span></label>
-                            <textarea class="form-control" name="halfwayList" id="halfwayList" rows="5"></textarea>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label fw-bold fs-5 m-0">電子郵件</label>
-                            <input type="text" name="email" id="email" class="form-control mb-3">
-                            <label for="putupCount" class="form-label fw-bold fs-5 m-0">送養數量<span class="fs-6"> (例如：犬 5隻; 貓
-                                    5隻)</span></label>
-                            <input type="text" name="putupCount" id="putupCount" class="form-control mb-3">
-                            <label for="halfwayList" class="form-label fw-bold fs-5 m-0">想對領養人說的話</label>
-                            <textarea class="form-control" name="myself" id="myself" rows="5"></textarea>
-                        </div>
-                    </div>
-                    <div class="btn_group d-flex justify-content-center justify-content-md-end mb-3">
-                        <button type="button" class="btn btn-outline-success border-0 fw-bold fs-5 me-3">編輯</button>
-                        <button type="button" class="btn btn-outline-dark border-0 fw-bold fs-5">完成</button>
-                    </div>
-                </form>
+
             </div>
         </section>
     </main>
