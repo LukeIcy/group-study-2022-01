@@ -10,6 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/login.css">
+    <style>
+        @media (max-width: 1400px) {
+            .login_img{
+                width: 440px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .login_img{
+                width: 98%;
+            }
+            .label-form{
+                font-size: 16px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -34,7 +50,7 @@
                                 <h1 class="card-title">註冊</h1>
                                 <div class="row mb-3">
                                     <div class="col-2 d-flex justify-content-end align-items-center">
-                                        <label for="userID" class="label-form fs-4 fw-bold ">帳號名稱</label>
+                                        <label for="userID" class="label-form  fs-4 fw-bold ">帳號名稱</label>
                                     </div>
                                     <div class="col-10">
                                         <input type="ID" name="userID" id="userID" class="form-control email_input border-bottom border-2">
@@ -57,9 +73,9 @@
                                     </div>
                                 </div>
                                 <div class="row justify-content-end">
-                                    <div class="col-12 col-lg-3">
-                                        <a href="" class="text-decoration-none" >忘記密碼或帳號</a>
-                                        <a href="" class="text-decoration-none" >還沒註冊</a>
+                                    <div class="col-12 col-lg-3 p-0">
+                                        <a href="" class="text-decoration-none fs-6 fw-bold" >忘記密碼或帳號</a>
+                                        <a href="" class="text-decoration-none fs-6 fw-bold" >還沒註冊</a>
                                     </div>
                                 </div>
                             </div>

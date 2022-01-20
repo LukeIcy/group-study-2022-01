@@ -18,6 +18,24 @@ main {
           transform: scale(1.15);
 }
 
+@media (max-width: 1200px) {
+  .login_img {
+    width: 360px;
+  }
+}
+
+@media (max-width: 992px) {
+  .login_img {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .olol {
+    border-radius: unset !important;
+  }
+}
+
 .login .card-body h1 {
   font-weight: 600;
   margin-bottom: 70px;
@@ -27,6 +45,12 @@ main {
   border: unset;
   background-color: unset;
   border-radius: unset;
+}
+
+@media (max-width: 992px) {
+  label {
+    padding: unset;
+  }
 }
 
 a {

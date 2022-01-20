@@ -14,7 +14,17 @@ main{
 
 .login_img{
     transform: scale(1.15);
-
+    @media (max-width: 1200px) {
+        width: 360px;
+    }
+    @media (max-width: 992px) {
+        display: none;
+    }
+}
+.olol{
+    @media (max-width: 992px) {
+        border-radius: unset !important;
+    }
 }
 
 .login{
@@ -30,6 +40,12 @@ main{
     border: unset;
     background-color: unset;
     border-radius: unset;
+}
+
+label{
+    @media (max-width: 992px) {
+        padding: unset;
+    }
 }
 a{
     color: white;
