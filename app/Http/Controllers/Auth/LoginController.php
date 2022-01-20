@@ -38,6 +38,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    // 下面是新程式碼，可以實現在哪個頁面按登入按鈕，就可以在登入後回到那個頁面。
     public function showLoginForm()
     {
         // Get URLs

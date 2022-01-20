@@ -77,7 +77,6 @@
         {{$news->links()}}
         </div>
 
-
         <!-- 原本的按鈕區塊 -->
         {{-- <div class="py-5 mb-5">
             <div class="btn-toolbar mb-3 d-flex justify-content-center" role="toolbar"

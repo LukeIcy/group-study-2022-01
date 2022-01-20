@@ -52,19 +52,19 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="./law_animal">
                                         <img src="./team-img/icon/9.png" width="50px" alt="">
                                         <span class="mx-2 fw-bold" style="font-size: 16px;">動物保護</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./news">
+                                    <a class="dropdown-item" href="{{route('news.list')}}">
                                         <img src="./team-img/icon/11.png" width="50px" alt="">
                                         <span class="mx-2 fw-bold" style="font-size: 16px;">最新消息</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="./babysitter">
                                         <img src="./team-img/icon/8.png" width="50px" alt="">
                                         <span class="mx-2 fw-bold" style="font-size: 16px;">寵物褓姆</span>
                                     </a>
@@ -96,11 +96,6 @@
                             <a class="nav-link logina" href="{{ route('login') }}">登入</a>/
                             <a class="nav-link logina" href="{{ route('register') }}">註冊</a>                           
                             </li>
-                            {{-- @endif --}}
-                            {{-- @if (Route::has('register')) --}}
-                            {{-- <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">註冊</a>
-                            </li> --}}
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -147,6 +142,7 @@
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-facebook"></i></a>
                     <a href=""><i class="fab fa-line"></i></a>
+                    <a href=""><i class="fas fa-share-alt-square"></i></a>
                 </div>
                 <p>© 2022 一起回家</p>
             </div>

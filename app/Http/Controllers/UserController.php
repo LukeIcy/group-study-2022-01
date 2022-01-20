@@ -33,4 +33,8 @@ class UserController extends Controller
 
         return redirect()->route('user.list');
     }
+
+    // 暫時先不做新增使用者
+    // 考慮讓送養人註冊後，再開權限給他
+    // 總之兩個方案二選一
 }
