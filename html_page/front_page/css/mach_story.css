@@ -8,6 +8,36 @@
   }
 }
 
+.mach_story_picarea .container .basemap {
+  position: relative;
+}
+
+.mach_story_picarea .container .basemap img {
+  width: 1380px;
+  position: absolute;
+  top: 38px;
+  left: 0;
+}
+
+@media (max-width: 992px) {
+  .mach_story_picarea .container .basemap img {
+    width: 725px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mach_story_picarea .container .basemap img {
+    width: 575px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mach_story_picarea .container .basemap img {
+    display: none;
+  }
+}
+
 .mach_story_picarea .container .story_title {
   position: relative;
   height: 400px;
@@ -30,7 +60,7 @@
 .mach_story_picarea .container .story_title img {
   position: absolute;
   top: -100px;
-  left: 60px;
+  left: 30px;
 }
 
 @media (max-width: 992px) {
@@ -39,6 +69,19 @@
     width: 160px;
     height: 180px;
   }
+}
+
+.mach_story_picarea .container .story_title .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .mach_story_picarea .container .story_part1 {
@@ -68,7 +111,7 @@
 
 .mach_story_picarea .container .story_part1 .picture02 {
   position: absolute;
-  top: -250px;
+  top: -80px;
   right: 0px;
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
@@ -114,8 +157,8 @@
 
 .mach_story_picarea .container .story_part2 .picture04 {
   position: absolute;
-  top: 200px;
-  right: 50px;
+  top: 320px;
+  right: 40px;
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
 }
@@ -160,8 +203,8 @@
 
 .mach_story_picarea .container .story_part3 .picture05 {
   position: absolute;
-  top: 600px;
-  right: 50px;
+  top: 700px;
+  right: 40px;
   -webkit-transform: rotate(6deg);
           transform: rotate(6deg);
 }
@@ -185,7 +228,7 @@
 
 .mach_story_picarea .container .story_part4 .picture05 {
   position: absolute;
-  top: 1180px;
+  top: 1170px;
   left: 0px;
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
@@ -206,8 +249,8 @@
 
 .mach_story_picarea .container .story_part4 .picture06 {
   position: absolute;
-  top: 1050px;
-  right: 50px;
+  top: 1120px;
+  right: 60px;
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
 }
