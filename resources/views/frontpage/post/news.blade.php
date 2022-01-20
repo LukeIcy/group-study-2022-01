@@ -78,7 +78,7 @@
         </div>
 
 
-        <!-- 按鈕區塊 -->
+        <!-- 原本的按鈕區塊 -->
         {{-- <div class="py-5 mb-5">
             <div class="btn-toolbar mb-3 d-flex justify-content-center" role="toolbar"
                 aria-label="Toolbar with button groups">
@@ -93,8 +93,8 @@
                     <button class="btngroup--btn">NEXT</button>
                 </div>
             </div>
-        </div>
-    </section> --}}
+        </div> --}}
+    </section>
 
 @endsection
 
