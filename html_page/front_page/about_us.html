@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>送養頁面</title>
+    <title>關於我們</title>
     <!-- bootstrap Core CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -14,22 +14,16 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- index css -->
     <link rel="stylesheet" href="./css/layout.css">
-    <style>
-        input {
-            border-radius: unset !important;
-            border: 1px solid black !important;
-        }
-
-        textarea {
-            border-radius: unset !important;
-            border: 1px solid black !important;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/about_us.css">
 </head>
 
 <body>
+    <!-- go top button -->
+    <a href="#" class="go-top">
+        <img src="./team-img/icon/uptotop.png" width="50px" alt="">
+    </a>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #d56246;margin-bottom: 75px;">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 mb-5" style="background-color: #647D5C;">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="./index.html">
                 <img src="./team-img/LOGO/LOGO-8.png" width="50px" height="50px" alt="">
@@ -91,8 +85,8 @@
                         <a class="nav-link fw-bold text-white" href="#">支持我們</a>
                     </li>
                     <li class="nav-item px-2 pt-lg-1">
-                        <button type="button" class="btn btn-light btn-sm fw-bold px-3"
-                            style="color: #030303;border-radius: 6px;font-size: 16px;width: 120px;">登出</button>
+                        <button type="button" class="btn btn-light btn-sm px-3"
+                            style="color: #647D5C;border-radius: 6px;font-size: 16px;">註冊/登入</button>
                     </li>
                 </ul>
             </div>
@@ -100,74 +94,98 @@
     </nav>
 
     <main>
-        <section class="member_centre">
-            <h1 class="text-center fw-bold fs-2">會員中心</h1>
+        <section class="about_us">
+            <div class="container d-grid" style="height: 300px;">
+                <div class="row">
+                    <div class="about_us_title d-flex align-items-center justify-content-center position-relative">
+                        <div class="pic position-absolute start-0 top-0">
+                            <img src="./team-img/babysitter/paw01.png" style="width: 300px;" alt="">
+                        </div>
+                        <h1>關於我們</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 關於我們內文 -->
+        <section class="about_us_content">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="d-flex align-items-end justify-content-center flex-column flex-xl-row">
-                            <div class="pic">
-                                <img src="./team-img/450 x 600 px/16.png"
-                                    style="width: 170px;height: 170px;object-fit: cover;" alt="">
-                            </div>
-                            <div class="ms-2">
-                                <h4 class="fw-bold m-0">林小雨</h4>
-                            </div>
-                        </div>
+                    <div class="content_top col-12">
+                        <p>
+                            近期有許多認養亂象，有些人利用動物詐財或披著羊皮的心理變態藉由虐殺動物以滿足自己的慾望，從「大橘子事件」到近期「茶茶事件」一再地削弱人與人之間的信任，增加送養人與領養人之間的對立，最終結果則讓毛孩回家之路更為遙遠艱辛。
+                        </p>
                     </div>
-                    <div class="col-8 order-first order-lg-0 mb-3 mb-lg-0">
-                        <div class="d-flex flex-column justify-content-between" style="height: 170px;">
-                            <div class="d-flex justify-content-center">
-                                <a class="btn rounded-0 fw-bold" href="#" role="button"
-                                    style="width: 160px;background-color: #d56246;color: #fff;">個人資料</a>
-                                <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
-                                    style="width: 160px;background-color: #d56246;">送養紀錄</a>
-                                <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
-                                    style="width: 160px;background-color: #d56246;">我要送養</a>
-                                <a class="text-dark fw-bolder fs-6 text-decoration-none me-5" href="./index.html">
-                                    <i class="fas fa-caret-right me-2"></i>返回首頁
-                                </a>
-                            </div>
+                    <div class="content_middle col-12">
+                        <p>
+                            我們始終相信社會與人們建立的橋樑應該是溝通與信任，許多人都認為科技是冰冷的，這個網站就是要反轉認養的窠臼，利用推薦制的送養人制度，篩選真正為毛孩付出心力的優秀中途，創造保障雙方和有效率的免付費認養環境，幫助毛孩回家。
+                        </p>
+                    </div>
+                    <div class="content_bottom col-12">
+                        <div class="list">
+                            <h3>服務項目：</h3>
+                            <ul>
+                                <li>1. 提供領養貓咪的資訊和踏實的領養管道</li>
+                                <li>2. 讓更多人能正確的認識貓咪</li>
+                                <li>#貓咪知識文章 #整理實用資訊 #動物保護法律常識</li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <img src="./team-img/LOGO/LOGO-3.png" style="width: 230px;opacity: 0.7;" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <hr style="height: 2px;background-color: #d56246;opacity: 0.8;margin: 0;margin-bottom: 88px;">
-        <section class="member_centre_form">
+
+        <!-- 連絡我們 -->
+        <section class="liason_us">
             <div class="container">
-                <form action="" method="post">
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label for="name" class="form-label fw-bold fs-5">姓名</label>
-                            <input type="text" name="name" id="name" class="form-control">
-                            <label for="halfwaySeniority" class="form-label fw-bold fs-5">中途資歷</label>
-                            <input type="text" name="halfwaySeniority" id="halfwaySeniority" class="form-control">
-                            <label for="halfwayList" class="form-label fw-bold fs-5">中途項目<span
-                                    class="fs-6">(簡述中途工作內容)</span></label>
-                            <textarea class="form-control" name="halfwayList" id="halfwayList" rows="5"></textarea>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label fw-bold fs-5">電子郵件</label>
-                            <input type="text" name="email" id="email" class="form-control">
-                            <label for="putupCount" class="form-label fw-bold fs-5">送養數量<span class="fs-6"> (例如：犬 5隻; 貓
-                                    5隻)</span></label>
-                            <input type="text" name="putupCount" id="putupCount" class="form-control">
-                            <label for="halfwayList" class="form-label fw-bold fs-5">想對領養人說的話</label>
-                            <textarea class="form-control" name="myself" id="myself" rows="5"></textarea>
-                        </div>
+                <div class="row liason_content w-100">
+                    <div class="liason_top col-12">
+                        <h3>連絡我們</h3>
                     </div>
-                    <div class="btn_group d-flex justify-content-center justify-content-md-end">
-                        <button type="button" class="btn btn-outline-success border-0 fw-bold fs-5 me-3">編輯</button>
-                        <button type="button" class="btn btn-outline-dark border-0 fw-bold fs-5">完成</button>
+                    <div class="liason_middle col-12">
+                        <p>您的留言</p>
+                        <hr>
+                        <hr>
+                        <hr>
+                        <hr>
+                        <hr>
                     </div>
-                </form>
+                    <div class="liason_bottom col-md-6 offset-md-6">
+                        <p>您的姓名</p>
+                        <hr>
+                        <p>您的e-mail</p>
+                        <hr>
+                    </div>
+                    <div class="btn col offset-md-9">
+                        <img src="./team-img/LOGO/LOGO-3.png" style="width: 60px;margin-right: 12px;" alt="">
+                        <input class="btn" type="submit" value="送出">
+                    </div>
+                </div>
             </div>
-
         </section>
-
     </main>
 
+    <footer class="footdown">
+        <div class="container">
+            <div class="pic">
+                <img src="./team-img/illustration/footer02.png" alt="">
+            </div>
+            <div class="adove">
+                <img src="./team-img/LOGO/LOGO-3.png" width="190px" height="230px" alt="">
+            </div>
+            <div class="footer-below">
+                <div class="below mb-3 border-bottom pb-3">
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-line"></i></a>
+                    <a href=""><i class="fas fa-share-alt-square"></i></a>
+                </div>
+                <p>© 2022 一起回家</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
