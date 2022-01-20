@@ -1,3 +1,7 @@
+.law_animal_content {
+  margin-bottom: 100px;
+}
+
 .law_animal_content .row {
   width: 80%;
 }
@@ -21,6 +25,10 @@
   font-size: 18px;
   font-weight: 600;
   text-align: justify;
+}
+
+.help_animal {
+  margin-bottom: 80px;
 }
 
 .help_animal .row {
@@ -85,6 +93,10 @@
   font-size: 18px;
   font-weight: 600;
   padding: 0 8px;
+}
+
+.related {
+  margin-bottom: 80px;
 }
 
 .related .row {
