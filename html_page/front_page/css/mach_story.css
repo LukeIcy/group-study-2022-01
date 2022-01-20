@@ -11,10 +11,6 @@
 .mach_story_picarea .container .story_title {
   position: relative;
   height: 400px;
-  border: 3px solid #fff;
-  border-radius: 26px;
-  -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.6));
-          filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.6));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
