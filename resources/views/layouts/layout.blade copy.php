@@ -85,57 +85,19 @@
                         <a class="nav-link fw-bold text-white" href="#">Support</a>
                     </li>
                     <li class="nav-item px-2 pt-lg-1">
-                        {{-- 下面是原本的註冊登入按鈕 --}}
-                        {{-- <button type="button" class="btn btn-light btn-sm px-3"
-                            style="color: #647D5C;border-radius: 6px;font-size: 16px;">註冊/登入</button> --}}
-                        {{-- 下面是後台加上程式碼的註冊跟登入按鈕 --}}
-                        @guest
-                            @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-light btn-sm px-3"
-                                style="color: #647D5C;border-radius: 6px;font-size: 16px;"
-                                href="{{ route('login') }}">登入</a>
-                        </li>
-                        @endif
-
-                        @if (Route::has('register'))
-                            <li class="nav-item ms-4">
-                                <a class="nav-link btn btn-light btn-sm px-3"
-                                style="color: #647D5C;border-radius: 6px;font-size: 16px;"
-                                href="{{ route('register') }}">註冊</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">登出</a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-
-
+                        <button type="button" class="btn btn-light btn-sm px-3"
+                            style="color: #647D5C;border-radius: 6px;font-size: 16px;">註冊/登入</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main>
+<main>
 
-        @yield('main')
+@yield('main')
 
-    </main>
+</main>
 
     <footer class="footdown">
         <div class="container">
@@ -158,10 +120,10 @@
 
     <!-- Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
-    </script>
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
 
-    @yield('js')
+        @yield('js')
 </body>
 
 </html>
