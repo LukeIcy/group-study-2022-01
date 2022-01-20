@@ -22,6 +22,19 @@ body .go-top:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
+.loginbtn{
+  display: flex;
+  align-items:center;
+  color:#647D5C;
+  background-color: #f3ede0;
+  padding: 1px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+a.logina{
+  color:#647D5C !important;
+}
 
 nav .nav-item .line_dropdown {
   padding: 5px;
@@ -40,6 +53,19 @@ nav .nav-item .line_dropdown {
     padding: unset;
     display: unset;
     position: unset;
+  }
+  .loginbtn{
+    width: 120px;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  a.logina{
+    color:#647D5C !important;
+    margin: 0px 5px;
+  }
+  .loginname{
+    margin-left: 8px;
   }
 }
 

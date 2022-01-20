@@ -91,27 +91,23 @@
                         
                         {{-- 下面是後台加上程式碼的註冊跟登入按鈕 --}}
                         @guest
-                            @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-light btn-sm px-3"
-                                style="color: #647D5C;border-radius: 6px;font-size: 16px;"
-                                href="{{ route('login') }}">登入</a>
-                        </li>
-                        @endif
-
-                        @if (Route::has('register'))
-                            <li class="nav-item ms-4">
-                                <a class="nav-link btn btn-light btn-sm px-3"
-                                style="color: #647D5C;border-radius: 6px;font-size: 16px;"
-                                href="{{ route('register') }}">註冊</a>
+                            @if (Route::has('login') && Route::has('register'))
+                            <li class="nav-item loginbtn">
+                            <a class="nav-link logina" href="{{ route('login') }}">登入</a>/
+                            <a class="nav-link logina" href="{{ route('register') }}">註冊</a>                           
                             </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            {{-- @endif --}}
+                            {{-- @if (Route::has('register')) --}}
+                            {{-- <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">註冊</a>
+                            </li> --}}
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle loginname" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
-                            </a>
+                                </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -123,7 +119,7 @@
                                 </form>
                             </div>
                         </li>
-                    @endguest
+                        @endguest
                    {{-- 上面是後台加上程式碼的註冊跟登入按鈕 --}}
 
                     </li>
