@@ -41,7 +41,7 @@
                     <li class="nav-item dropdown px-2">
                         <a class="nav-link dropdown-toggle fw-bold text-white" href="#" id="navbarScrollingDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Features
+                            網站服務
                         </a>
                         <ul class="dropdown-menu m-0 p-0 border-0" aria-labelledby="navbarScrollingDropdown">
                             <div class="line_dropdown">
@@ -82,7 +82,7 @@
                         <a class="nav-link fw-bold text-white" aria-current="page" href="#">關於我們</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link fw-bold text-white" href="#">Support</a>
+                        <a class="nav-link fw-bold text-white" href="#">支持我們</a>
                     </li>
                     <li class="nav-item px-2 pt-lg-1">
                         {{-- 下面是原本的註冊登入按鈕 --}}
