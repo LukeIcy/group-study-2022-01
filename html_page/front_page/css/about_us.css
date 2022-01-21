@@ -22,12 +22,12 @@
 }
 
 .about_us_content .container .row p {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .about_us_content .container .row .content_middle {
-  margin: 120px 0 150px 0;
+  margin: 90px 0 150px 0;
 }
 
 .about_us_content .container .row .content_bottom {
@@ -41,7 +41,7 @@
 }
 
 .about_us_content .container .row .content_bottom .list h3 {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 600;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .about_us_content .container .row .content_bottom .list ul li {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   margin: 50px 0;
 }
@@ -60,6 +60,12 @@
   position: absolute;
   top: -60px;
   right: 155px;
+}
+
+@media (max-width: 992px) {
+  .about_us_content .container .row .content_bottom img {
+    display: none;
+  }
 }
 
 .liason_us {
