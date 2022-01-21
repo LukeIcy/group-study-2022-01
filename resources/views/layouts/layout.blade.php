@@ -25,7 +25,7 @@
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark px-5 mb-5" style="background-color: #647D5C;">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="./index">
+            <a class="navbar-brand d-flex align-items-center" href="{{route('front.index')}}">
                 <img src="./team-img/LOGO/LOGO-8.png" width="50px" height="50px" alt="">
                 <span class="mx-3 fw-bold pt-2">一起回家</span>
             </a>
@@ -39,20 +39,20 @@
             <div class="collapse navbar-collapse flex-lg-grow-0" id="navbarScroll">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown px-2">
-                        <a class="nav-link dropdown-toggle fw-bold text-white" href="#" id="navbarScrollingDropdown"
+                        <a class="nav-link dropdown-toggle fw-bold text-white" id="navbarScrollingDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             網站服務
                         </a>
                         <ul class="dropdown-menu m-0 p-0 border-0" aria-labelledby="navbarScrollingDropdown">
                             <div class="line_dropdown">
                                 <li>
-                                    <a class="dropdown-item " href="./adoption_pic">
+                                    <a class="dropdown-item " href="{{route('center.index')}}">
                                         <img src="./team-img/icon/12.png" width="50px" alt="">
                                         <span class="mx-2 fw-bold" style="font-size: 16px;">我要領養</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./law_animal">
+                                    <a class="dropdown-item" href="{{route('news.lawrescue')}}">
                                         <img src="./team-img/icon/9.png" width="50px" alt="">
                                         <span class="mx-2 fw-bold" style="font-size: 16px;">動物保護</span>
                                     </a>
@@ -64,13 +64,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./babysitter">
+                                    <a class="dropdown-item" href="{{route('news.sitter')}}">
                                         <img src="./team-img/icon/8.png" width="50px" alt="">
-                                        <span class="mx-2 fw-bold" style="font-size: 16px;">寵物褓姆</span>
+                                        <span class="mx-2 fw-bold" style="font-size: 16px;">寵物保姆</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('news.match')}}">
                                         <img src="./team-img/icon/13.png" width="50px" alt="">
                                         <span class="mx-2 fw-bold" style="font-size: 16px;">媒合故事</span>
                                     </a>
@@ -79,10 +79,10 @@
                         </ul>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link fw-bold text-white" aria-current="page" href="#">關於我們</a>
+                        <a class="nav-link fw-bold text-white" aria-current="page" href="{{route('front.aboutus')}}">關於我們</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link fw-bold text-white" href="#">支持我們</a>
+                        <a class="nav-link fw-bold text-white" href="{{route('front.supportus')}}">支持我們</a>
                     </li>
                     <li class="nav-item px-2 pt-lg-1">
                         {{-- 下面是原本的註冊登入按鈕 --}}
