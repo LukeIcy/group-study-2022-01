@@ -12,7 +12,7 @@
 @endsection
 
 @section('main')
-    
+
 <!-- 大圖區 -->
 <section class="home position-relative mb-5" id="home">
     <div class="container-fluid p-0">
@@ -20,13 +20,6 @@
     </div>
     <div class="container">
         <div class="home-content">
-            <!-- <ul class="list-unstyled">
-                    <li class="py-4 px-2"><a href="">動物認養</a></li>
-                    <li class="py-4 px-2"><a href="">寵物保母</a></li>
-                    <li class="py-4 px-2"><a href="">動物保護</a></li>
-                    <li class="py-4 px-2"><a href="">媒合故事</a></li>
-                    <li class="py-4 px-2"><a href="">最新消息</a></li>
-                </ul> -->
             <div class="home-content-left py-lg-5 position-absolute top-50">
                 <h1 class="text-2">不只有人需要<br>一個家</h1>
                 <button type="button" class="btn py-2 mt-3 home-btn"
@@ -109,7 +102,7 @@
         <div class="row justify-content-center">
             <div class="box">
                 <a href="./adoption_pic">
-                    <button type="button" class="btn btn-secondary rounded-pill">更多可愛的孩子在這邊喔</button></a>
+                    <button type="button" class="btn btn-secondary rounded">更多可愛的孩子在這邊喔</button></a>
             </div>
 
         </div>
@@ -495,7 +488,7 @@
 @endsection
 
 @section('js')
-    
+
     <!-- AOS CDN & 初始化 -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
