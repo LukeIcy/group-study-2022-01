@@ -38,9 +38,9 @@ Route::get('/index',[FrontController::class,'index'])->name('front.index');
 Route::get('/aboutus',[FrontController::class,'aboutus'])->name('front.aboutus');
 // 支持我們
 Route::get('/supportus',[FrontController::class,'supportus'])->name('front.supportus');
-// 動物領養
+// 我要領養
 Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
-// 前台動物資訊&申請表
+// 動物資訊&申請表
 Route::get('/adoption/{id}/apply',[AdopController::class,'apply'])->name('center.apply');
 // 最新消息
 Route::get('/news',[PostController::class,'index'])->name('news.index');
@@ -50,7 +50,7 @@ Route::get('/babysitter',[PostController::class,'sitter'])->name('news.sitter');
 Route::get('/lawrescue',[PostController::class,'lawrescue'])->name('news.lawrescue');
 // 動保法律 這一頁沒人做!!
 Route::get('/law',[PostController::class,'law'])->name('news.law');
-// 一起回家故事
+// 媒合故事 一起回家故事
 Route::get('/match',[PostController::class,'match'])->name('news.match');
 
 // 最新消息單頁 還沒有頁面!!
