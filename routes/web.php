@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 
 
-
+// 前台頁面
 // 首頁
 Route::get('/index', function () {
     return view('frontpage.index');
@@ -39,9 +39,6 @@ Route::get('/adoption', function () {
 Route::get('apply', function (){
     return view('frontpage.center.animal_information');
 });
-
-
-// 前台頁面
 // 最新消息
 Route::get('/news',[PostController::class,'index'])->name('news.index');
 // 動物保姆 還未串接
