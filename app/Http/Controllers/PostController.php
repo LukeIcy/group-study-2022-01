@@ -25,8 +25,9 @@ class PostController extends Controller
     // 寵物保姆(前台)
     public function sitter()
     {
-        $news = News::where('type', '寵物保母')->paginate(10);
-        return view('frontpage.post.sitter',compact('news'));
+        $sitter = News::where('type', '寵物保姆')->paginate(5);
+        // dd($sitter);
+        return view('frontpage.post.sitter',compact('sitter'));
     }
 
     // 動保法律(前台)
