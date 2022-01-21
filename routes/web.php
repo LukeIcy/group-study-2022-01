@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdopController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ApplyController;
@@ -37,15 +38,10 @@ Route::get('/index',[FrontController::class,'index'])->name('front.index');
 Route::get('/aboutus',[FrontController::class,'aboutus'])->name('front.aboutus');
 // 支持我們
 Route::get('/supportus',[FrontController::class,'supportus'])->name('front.supportus');
-
 // 寵物照片
-Route::get('/adoption', function () {
-    return view('frontpage.center.adoption');
-});
+Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
 // 前台動物資訊&申請表
-Route::get('apply', function (){
-    return view('frontpage.center.animal_information');
-});
+Route::get('/adoption/{id}/apply',[AdopController::class,'apply'])->name('center.apply');
 // 最新消息
 Route::get('/news',[PostController::class,'index'])->name('news.index');
 // 寵物保姆
