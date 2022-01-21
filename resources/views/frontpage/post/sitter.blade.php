@@ -57,7 +57,10 @@
                     <a href=""><h3 class="mb-5" style="color: #647D5C;font-weight: 600;">{{ $item->title }}</h3></a>
                 </div>
                 <div class="content_bottom">
-                    <p class="fw-bold mx-3">{{ $item->content }}</p>
+                    {{-- <p class="fw-bold mx-3">{{ $item->content }}</p> --}}
+                    <p class="fw-bold mx-3">{!! nl2br(e($item->content)) !!}</p>
+                    {{-- <p class="fw-bold mx-3">{{ nl2br(e($item->content)) }}</p> --}}
+                    
                 </div>
             </div>
         </div>
