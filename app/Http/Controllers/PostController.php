@@ -22,6 +22,20 @@ class PostController extends Controller
         return view('frontpage.post.news',compact('news'));
     }
 
+    // 寵物保姆(前台)
+    public function sitter()
+    {
+        $news = News::where('type', '寵物保母')->paginate(10);
+        return view('frontpage.post.sitter',compact('news'));
+    }
+
+    // 動保法律(前台)
+    public function law()
+    {
+        $news = News::where('type', '動保法律')->paginate(10);
+        return view('frontpage.post.lawanimal',compact('news'));
+    }
+
     // 文章列表(後台)
     public function list()
     {
