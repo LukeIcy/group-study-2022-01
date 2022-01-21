@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title','寵物領養照片')
+@section('title','我要領養')
 
 @section('css')
     <link rel="stylesheet" href="./css/adoption_pic.css">

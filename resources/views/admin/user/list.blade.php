@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-{{-- @section('title','user-management') --}}
+@section('title','使用者列表')
 
 @section('css')
     <!-- dataTable -->
