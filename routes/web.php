@@ -16,6 +16,9 @@ use App\Http\Controllers\ApplyController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('template', function () {
+    return view('layouts.layout');
+});
 
 // user系統加入的
 Auth::routes();
@@ -94,6 +97,3 @@ Route::prefix('admin')->group(function ()
     Route::get('/', [ApplyController::class, 'index']);
     Route::post('store', [ApplyController::class, 'store']);
 });
-
-
-
