@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', '寵物保姆')
+@section('title', '動保法律&動物救援')
 
 @section('css')
 <link rel="stylesheet" href="./css/law_animal.css">
