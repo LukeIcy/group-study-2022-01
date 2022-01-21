@@ -86,8 +86,9 @@
         <hr class="mb-5" style="height: 2px;background-color: #d56246;opacity: 0.8;">
     </div>
 
+    {{$sitter->links()}}
     <!-- 按鈕區塊 -->
-    <div class="py-5 mb-5 position-relative">
+    {{-- <div class="py-5 mb-5 position-relative">
         <img class="w-25 position-absolute end-0 bottom-100" src="./team-img/babysitter/paw01.png"  alt="">
         <div class="btn-toolbar mb-3 d-flex justify-content-center" role="toolbar"
         aria-label="Toolbar with button groups">
@@ -102,7 +103,7 @@
             <button class="btngroup--btn">NEXT</button>
         </div>
     </div>
-</div>
+</div> --}}
 </section>
 
 @endsection
