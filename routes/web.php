@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ApplyController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +32,12 @@ Route::get('/', function () {
 
 // 前台頁面
 // 首頁
-Route::get('/index', function () {
-    return view('frontpage.index');
-});
+Route::get('/index',[FrontController::class,'index'])->name('front.index');
+// 關於我們
+Route::get('/aboutus',[FrontController::class,'aboutus'])->name('front.aboutus');
+// 支持我們
+Route::get('/supportus',[FrontController::class,'supportus'])->name('front.supportus');
+
 // 寵物照片
 Route::get('/adoption', function () {
     return view('frontpage.center.adoption');
@@ -44,19 +48,19 @@ Route::get('apply', function (){
 });
 // 最新消息
 Route::get('/news',[PostController::class,'index'])->name('news.index');
-// 動物保姆 還未串接
+// 寵物保姆
 Route::get('/babysitter',[PostController::class,'sitter'])->name('news.sitter');
-// 動保法律 還未串接
+// 動保法律
 Route::get('/law',[PostController::class,'law'])->name('news.law');
-// 一起回家故事 還未串接
-Route::get('/mach',[PostController::class,'mach'])->name('news.mach');
+// 一起回家故事
+Route::get('/match',[PostController::class,'match'])->name('news.match');
 
 // 最新消息單頁 還沒有頁面!!
-Route::get('/article',[PostController::class,'article'])->name('news.article');
+Route::get('/{id}/article',[PostController::class,'article'])->name('news.article');
 // 動保法律單頁 還沒有頁面!!
-Route::get('/lawarticle',[PostController::class,'lawarticle'])->name('news.lawarticle');
+Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.lawarticle');
 // 一起回家故事單頁 還沒有頁面!!
-Route::get('/story',[PostController::class,'story'])->name('news.story');
+Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
 
 
 // 文章列表 - 後台

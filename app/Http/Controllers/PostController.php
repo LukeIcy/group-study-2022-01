@@ -36,6 +36,13 @@ class PostController extends Controller
         return view('frontpage.post.lawanimal',compact('news'));
     }
 
+    // 一起回家故事(前台)
+    public function match()
+    {
+        $news = News::where('type', '一起回家故事')->paginate(10);
+        return view('frontpage.post.match',compact('news'));
+    }
+
     // 文章列表(後台)
     public function list()
     {
