@@ -18,7 +18,7 @@ class PostController extends Controller
         // simplePaginate(number); 這個是簡單分頁的方式，只會出現上一頁跟下一頁的按鈕
         // cursorPaginate(number);這個不知道是什麼，還沒測
         // number = 你一頁想放幾篇文章的數量，下面就是想放5篇文章
-        $news = News::where('type', '最新消息')->paginate(5);
+        $news = News::where('type', '最新消息')->paginate(10);
         return view('frontpage.post.news',compact('news'));
     }
 

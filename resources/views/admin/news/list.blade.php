@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-{{-- @section('title','news-management') --}}
+@section('title','post-management')
 
 @section('css')
     <!-- dataTable -->
@@ -21,6 +21,7 @@
 		};
 	</style>
 @endsection
+
 
 @section('main')
 <div class="container">

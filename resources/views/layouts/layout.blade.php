@@ -14,7 +14,7 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- index css -->
     <link rel="stylesheet" href="./css/layout.css">
-    @yield('css')
+    @yield('css')   
 </head>
 
 <body>
@@ -58,7 +58,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="{{route('news.list')}}">
+                                    <a class="dropdown-item" href="{{route('news.index')}}">
                                         <img src="./team-img/icon/11.png" width="50px" alt="">
                                         <span class="mx-2 fw-bold" style="font-size: 16px;">最新消息</span>
                                     </a>
@@ -124,9 +124,7 @@
     </nav>
 
     <main>
-
         @yield('main')
-
     </main>
 
     <footer class="footdown">
