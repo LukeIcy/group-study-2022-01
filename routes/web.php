@@ -38,7 +38,7 @@ Route::get('/index',[FrontController::class,'index'])->name('front.index');
 Route::get('/aboutus',[FrontController::class,'aboutus'])->name('front.aboutus');
 // 支持我們
 Route::get('/supportus',[FrontController::class,'supportus'])->name('front.supportus');
-// 寵物照片
+// 動物領養
 Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
 // 前台動物資訊&申請表
 Route::get('/adoption/{id}/apply',[AdopController::class,'apply'])->name('center.apply');
@@ -48,7 +48,7 @@ Route::get('/news',[PostController::class,'index'])->name('news.index');
 Route::get('/babysitter',[PostController::class,'sitter'])->name('news.sitter');
 // 動保法律&動物救援
 Route::get('/lawrescue',[PostController::class,'lawrescue'])->name('news.lawrescue');
-// 動保法律 這一頁沒人做
+// 動保法律 這一頁沒人做!!
 Route::get('/law',[PostController::class,'law'])->name('news.law');
 // 一起回家故事
 Route::get('/match',[PostController::class,'match'])->name('news.match');
