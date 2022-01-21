@@ -101,7 +101,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="box">
-                <a href="./adoption_pic">
+                <a href="{{route('center.index')}}">
                     <button type="button" class="btn btn-secondary rounded">更多可愛的孩子在這邊喔</button></a>
             </div>
 
@@ -449,7 +449,7 @@
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <div class="news-title mb-3">
             <!-- <img src="./team-img/navdropdownicon/news.png" width="60px" alt=""> -->
-            <a class="" href="">
+            <a class="" href="{{route('news.index')}}">
                 <h2 class="fw-bold fs-1">最新消息</h2>
             </a>
         </div>
