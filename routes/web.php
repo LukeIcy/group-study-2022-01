@@ -46,7 +46,9 @@ Route::get('/adoption/{id}/apply',[AdopController::class,'apply'])->name('center
 Route::get('/news',[PostController::class,'index'])->name('news.index');
 // 寵物保姆
 Route::get('/babysitter',[PostController::class,'sitter'])->name('news.sitter');
-// 動保法律
+// 動保法律&動物救援
+Route::get('/lawrescue',[PostController::class,'lawrescue'])->name('news.lawrescue');
+// 動保法律 這一頁沒人做
 Route::get('/law',[PostController::class,'law'])->name('news.law');
 // 一起回家故事
 Route::get('/match',[PostController::class,'match'])->name('news.match');
