@@ -55,8 +55,12 @@
                             {{-- <div class="mb-3">{{{$member["name"]}}}</div> --}}
                             {{-- <div class="mb-3">{{$member[0]["name"]}}</div> --}}
                             {{-- <div class="mb-3">{{$member->data["name"]}}</div> --}}
+                            {{-- <div class="mb-3">{{$member[0]->data['name']}}</div> --}}
+                            {{-- 我感覺我真的要換一個思路了... --}}
+                            {{-- 我是不是乾脆看看都從Auth抓資料出來 --}}
+                            {{-- <div class="mb-3">{{Auth::user()->name}}</div> --}}
 
-                            {{-- 下面dd測試，資料確實有帶進來 --}}
+                            {{-- 下面dd測試，資料應該大概或許有帶進來 --}}
                             {{-- @php
                                 dd($member);
                             @endphp --}}
