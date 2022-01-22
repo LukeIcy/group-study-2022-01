@@ -10,7 +10,7 @@
 
         <section class="member_centre">
             <div class="container">
-                <h1 class="text-center fw-bold">會員中心</h1>
+                <h1 class="text-center fw-bold">會員中心 個人資料</h1>
                 <div class="row d-flex flex-column flex-md-row">
                     <div class="col-12 col-md-4 d-flex align-items-end mb-3 mb-md-0">
                         <div class="pic me-3">
@@ -40,6 +40,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3 mb-md-0">
                             <div class="fw-bold fs-5 m-0">真實姓名</div>
+                            <div class="mb-3">未填</div>
                             {{-- 下面嘗試會員中心帶入顯示的會員資料->名字 --}}
                             {{-- <div class="mb-3">{{$member[0]->name}}</div> --}}
                             {{-- <div class="mb-3">{{$member->name}}</div> --}}
@@ -61,11 +62,11 @@
                             {{-- <div class="mb-3">{{Auth::user()->name}}</div> --}}
                             {{-- 累了 先這樣... --}}
                             {{-- 等等 雖然只有一筆資料 我要不要乾脆試試看foreach --}}
-                            {{-- @foreach ($member as $item)                                
-                            <div class="mb-3">{{$item->name}}</div>
-                            @endforeach --}}
+                            {{-- @foreach ($member as $item) --}}
+                            {{-- <div class="mb-3">{{$item->name}}</div> --}}
+                            {{-- <div class="mb-3">{{$item->['name']}}</div> --}}
+                            {{-- @endforeach --}}
                             {{-- 很好 當我沒說 --}}
-
 
                             {{-- 下面dd測試，資料應該大概或許有帶進來 --}}
                             {{-- @php
