@@ -30,14 +30,15 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/1.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>1月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>3個月</span></p>
+                                    <p class="card-text">姓名：1月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：3個月<span ><a href="">...more</a></span></p>
+
                                 </div>
                             </div>
                         </a>
@@ -47,14 +48,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/2.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>2月</span></p>
-                                    <p class="card-text">姓別：<span>女生</span></p>
-                                    <p class="card-text">年齡：<span>2歲半</span></p>
+                                    <p class="card-text">姓名：2月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：女生</p>
+                                    <p class="card-text">年齡：2歲半<span ><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -64,14 +65,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/3.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>3月</span></p>
-                                    <p class="card-text">姓別：<span>女生</span></p>
-                                    <p class="card-text">年齡：<span>1個月</span></p>
+                                    <p class="card-text">姓名：3月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：女生</p>
+                                    <p class="card-text">年齡：1個月<span ><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -81,14 +82,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/4.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>4月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>3歲</span></p>
+                                    <p class="card-text">姓名：4月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：3歲<span ><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -98,14 +99,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/5.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>5月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>約2歲</span></p>
+                                    <p class="card-text">姓名：5月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：約2歲<span ><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -115,14 +116,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/6.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>6月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>6歲</span></p>
+                                    <p class="card-text">姓名：6月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：6歲<span ><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -131,15 +132,15 @@
 
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                        <a href="">
-                            <div class="card" style="width: 18rem;">
+                        <a href="./animal_information.html">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/7.jpg" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>7月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>4歲</span></p>
+                                    <p class="card-text">姓名：7月<span><i class="fas fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：4歲<span><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -149,14 +150,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/8.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>8月</span></p>
-                                    <p class="card-text">姓別：<span>女生</span></p>
-                                    <p class="card-text">年齡：<span>2歲多</span></p>
+                                    <p class="card-text">姓名：8月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：女生</p>
+                                    <p class="card-text">年齡：2歲多<span><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -166,14 +167,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/9.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>9月</span></p>
-                                    <p class="card-text">姓別：<span>女生</span></p>
-                                    <p class="card-text">年齡：<span>1歲3個月</span></p>
+                                    <p class="card-text">姓名：9月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：女生</p>
+                                    <p class="card-text">年齡：1歲3個月<span><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -183,14 +184,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/10.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>10月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>約5歲</span></p>
+                                    <p class="card-text">姓名：10月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：約5歲<span><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -200,14 +201,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/11.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>11月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>1歲多</span></p>
+                                    <p class="card-text">姓名：11月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：1歲多<span><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>
@@ -217,14 +218,14 @@
                     <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <div class="pic h-50">
                                     <img src="./team-img/adoption_pic/12.png" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：<span>12月</span></p>
-                                    <p class="card-text">姓別：<span>男生</span></p>
-                                    <p class="card-text">年齡：<span>5歲</span></p>
+                                    <p class="card-text">姓名：12月<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：男生</p>
+                                    <p class="card-text">年齡：5歲<span><a href="">...more</a></span></p>
                                 </div>
                             </div>
                         </a>

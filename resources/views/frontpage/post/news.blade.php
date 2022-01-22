@@ -73,11 +73,11 @@
 
             @foreach ($news as $item)
 
-                <div class="row">
-                    <div class="col-4">
+                <div class="row flex-column flex-md-row">
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
                         <img class="w-100" style="height: 250px" src="{{ $item->image }}" alt="">
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-6">
                         <h5 class="bg-gradient text-white bg-opacity-75 d-inline-flex p-2 bd-highlight text-center mb-4">
                             {{$item->type}}</h5>
                         <h3 class="outline mb-4"><a href="#" target="_self">{{ $item->title }}</a></h3>
