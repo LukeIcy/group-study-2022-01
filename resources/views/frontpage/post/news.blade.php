@@ -5,6 +5,17 @@
 @section('css')
     <link rel="stylesheet" href="./css/news.css">
     <style>
+        #imgcat{
+            width: 61%;
+            height: 220px;
+            opacity: 0.8;
+        }
+        #imgdog{
+            width: 66%;
+            height: 188px;
+            opacity: 0.8;
+        }
+
         .news_content {
             overflow: hidden;
             display: -webkit-box;
@@ -19,33 +30,30 @@
 
 @section('main')
 
-    <section class="news py-3 mb-3">
-        <div class="container">
-            <div class="news_title">
-                <div class="row">
-                    <div class="col-4">
-                        <img class="mb-3" src="./team-img/news_pic/cat.png" width="302px" height="260px" alt="">
-                    </div>
-                    <div class="col-4 d-flex justify-content-center align-items-center">
-                        <div class="">
-                            <h1 class="" style="color: #85550E;font-size: 80px;font-weight: 600;">最新消息</h1>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <img class="mb-3" src="./team-img/news_pic/dog.png" width="302px" height="260px" alt="">
-                    </div>
-                </div>
+<section class="news_title">
+    <div class="container">
+        <div class="row mb-3 h1_row">
+            <div class="col-lg-4 d-flex align-items-end justify-content-center">
+                <img src="./team-img/news_pic/cat01.png" id="imgcat" alt="">
             </div>
-            <ul class="d-flex justify-content-end">
-                <li class="px-3">
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <h1 style="color: #85550E;font-size: 80px;font-weight: 600;">最新消息</h1>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <img src="./team-img/news_pic/dog01.png" id="imgdog" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <ul class="d-flex justify-content-center justify-content-sm-end">
+                <li class="px-1 px-sm-3">
                     <span>資料總筆數：</span>
-                    <span class="text-danger">47</span>
+                    <span class="text-danger">18</span>
                 </li>
-                <li class="px-3">
+                <li class="px-1 px-sm-3">
                     <span>每頁筆數：</span>
                     <span class="text-danger">4</span>
                 </li>
-                <li class="px-3">
+                <li class="px-1 px-sm-3">
                     <span>總頁數：</span>
                     <span class="text-danger">6</span>
                 </li>
@@ -54,9 +62,12 @@
                     <span class="text-danger">1</span>
                 </li>
             </ul>
-            <hr>
         </div>
-    </section>
+    </div>
+</section>
+
+<hr style="height: 2px;background-color: #d56246;opacity: 0.8;">
+
     <section class="news_content">
         <div class="container">
 
@@ -74,7 +85,7 @@
                         <p class="news_content">{{ $item->content }}</p>
                     </div>
                 </div>
-                <hr class="my-5">
+                <hr class="my-5" style="height: 2px;background-color: #d56246;opacity: 0.8;">
             @endforeach
         {{-- 以下測試paginate的分頁按鈕功能 --}}
 

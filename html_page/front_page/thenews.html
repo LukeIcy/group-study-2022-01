@@ -15,18 +15,10 @@
     <!-- index css -->
     <link rel="stylesheet" href="./css/layout.css">
     <style>
-        * { 
-            box-sizing:border-box;
+        * {
+            box-sizing: border-box;
             margin: 0px;
             padding: 0px;
-           }
-
-        .wrap {
-            position: relative;
-        }
-
-        .news-page-title {
-            padding: 0 50px 0 50px;
         }
 
         .newstitle span>b {
@@ -44,11 +36,11 @@
 
         .text {
             font-size: 18px;
-            font-weight: bolder;
+            font-weight: 600;
         }
 
-        .pic {
-            display:flex;
+        .cards {
+            display: flex;
         }
 
         .picturetext {
@@ -64,16 +56,12 @@
             background-position: center;
             background-size: contain;
         }
-
-        .icontext {
-            font-weight: bolder;
-        }
     </style>
 </head>
 
 <body>
-     <!-- go top button -->
-     <a href="#" class="go-top">
+    <!-- go top button -->
+    <a href="#" class="go-top">
         <img src="./team-img/icon/uptotop.png" width="50px" alt="">
     </a>
     <!-- nav bar -->
@@ -147,72 +135,108 @@
         </div>
     </nav>
 
-<main>
-    <div class="container">
-        <div class="warp">
-            <div class="news-page-title">
-                <h1 class="title">[毛寶貝] 到府服務</h1>
-                <div class="newstitle">
-                <span>
-                    發布日期 : 
-                    <b>2022-02-29</b>
-                    <hr style="height: 1px; background-color: black;">
-                </span>
+    <main>
+        <section class="newsbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="warp">
+                            <div class="news-page-title">
+                                <h1 class="title">[毛寶貝] 到府服務</h1>
+                                <div class="newstitle">
+                                    <span class="">
+                                        發布日期 :
+                                        <b class="textudanger">2022-02-29</b>
+                                    </span>
+                                </div>
+                                <hr style="height: 1px; background-color: black;">
+                            </div>
+                            <div class="newstextbox fw-bold fs-5">
+                                <p class="text">關注流浪動物議題、喜愛毛孩的人們，絕不能錯過的感動紀錄片《浪浪回家》，
+                                    11月4日在想映電影院線上平台獨家上架！這部紀錄片由瑞士電影配樂家馬汀．斯卡爾斯基（Martin Skalsky）自編自導，
+                                    是他的第一部導演作品，曾在蘇黎世影展舉行世界首映，也獲許多國外網友盛讚「這是一部很棒的紀錄片！」、
+                                    「謝謝這部美麗的電影。」「這部電影讓人更關注動物福利的相關議題。」
+                                    今年主燈仍由中華電信股份有限公司贊助，突破往年燈會主燈設計，首創將書法藝術與傳統燈藝融合，
+                                    由國寶級書法家董陽孜老師首次為台灣燈會親自揮毫，為主燈名稱及開燈六步驟題字，
+                                    在歡樂的元宵節慶時增添濃厚之藝術氣質，也讓燈會的觀光效益無限延伸。</p>
+                                <p class="text my-5">流浪動物除了在街頭流浪外，
+                                    能去的地方就是「收容所」及「私人狗園」，
+                                    但因為收容及狗園的動物量通常都很多，
+                                    為了避免噪音氣味干擾鄰居，
+                                    所以通常都會蓋得離人群很遠，
+                                    距離的關係，
+                                    民眾無法接觸到狗園及收容所，
+                                    更別說能實踐「領養」了。</p>
+                                <p class="text my-5">歡迎有心想養狗貓的人來這裡看看有沒有與你有緣的動物，
+                                    我們希望能讓客人在無壓力的狀態下與浪浪互動幫浪浪們找到一個溫暖的家！
+                                    愛媽花了整整一年的時間才能把五個孩子和媽媽一一的從那位不良飼主的手中救回，
+                                    又經過了好長一段時間和努力才讓這些三年來從沒有接觸過外界的孩子們開始慢慢敞開心胸、有些相信人類
+                                    展現你的業務內容、建立廣告並與顧客或支持者建立聯繫
+                                </p>
+                                <p class="text my-5">瓜地馬拉的卡哈本河上有2座政府許可建造的水力發電廠。建造工程奪走當地原住民一直守護的森林，
+                                    如今更將失去賴以為生的水資源。
+                                    正是讓大家看見高雄20年來的成長改變，高雄捷運通車、高雄世運、縣市合併等，型塑城市光榮感及國際榮耀。
+                                    今年台灣燈會選擇以衛武營展區及愛河灣展區做為雙展區，
+                                    亦可讓大家看見原高雄市及原高雄縣相互融合、共榮互利的發展，呼應本次燈會主題「聚光臺灣 高雄發光」。
+                                </p>
+                                <p class="text">今年命名為「大吉虎」，以民間信仰小朋友的守護神「虎爺」作Q版設計，並於虎掌上寫著「大吉」和「大利」，
+                                    除可供小朋友提燈遊玩外，亦可坐立於桌面上，做為祈求平安的虎爺公仔，保佑小朋友平安，期許疫病遠離。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="newstextbox">
-                <p class="text">關注流浪動物議題、喜愛毛孩的人們，絕不能錯過的感動紀錄片《浪浪回家》，
-                    11月4日在想映電影院線上平台獨家上架！這部紀錄片由瑞士電影配樂家馬汀．斯卡爾斯基（Martin Skalsky）自編自導，
-                    是他的第一部導演作品，曾在蘇黎世影展舉行世界首映，也獲許多國外網友盛讚「這是一部很棒的紀錄片！」、
-                    「謝謝這部美麗的電影。」「這部電影讓人更關注動物福利的相關議題。」
-                    今年主燈仍由中華電信股份有限公司贊助，突破往年燈會主燈設計，首創將書法藝術與傳統燈藝融合，
-                    由國寶級書法家董陽孜老師首次為台灣燈會親自揮毫，為主燈名稱及開燈六步驟題字，
-                    在歡樂的元宵節慶時增添濃厚之藝術氣質，也讓燈會的觀光效益無限延伸。</p>
-                <p class="text">流浪動物除了在街頭流浪外，
-                    能去的地方就是「收容所」及「私人狗園」，
-                    但因為收容及狗園的動物量通常都很多，
-                    為了避免噪音氣味干擾鄰居，
-                    所以通常都會蓋得離人群很遠，
-                    距離的關係，
-                    民眾無法接觸到狗園及收容所，
-                    更別說能實踐「領養」了。</p>
-                <p class="text">歡迎有心想養狗貓的人來這裡看看有沒有與你有緣的動物，
-                   我們希望能讓客人在無壓力的狀態下與浪浪互動幫浪浪們找到一個溫暖的家！
-                   愛媽花了整整一年的時間才能把五個孩子和媽媽一一的從那位不良飼主的手中救回，
-                   又經過了好長一段時間和努力才讓這些三年來從沒有接觸過外界的孩子們開始慢慢敞開心胸、有些相信人類
-                   展現你的業務內容、建立廣告並與顧客或支持者建立聯繫
-                </p>
-                <p class="text">瓜地馬拉的卡哈本河上有2座政府許可建造的水力發電廠。建造工程奪走當地原住民一直守護的森林，
-                    如今更將失去賴以為生的水資源。
-                    正是讓大家看見高雄20年來的成長改變，高雄捷運通車、高雄世運、縣市合併等，型塑城市光榮感及國際榮耀。
-                    今年台灣燈會選擇以衛武營展區及愛河灣展區做為雙展區，
-                    亦可讓大家看見原高雄市及原高雄縣相互融合、共榮互利的發展，呼應本次燈會主題「聚光臺灣 高雄發光」。
-                </p>
-                <p class="text">今年命名為「大吉虎」，以民間信仰小朋友的守護神「虎爺」作Q版設計，並於虎掌上寫著「大吉」和「大利」，
-                    除可供小朋友提燈遊玩外，亦可坐立於桌面上，做為祈求平安的虎爺公仔，保佑小朋友平安，期許疫病遠離。
-                </p>
-            </div>
-    </div>
-    </div>
-    <div class="container">
-        <div class="picturetext">
-                <div class="icon"></div>
-                <h2 class="icontext">照片</h2>
-            </div>
-        <div class="pic">
-            <div class="imgp">
-                <div class="imgnews">
-                    <img src="https://image.freepik.com/free-photo/closeup-cute-white-ginger-tabby-cat-sitting-carpet_181624-41514.jpg" alt="">
+        </section>
+        <section class="newspicture" style="margin-bottom: 120px;">
+            <div class="container">
+                <div class="picturetext">
+                    <div class="icon"></div>
+                    <h2 class="icontext fw-bold">照片</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="imgcard" style="border: double #020202;">
+                            <img src="https://image.freepik.com/free-photo/closeup-cute-white-ginger-tabby-cat-sitting-carpet_181624-41514.jpg"
+                                class="card-img-top" alt="">
+                            <div class="cardbody">
+                                <p class="cardtext m-3">24小時免付費旅遊諮詢熱線：0800-011765
+                                    免付費國旅券專線：0800-211734（服務時間：週一至週日8:30~18:30）以臺灣造型、
+                                    帝雉展翅及乘風(氣旋)而起優美之姿，交通部王國材部長表示，台灣燈會隔20年重返高雄
+                                    之後每小時整點及30分各展演1場主燈秀
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="imgcard" style="border: double #020202;">
+                            <img src="https://image.freepik.com/free-photo/beautiful-pet-portrait-small-dog-cat_23-2149218512.jpg"
+                                class="card-img-top" alt="">
+                            <div class="cardbody">
+                                <p class="cardtext m-3">路，協調公路、警察及相關主管機關，將加強期間之交通疏導等工作，
+                                    並輔導開行觀光遊樂地區接駁專車、「台灣好行」景點接駁公車及「台灣觀巴」套裝旅遊行程服務，
+                                    提出各種替代景點方案及路線，以紓解車流，讓春節出遊更輕鬆。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="imgcard" style="border: double #020202;">
+                            <img src="https://image.freepik.com/free-photo/closeup-cute-white-ginger-tabby-cat-sitting-carpet_181624-41514.jpg"
+                                class="card-img-top" alt="">
+                            <div class="cardbody">
+                                <p class="cardtext m-3">首創將書法藝術與傳統燈藝融合，由國寶級書法家董陽孜老師首次為台灣燈會親自揮毫，
+                                    為主燈名稱及開燈六步驟題字，在歡樂的元宵節慶時增添濃厚之藝術氣質，也讓燈會的觀光效益無限延伸。
+                                    棲息在祥雲籠罩之高山上，
+                                    打造本次饒富現代風格並融合
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="imgp">
-                <div class="imgnews">
-                    <img src="https://image.freepik.com/free-photo/beautiful-pet-portrait-small-dog-cat_23-2149218512.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+        </section>
+    </main>
 
     <footer class="footdown">
         <div class="container">
