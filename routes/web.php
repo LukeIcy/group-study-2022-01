@@ -24,7 +24,7 @@ Route::get('template', function () {
 
 // user系統加入的
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 // 預設 先放著
 Route::get('/', function () {
     return view('welcome');
@@ -61,8 +61,11 @@ Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.
 // 一起回家故事單頁 還沒有頁面!!
 Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
 
-// 會員中心 送養人的個人資料
-Route::get('/{id}/member',[AdopController::class,'member'])->name('center.member');
+// 會員中心 送養人個人資料
+// Route::get('/{id}/member',[AdopController::class,'member'])->name('center.member');
+Route::get('/member',[AdopController::class,'member'])->name('center.member');
+// 會員中心 編輯送養人個人資料
+Route::get('/member/edit',[AdopController::class,'memberedit'])->name('center.memberedit');
 
 
 // 文章列表 - 後台

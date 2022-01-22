@@ -23,9 +23,17 @@ class AdopController extends Controller
     // 會員中心 送養人的個人資料(前台)
     // 在外面的網頁嘗試用這樣帶資料進來看看，好像有成功
     // href="{{ route('center.member',['id' =>Auth::user()->id]) }}"
-    public function member($id)
+
+    // public function member($id)
+    public function member()
     {
-        $member = User::find($id);
-        return view('frontpage.center.member',compact('member'));
+        // $member = User::find($id);
+        // return view('frontpage.center.member',compact('member'));
+        return view('frontpage.center.member');
+    }
+
+    public function memberedit()
+    {
+        return view('frontpage.center.member_edit');
     }
 }
