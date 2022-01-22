@@ -25,9 +25,11 @@ class PostController extends Controller
     // 寵物保姆(前台)
     public function sitter()
     {
-        $sitter = News::where('type', '寵物保姆')->paginate(5);
-        // dd($sitter);
-        return view('frontpage.post.sitter',compact('sitter'));
+        $num = 5;
+        $sitter = News::where('type', '寵物保姆')->paginate($num);
+        // dd($sitter->id);這個會報錯，因為陣列沒有自己的id
+        // dd($sitter[0]->id);這個不會抱錯，因為他是陣列
+        return view('frontpage.post.sitter',compact('sitter','num'));
     }
 
     // 動保法律(前台) 沒人做這頁
