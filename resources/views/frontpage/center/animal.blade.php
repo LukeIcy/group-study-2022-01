@@ -102,7 +102,8 @@
         <section class="animal_information">
             <div class="container">
                 <div class="next text-end mb-2">
-                    <a class="text-dark fw-bolder fs-6 text-decoration-none" href="./adoption_pic.html"><i class="fas fa-caret-right"></i> 返回上一頁</a></div>
+                    <a class="text-dark fw-bolder fs-6 text-decoration-none" href="./adoption_pic.html"><i class="fas fa-caret-right"></i> 返回上一頁</a>
+                </div>
                 <div class="row mb-3">
                     <div class="col-12 col-lg-5">
                         <div class="swiper mySwiper2">

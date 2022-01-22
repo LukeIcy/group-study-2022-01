@@ -13,6 +13,9 @@
 
     <section class="animal_information">
         <div class="container">
+            <div class="next text-end mb-2">
+                <a class="text-dark fw-bolder fs-6 text-decoration-none" href="./adoption_pic.html"><i class="fas fa-caret-right"></i> 返回上一頁</a>
+            </div>
             <div class="row mb-3">
                 <div class="col-12 col-lg-5">
                     <div class="swiper mySwiper2">
@@ -70,7 +73,7 @@
                 </div>
                 <div class="col-12 col-lg-7 information">
                     <div class="information_title p-4 py-lg-0 d-flex justify-content-between">
-                        <h5><i class="fas fa-square mx-2"></i>萌寵基本資料</h5>
+                        <h5><i class="fas fa-square mx-2"></i>貓咪基本資料</h5>
                         <a href=""><i class="fas fa-share-alt"></i></a>
                     </div>
                     <ul>
@@ -113,6 +116,7 @@
             </div>
         </div>
     </section>
+    
     <section class="advise">
         <div class="container">
             <!-- 申請前叮嚀 -->
@@ -131,6 +135,7 @@
             </div>
         </div>
     </section>
+
     <section class="conditions mb-5">
         <div class="container">
             <!-- 認養條件 -->
@@ -141,7 +146,7 @@
                         <div class="condition d-flex flex-column align-items-center">
                             <h2>認養條件</h2>
                             <span>【須簽署認養協議書，內容請參見：<a
-                                    href="http://tinyurl.com/bkuryqw">http://tinyurl.com/bkuryqw</a>】</span>
+                                    href="https://reurl.cc/DdyQv6">https://reurl.cc/DdyQv6</a>】</span>
                             <ul>
                                 <li>(1)家人的支持以及意見是很重要的，必須經過家人或室友同意。(住學校宿舍不行)</li>
                                 <li>(2)有經濟能力可以照顧貓咪，並每年施打預防針，及貓咪生病時的醫藥費負擔。</li>
