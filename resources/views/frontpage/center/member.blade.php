@@ -40,7 +40,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3 mb-md-0">
                             <div class="fw-bold fs-5 m-0">真實姓名</div>
-                            {{-- 下面嘗試會員中心帶入顯示的會員資料 名字 --}}
+                            {{-- 下面嘗試會員中心帶入顯示的會員資料->名字 --}}
                             {{-- <div class="mb-3">{{$member[0]->name}}</div> --}}
                             {{-- <div class="mb-3">{{$member->name}}</div> --}}
                             {{-- <div class="mb-3">{{$member['name']}}</div> --}}
@@ -48,7 +48,15 @@
                             {{-- <div class="mb-3">{{$name => $member['name']}}</div> --}}
                             {{-- <div class="mb-3">{{$member['name']->name}}</div> --}}
                             {{-- <div class="mb-3">{{{$member['name']}}}</div> --}}
-                            
+                            {{-- <div class="mb-3">{{$member[0]['name']}}</div> --}}
+                            {{-- <div class="mb-3">{{$member->data['name']}}</div> --}}
+                            {{-- <div class="mb-3">{{$member}}</div> --}}
+                            {{-- <div class="mb-3">{{$member["name"]}}</div> --}}
+                            {{-- <div class="mb-3">{{{$member["name"]}}}</div> --}}
+                            {{-- <div class="mb-3">{{$member[0]["name"]}}</div> --}}
+                            {{-- <div class="mb-3">{{$member->data["name"]}}</div> --}}
+
+                            {{-- 下面dd測試，資料確實有帶進來 --}}
                             {{-- @php
                                 dd($member);
                             @endphp --}}
