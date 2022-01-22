@@ -62,7 +62,7 @@ Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.
 Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
 
 // 會員中心 送養人的個人資料
-Route::get('/member',[AdopController::class,'member'])->name('center.member');
+Route::get('/{id}/member',[AdopController::class,'member'])->name('center.member');
 
 
 // 文章列表 - 後台
