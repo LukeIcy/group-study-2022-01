@@ -38,10 +38,6 @@ Route::get('/index',[FrontController::class,'index'])->name('front.index');
 Route::get('/aboutus',[FrontController::class,'aboutus'])->name('front.aboutus');
 // 支持我們
 Route::get('/supportus',[FrontController::class,'supportus'])->name('front.supportus');
-// 我要領養
-Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
-// 動物資訊&申請表
-Route::get('/adoption/{id}/apply',[AdopController::class,'apply'])->name('center.apply');
 // 最新消息
 Route::get('/news',[PostController::class,'index'])->name('news.index');
 // 寵物保姆
@@ -53,12 +49,20 @@ Route::get('/law',[PostController::class,'law'])->name('news.law');
 // 媒合故事 一起回家故事
 Route::get('/match',[PostController::class,'match'])->name('news.match');
 
+// 我要領養
+Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
+// 動物資訊&申請表 為了看頁面先去掉路徑裡的{id}
+Route::get('/adoption/animal',[AdopController::class,'animal'])->name('center.animal');
+
 // 最新消息單頁 還沒有頁面!!
 Route::get('/{id}/article',[PostController::class,'article'])->name('news.article');
 // 動保法律單頁 還沒有頁面!!
 Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.lawarticle');
 // 一起回家故事單頁 還沒有頁面!!
 Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
+
+// 會員中心 送養人的個人資料
+Route::get('/member',[AdopController::class,'member'])->name('center.member');
 
 
 // 文章列表 - 後台
@@ -88,9 +92,6 @@ Route::get('/user/{id}/edit',[UserController::class,'edit'])->name('user.edit');
 Route::patch('/user/{id}/update',[UserController::class,'update'])->name('user.update');
 // 刪除
 Route::delete('/user/{id}',[UserController::class,'destroy'])->name('user.destroy');
-
-
-
 
 
 // 後台頁面-申請表列表
