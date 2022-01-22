@@ -66,6 +66,9 @@ Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
 Route::get('/member',[AdopController::class,'member'])->name('center.member');
 // 會員中心 編輯送養人個人資料
 Route::get('/member/edit',[AdopController::class,'memberedit'])->name('center.memberedit');
+// 會員中心 我要送養
+Route::get('/member/putadop',[AdopController::class,'putadop'])->name('center.putadop');
+
 
 
 // 文章列表 - 後台
