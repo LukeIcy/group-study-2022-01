@@ -13,8 +13,14 @@ class AdopController extends Controller
     }
 
     // 動物資訊&申請表(前台)
-    public function apply()
+    public function animal()
     {
         return view('frontpage.center.animal');
+    }
+
+    // 會員中心 送養人的個人資料(前台)
+    public function member()
+    {
+        return view('frontpage.center.member');
     }
 }
