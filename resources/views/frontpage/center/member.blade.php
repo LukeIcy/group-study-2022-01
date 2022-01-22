@@ -60,6 +60,12 @@
                             {{-- 我是不是乾脆看看都從Auth抓資料出來 --}}
                             {{-- <div class="mb-3">{{Auth::user()->name}}</div> --}}
                             {{-- 累了 先這樣... --}}
+                            {{-- 等等 雖然只有一筆資料 我要不要乾脆試試看foreach --}}
+                            {{-- @foreach ($member as $item)                                
+                            <div class="mb-3">{{$item->name}}</div>
+                            @endforeach --}}
+                            {{-- 很好 當我沒說 --}}
+
 
                             {{-- 下面dd測試，資料應該大概或許有帶進來 --}}
                             {{-- @php
