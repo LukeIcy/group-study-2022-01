@@ -74,7 +74,12 @@
                 <hr class="my-5">
             @endforeach
         {{-- 以下測試paginate的分頁按鈕功能 --}}
-        {{$news->links()}}
+        
+        <div class="row">
+            <div class="col d-flex justify-content-center mb-5">
+                {{$news->links()}}
+            </div>
+        </div>
         </div>
 
         <!-- 原本的按鈕區塊 -->

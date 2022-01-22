@@ -16,13 +16,12 @@
         <ul class="d-flex justify-content-end fw-bold" style="font-size: 18px;">
             <li class="px-3">
                 <span>資料總筆數：</span>
-                {{-- <span class="text-danger">{{ count($sitter->id) }}</span> --}}
-                {{-- 上面的總比數不知道為什麼不能實現 --}}
-                <span class="text-danger">10000</span>
+                <span class="text-danger">{{ count($sitter) }}</span>
+                {{-- 總筆數不能用count指令求$sitter->id，因為在這邊sitter是陣列， --}}
             <li class="px-3">
                 <span>每頁筆數：</span>
                 {{-- 下面這個填入在controller中設定的數字即可 感覺好像可以用變數耶 有空試試看--}}
-                <span class="text-danger">5</span>
+                <span class="text-danger">{{$num}}</span>
             </li>
             <li class="px-3">
                 {{-- 有想法 沒空試 哀傷 --}}
@@ -31,7 +30,7 @@
             </li>
             <li>
                 <span>目前頁次：</span>
-                {{-- 感覺好像可以抓到 有空試試 但都沒空 --}}
+                {{-- 太久沒碰js 不知道怎麼抓 --}}
                 <span class="text-danger">1</span>
             </li>
         </ul>
@@ -70,7 +69,7 @@
 
         <!-- end -->
         {{-- 下面範例留存 --}}
-        <div class="row ">
+        <div class="row">
             <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-end">
                 <img class="w-100" src="./team-img/babysitter/04.jpg" alt="">
             </div>
@@ -89,7 +88,12 @@
         <hr class="mb-5" style="height: 2px;background-color: #d56246;opacity: 0.8;">
     </div>
 
-    {{$sitter->links()}}
+    <div class="row">
+        <div class="col d-flex justify-content-center mb-5">
+            {{$sitter->links()}}
+        </div>
+    </div>
+
     <!-- 按鈕區塊 -->
     {{-- <div class="py-5 mb-5 position-relative">
         <img class="w-25 position-absolute end-0 bottom-100" src="./team-img/babysitter/paw01.png"  alt="">
@@ -112,5 +116,5 @@
 @endsection
 
 @section('js')
-    
+
 @endsection
