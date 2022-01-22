@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\FilesController;
 
 class UserController extends Controller
 {
@@ -15,15 +16,26 @@ class UserController extends Controller
         return view('admin.user.list',compact('user'));
     }
 
-    // 更改使用者密碼
+    // 更改使用者資料
     public function update($id, Request $request)
     {
         $user = User::find($id);
+
+        $path = $user->avatar;
+        if ($request->avatar){
+            $path = FilesController::imgUpload($request->avatar,'avatar');
+        };
+
+        $user->name = $request->name;
+        $user->career = $request->career;
+        $user->experience = $request->experience;
+        $user->email = $request->email;
+        $user->adopnumber = $request->adopnumber;
         // 改密碼，必需用系統預設的hash雜湊加密
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return redirect()->route('user.list');
+        return redirect()->route('center.member');
     }
 
     // 刪除使用者

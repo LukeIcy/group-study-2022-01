@@ -108,7 +108,6 @@ class PostController extends Controller
 
     public function update($id,Request $request)
     {
-
         $news = News::find($id);
 
         $path = $news->image;
