@@ -43,10 +43,16 @@
                             {{-- 下面嘗試會員中心帶入顯示的會員資料 名字 --}}
                             {{-- <div class="mb-3">{{$member[0]->name}}</div> --}}
                             {{-- <div class="mb-3">{{$member->name}}</div> --}}
-
-                            @php
+                            {{-- <div class="mb-3">{{$member['name']}}</div> --}}
+                            {{-- <div class="mb-3">{{$name = $member['name']}}</div> --}}
+                            {{-- <div class="mb-3">{{$name => $member['name']}}</div> --}}
+                            {{-- <div class="mb-3">{{$member['name']->name}}</div> --}}
+                            {{-- <div class="mb-3">{{{$member['name']}}}</div> --}}
+                            
+                            {{-- @php
                                 dd($member);
-                            @endphp
+                            @endphp --}}
+
                             <div class="fw-bold fs-5 m-0">中途資歷</div>
                             <div class="mb-3">未填</div>
                             <div class="fw-bold fs-5 m-0">中途項目

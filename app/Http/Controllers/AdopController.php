@@ -21,7 +21,7 @@ class AdopController extends Controller
     }
 
     // 會員中心 送養人的個人資料(前台)
-    // 在外面的網頁嘗試用這樣帶資料進來看看
+    // 在外面的網頁嘗試用這樣帶資料進來看看，好像有成功
     // href="{{ route('center.member',['id' =>Auth::user()->id]) }}"
     public function member($id)
     {
