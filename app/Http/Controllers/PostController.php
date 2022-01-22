@@ -32,12 +32,12 @@ class PostController extends Controller
         return view('frontpage.post.sitter',compact('sitter','num'));
     }
 
-    // 動保法律(前台) 沒人做這頁
+    // 動保法律列表(前台) 沒人做這頁
     // 之後記得換view的路徑
     public function law()
     {
         $law = News::where('type', '動保法律')->paginate(5);
-        return view('frontpage.post.lawanimal',compact('law'));
+        return view('frontpage.post.law',compact('law'));
     }
 
     // 動保法律&動物救援(前台) 只顯示兩比資料
