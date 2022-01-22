@@ -11,6 +11,9 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
         }
+        img{
+            object-fit: cover;
+        }
     </style>
 @endsection
 
@@ -74,7 +77,7 @@
                 <hr class="my-5">
             @endforeach
         {{-- 以下測試paginate的分頁按鈕功能 --}}
-        
+
         <div class="row">
             <div class="col d-flex justify-content-center mb-5">
                 {{$news->links()}}
