@@ -20,9 +20,9 @@
 @section('main')
 
 <!-- 大圖區 -->
-<section class="home position-relative mb-5" id="home">
+<section class="home position-relative" id="home" style="margin-bottom: 150px;">
     <div class="container-fluid p-0">
-        <img class="w-100" src="./team-img/index.jpg" alt="">
+        <img class="img w-100" src="./team-img/index.jpg" style="background-position: center;object-fit: cover;height: 820px;" alt="">
     </div>
     <div class="container">
         <div class="home-content">
@@ -37,7 +37,7 @@
 </section>
 
 <!-- 關於一起回家 -->
-<section class="gohome" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500">
+<section class="gohome" style="margin-bottom: 100px">
     <div class="container">
         <div class="row position-relative">
             <div class="col-12 col-lg-4 mb-3 mb-lg-0">
@@ -45,9 +45,9 @@
                     <div class="title offset-lg-1">
                         <h2 class="card-title my-4" style="color: #d56246;">關於 "一起回家"</h2>
                         <p class="card-text">
-                            隨著網路科技的進步，正確的動物保護觀念已逐漸在台灣教育紮根，我們所要做的就是希望透過有效率的免付費認養平台，幫助毛孩回家。</p>
+                            透過數據篩選機制加速媒合認養利用，推薦會員制度做更安心的保障，唯一的期望就是讓孩子一起回家</p>
                         <div class="title_icon">
-                            <img class="card-logo w-25" src="./team-img/LOGO/LOGO-3.png" alt="">
+                            <img class="card-logo w-25" src="./team-img/LOGO/LOGO-3.png" style="opacity: 0.5;" alt="">
                         </div>
                     </div>
                 </div>
