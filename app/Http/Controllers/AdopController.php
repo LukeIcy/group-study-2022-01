@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdopController extends Controller
 {
@@ -19,8 +21,11 @@ class AdopController extends Controller
     }
 
     // 會員中心 送養人的個人資料(前台)
-    public function member()
+    // 在外面的網頁嘗試用這樣帶資料進來看看
+    // href="{{ route('center.member',['id' =>Auth::user()->id]) }}"
+    public function member($id)
     {
-        return view('frontpage.center.member');
+        $member = User::find($id);
+        return view('frontpage.center.member',compact('member'));
     }
 }
