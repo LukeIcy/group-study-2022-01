@@ -106,7 +106,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 {{-- 下面這行，嘗試加入會員中心按鈕，之後會設權限只有送養人看得到 --}}
-                                <a class="btn" href="{{ route('center.member') }}">會員中心</a>
+                                <a class="btn" href="{{ route('center.member',['id' =>Auth::user()->id]) }}">會員中心</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">登出</a>
 
