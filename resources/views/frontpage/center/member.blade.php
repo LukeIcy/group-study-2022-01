@@ -40,7 +40,13 @@
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3 mb-md-0">
                             <div class="fw-bold fs-5 m-0">真實姓名</div>
-                            <div class="mb-3">未填</div>
+                            {{-- 下面嘗試會員中心帶入顯示的會員資料 名字 --}}
+                            {{-- <div class="mb-3">{{$member[0]->name}}</div> --}}
+                            {{-- <div class="mb-3">{{$member->name}}</div> --}}
+
+                            @php
+                                dd($member);
+                            @endphp
                             <div class="fw-bold fs-5 m-0">中途資歷</div>
                             <div class="mb-3">未填</div>
                             <div class="fw-bold fs-5 m-0">中途項目
