@@ -65,7 +65,7 @@
         <div class="row">
             <h3>等待一個回家機會的孩子</h3>
         </div>
-        <div class="row">
+        <div class="row mb-5">
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -105,16 +105,16 @@
                 <div class="swiper-button-next" style="color: white;"></div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" style="margin-bottom: 80px">
             <div class="box">
                 <a href="{{route('center.index')}}">
-                    <button type="button" class="btn btn-secondary rounded">更多可愛的孩子在這邊喔</button></a>
+                    <button type="button" class="btn rounded" style="width: 320px; background-color: #647D5C;color: #fff;font-size: 24px;">更多可愛的孩子在這邊喔</button></a>
             </div>
-
         </div>
     </div>
+
+    <!-- Modal -->
     <div class="modal-text">
-        <!-- Modal -->
         <div class="modal fade" id="animalSwiper1" tabindex="-1" aria-labelledby="animalSwiper1Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -324,6 +324,7 @@
         </div>
     </div>
 </section>
+
 <!-- 送養&領養步驟 -->
 <section class="step">
     <div class="container">
@@ -402,6 +403,7 @@
         </div>
     </div>
 </section>
+
 <!-- 貓狗配對區 -->
 <section class="pair-section mb-5 py-0 py-md-5">
     <div class="container">
@@ -477,7 +479,7 @@
 </section>
 
 <!-- 一起回家 -->
-<section class="together-section" data-aos="flip-up" data-aos-delay="100" data-aos-duration="1500">
+<section class="together-section">
     <div class="container">
         <div class="together shadow-lg">
             <div class="img">
