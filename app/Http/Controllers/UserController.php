@@ -27,6 +27,7 @@ class UserController extends Controller
         };
 
         $user->name = $request->name;
+        $user->avatar = $path;
         $user->career = $request->career;
         $user->experience = $request->experience;
         $user->email = $request->email;
