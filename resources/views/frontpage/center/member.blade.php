@@ -14,7 +14,7 @@
                 <div class="row d-flex flex-column flex-md-row">
                     <div class="col-12 col-md-4 d-flex align-items-end mb-3 mb-md-0">
                         <div class="pic me-3">
-                            <img src="{{Auth::user()->avatar}}" alt="">
+                            <img src="{{Auth::user()->avatar}}" alt="你的頭像">
                         </div>
                         <h4 class="fw-bold m-0">{{Auth::user()->name}}</h4>
                     </div>
@@ -23,7 +23,7 @@
                             style="width: 160px;background-color: #d56246;color: #fff;font-size: 18px;">個人資料</a>
                         <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
-                        <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
+                        <a class="btn rounded-0 ms-3 fw-bold" href="{{route('center.putadop')}}" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">我要送養</a>
                         {{-- 因為可以透過navbar的icon返回首頁 下面先不用 --}}
                         {{-- <a class="text-dark fw-bolder fs-6 text-decoration-none ms-auto none" href="./index.html">
