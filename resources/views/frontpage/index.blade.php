@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- index css -->
     <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .navbar{
+            margin-bottom: unset !important;
+        }
+    </style>
+
 @endsection
 
 @section('main')
