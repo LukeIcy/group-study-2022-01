@@ -25,9 +25,10 @@
                             style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
                         <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">我要送養</a>
-                        <a class="text-dark fw-bolder fs-6 text-decoration-none ms-auto none" href="./index.html">
+                        {{-- 因為可以透過navbar的icon返回首頁 下面先不用 --}}
+                        {{-- <a class="text-dark fw-bolder fs-6 text-decoration-none ms-auto none" href="./index.html">
                             <i class="fas fa-caret-right me-2"></i>返回首頁
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
@@ -38,27 +39,27 @@
                 <form action="" method="post">
                     <div class="row mb-3">
                         <div class="col-md-6 mb-3 mb-md-0">
-                            <label for="name" class="form-label fw-bold fs-5 m-0">姓名</label>
-                            <input type="text" name="name" id="name" class="form-control mb-3">
-                            <label for="halfwaySeniority" class="form-label fw-bold fs-5 m-0">中途資歷</label>
-                            <input type="text" name="halfwaySeniority" id="halfwaySeniority" class="form-control mb-3">
-                            <label for="halfwayList" class="form-label fw-bold fs-5 m-0">中途項目<span
-                                    class="fs-6">(簡述中途工作內容)</span></label>
-                            <textarea class="form-control" name="halfwayList" id="halfwayList" rows="5"></textarea>
+                            <div class="fw-bold fs-5 m-0">真實姓名</div>
+                            <div class="mb-3">未填</div>
+                            <div class="fw-bold fs-5 m-0">中途資歷</div>
+                            <div class="mb-3">未填</div>
+                            <div class="fw-bold fs-5 m-0">中途項目
+                                <span class="fs-6">(簡述中途工作內容)</span>
+                            </div>
+                            <div>未填</div>
                         </div>
                         <div class="col-md-6">
-                            <label for="email" class="form-label fw-bold fs-5 m-0">電子郵件</label>
-                            <input type="text" name="email" id="email" class="form-control mb-3">
-                            <label for="putupCount" class="form-label fw-bold fs-5 m-0">送養數量<span class="fs-6"> (例如：犬 5隻; 貓
-                                    5隻)</span></label>
-                            <input type="text" name="putupCount" id="putupCount" class="form-control mb-3">
-                            <label for="halfwayList" class="form-label fw-bold fs-5 m-0">想對領養人說的話</label>
-                            <textarea class="form-control" name="myself" id="myself" rows="5"></textarea>
+                            <label class="fw-bold fs-5 m-0">電子郵件</label>
+                            <div class="mb-3">未填</div>
+                            <label class="fw-bold fs-5 m-0">送養數量
+                                <span class="fs-6"> (例如：犬 5隻; 貓5隻)</span>
+                            </label>
+                            <div class="mb-3">未填</div>
+
                         </div>
                     </div>
                     <div class="btn_group d-flex justify-content-center justify-content-md-end mb-3">
-                        <button type="button" class="btn btn-outline-success border-0 fw-bold fs-5 me-3">編輯</button>
-                        <button type="button" class="btn btn-outline-dark border-0 fw-bold fs-5">完成</button>
+                        <button type="button" class="btn btn-outline-success border-0 fw-bold fs-5 me-3">編輯個人資料</button>
                     </div>
                 </form>
             </div>
