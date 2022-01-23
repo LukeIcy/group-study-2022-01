@@ -51,7 +51,7 @@
 						重設密碼
 					</button>					
 					<!-- Modal 要把按鈕跟裡面的div填入{{$item->id}}互相對應到 才能抓到每一筆資料-->
-					<form action="/user/{{$item->id}}/update" method="post">
+					<form action="/user/{{$item->id}}/updatepassword" method="post">
 						@csrf
 						@method('PATCH')
 						<div class="modal fade" id="catch{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

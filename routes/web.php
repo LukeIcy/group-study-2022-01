@@ -62,6 +62,8 @@ Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.
 // 一起回家故事單頁 還沒有頁面!!
 Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
 
+// 這個先套一下auth好了 不然沒登入會報錯
+Route::middleware('auth')->group(function(){
 // 會員中心 送養人個人資料
 // Route::get('/{id}/member',[AdopController::class,'member'])->name('center.member');
 Route::get('/member',[AdopController::class,'member'])->name('center.member');
@@ -69,9 +71,10 @@ Route::get('/member',[AdopController::class,'member'])->name('center.member');
 Route::get('/member/edit',[AdopController::class,'memberedit'])->name('center.memberedit');
 // 會員中心 我要送養
 Route::get('/member/putadop',[AdopController::class,'putadop'])->name('center.putadop');
+});
 
-
-
+// 這邊也先套一下auth 都還沒設權限分級
+Route::middleware('auth')->group(function(){
 // 文章列表 - 後台
 // 列表頁
 Route::get('/news/list',[PostController::class,'list'])->name('news.list');
@@ -95,11 +98,14 @@ Route::get('/user/create',[UserController::class,'create'])->name('user.create')
 Route::post('/user/store',[UserController::class,'store'])->name('user.store');
 // 編輯頁 目前沒做
 Route::get('/user/{id}/edit',[UserController::class,'edit'])->name('user.edit');
-// 儲存編輯
-Route::patch('/user/{id}/update',[UserController::class,'update'])->name('user.update');
+// 儲存編輯 針對修改密碼(後台管理專用)
+Route::patch('/user/{id}/updatepassword',[UserController::class,'updatepassword'])->name('user.updatepassword');
 // 刪除
 Route::delete('/user/{id}',[UserController::class,'destroy'])->name('user.destroy');
 
+// 儲存編輯 這一頁專門給會員中心編輯個人資料用
+Route::patch('/user/{id}/update',[UserController::class,'update'])->name('user.update');
+});
 
 // 後台頁面-申請表列表
 Route::prefix('admin')->group(function ()
