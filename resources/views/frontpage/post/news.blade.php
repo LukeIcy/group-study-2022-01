@@ -34,20 +34,20 @@
     <div class="container">
         <div class="row mb-3 h1_row">
             <div class="col-lg-4 d-flex align-items-end justify-content-center">
-                <img src="./team-img/news_pic/cat01.png" id="imgcat" alt="">
+                <img src="{{asset('team-img/news_pic/cat.png')}}" id="imgcat" alt="">
             </div>
             <div class="col-lg-4 d-flex justify-content-center align-items-center">
                 <h1 style="color: #85550E;font-size: 80px;font-weight: 600;">最新消息</h1>
             </div>
             <div class="col-lg-4 d-flex justify-content-center">
-                <img src="./team-img/news_pic/dog01.png" id="imgdog" alt="">
+                <img src="{{asset('team-img/news_pic/dog.png')}}" id="imgdog" alt="">
             </div>
         </div>
         <div class="row">
             <ul class="d-flex justify-content-center justify-content-sm-end">
                 <li class="px-1 px-sm-3">
                     <span>資料總筆數：</span>
-                    <span class="text-danger">18</span>
+                    <span class="text-danger">{{ count($news) }}</span>
                 </li>
                 <li class="px-1 px-sm-3">
                     <span>每頁筆數：</span>
