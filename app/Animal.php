@@ -2,7 +2,8 @@
 
 namespace App;
 
-// use App\AnimalImg; 好像不用引入
+// use App\AnimalImg; 好像不用引入也可以用
+use App\Models\User; //這邊就要引入才能用 神秘...
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -41,8 +42,17 @@ class Animal extends Model
     // 做一對多關聯到animal_img
     public function imgs()//我要叫關聯的圖片出來的時候 我要取什麼名字 ex:$animal->imgs
     {
-        return $this->hasMany(AnimalImg::class,'animal_id','id');
         // hasMany的三個參數('要對應的資料表的 model','那個資料表的對應欄位','自己表的對應欄位')
+        return $this->hasMany(AnimalImg::class,'animal_id','id');
+    }
+
+    //每個寵物都只有一個送養人
+    public function user()
+    {
+        // belongsTo的三個參數('要對應的資料表的 model','自己表的對應欄位','那個資料表的對應欄位') 還是我搞錯了?
+        // return $this->belongsTo(User::class,'user_id','id');
+        // 奇怪...這邊又要importUserClass才可以用，不然會報錯，明明上面的animal_img不用importClass
+        return $this->belongsTo(User::class);
     }
 
 }
