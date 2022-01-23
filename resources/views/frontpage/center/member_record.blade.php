@@ -38,7 +38,7 @@
         <!-- 送養紀錄 -->
         <section class="member_centre_form">
             <div class="container">
-
+                <div>本頁無卡片，待認領。</div>
             </div>
         </section>
 
