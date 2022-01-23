@@ -82,7 +82,7 @@
                         <div class="mb-3">
                             <label for="vaccine" class="form-label fw-bold m-0">寵物是否施打預防針</label>
                             <input type="text" name="vaccine" id="vaccine" class="form-control">
-                            <p class="fw-bold">附註事項 (如有特殊事項 請在此欄位填寫)</p>
+                            {{-- <p class="fw-bold">附註事項 (如有特殊事項 請在此欄位填寫)</p> --}}
                         </div>
                     </div>
                 </div>
