@@ -21,7 +21,7 @@
                 <div class="col-12 col-md-8 d-flex align-items-end">
                     <a class="btn rounded-0 fw-bold" href="#" role="button"
                         style="width: 160px;background-color: #d56246;color: #fff;font-size: 18px;">個人資料</a>
-                    <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
+                    <a class="btn rounded-0 ms-3 fw-bold" href="{{route('center.record')}}" role="button"
                         style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
                     <a class="btn rounded-0 ms-3 fw-bold" href="{{ route('center.putadop') }}" role="button"
                         style="width: 160px;background-color: #d56246;font-size: 18px;">我要送養</a>
