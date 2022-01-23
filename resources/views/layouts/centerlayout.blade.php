@@ -62,7 +62,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #d56246;margin-bottom: 75px;">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{route('front.index')}}">
-                <img src="./team-img/LOGO/LOGO-8.png" width="50px" height="50px" alt="">
+                <img src="{{asset('team-img/LOGO/LOGO-8.png')}}" width="50px" height="50px" alt="">
                 <span class="mx-3 fw-bold pt-2">一起回家</span>
             </a>
 
