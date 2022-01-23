@@ -18,7 +18,7 @@
                         <h4 class="fw-bold m-0">{{Auth::user()->name}}</h4>
                     </div>
                     <div class="col-12 col-md-8 d-flex align-items-end">
-                        <a class="btn rounded-0 fw-bold" href="#" role="button"
+                        <a class="btn rounded-0 fw-bold" href="{{route('center.member')}}" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">個人資料</a>
                         <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
@@ -35,44 +35,52 @@
         <hr class="first_line">
 
         <!-- 我要送養表單 -->
+    <form action="{{route('center.store')}}" method="POST" enctype="multipart/form-data">
+        {{-- 忘記加@csrf，真是，難怪419 --}}
+        @csrf
         <section class="put_up mb-5">
             <div class="container">
+
                 <div class="row">
                     <div class="col-8 mx-auto">
                         <div class="mb-3">
-                            <label for="name" class="form-label fw-bold m-0">姓名</label>
+                            <label for="name" class="form-label fw-bold m-0">寵物姓名</label>
                             <input type="text" name="name" id="name" class="form-control w-50">
                         </div>
                         <div class="mb-3">
-                            <label for="gender" class="form-label fw-bold m-0">性別</label>
+                            <label for="species" class="form-label fw-bold m-0">寵物物種</label>
+                            <input type="text" name="species" id="species" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="gender" class="form-label fw-bold m-0">寵物性別</label>
                             <input type="text" name="gender" id="gender" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="age" class="form-label fw-bold m-0">年齡</label>
+                            <label for="age" class="form-label fw-bold m-0">寵物年齡</label>
                             <input type="text" name="age" id="age" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="character" class="form-label fw-bold m-0">個性</label>
-                            <input type="text" name="character" id="character" class="form-control">
+                            <label for="persona" class="form-label fw-bold m-0">寵物個性</label>
+                            <input type="text" name="persona" id="persona" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="feature" class="form-label fw-bold m-0">特色</label>
-                            <input type="text" name="feature" id="feature" class="form-control">
+                            <label for="chara" class="form-label fw-bold m-0">寵物特色</label>
+                            <input type="text" name="chara" id="chara" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="health" class="form-label fw-bold m-0">健康狀況</label>
+                            <label for="health" class="form-label fw-bold m-0">寵物健康狀況</label>
                             <input type="text" name="health" id="health" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="tnr" class="form-label fw-bold m-0">是否節育</label>
-                            <input type="text" name="tnr" id="tnr" class="form-control">
+                            <label for="fixed" class="form-label fw-bold m-0">寵物是否節育</label>
+                            <input type="text" name="fixed" id="fixed" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="site" class="form-label fw-bold m-0">所在地</label>
-                            <input type="text" name="site" id="site" class="form-control">
+                            <label for="location" class="form-label fw-bold m-0">寵物所在地</label>
+                            <input type="text" name="location" id="location" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="vaccine" class="form-label fw-bold m-0">是否施打預防針</label>
+                            <label for="vaccine" class="form-label fw-bold m-0">寵物是否施打預防針</label>
                             <input type="text" name="vaccine" id="vaccine" class="form-control">
                             <p class="fw-bold">附註事項 (如有特殊事項 請在此欄位填寫)</p>
                         </div>
@@ -91,78 +99,93 @@
                     <div class="col-8 mx-auto">
                         <a class="text-decoration-none text-dark"
                             href="http://tinyurl.com/bkuryqw">須簽署認養協議書，內容請參見：http://tinyurl.com/bkuryqw</a>
-                    </div>
-                    <div class="col-8 mx-auto">
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否必須經過家人或室友(房東)同意。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否有經濟能力可以照顧動物動物。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否須施打預防針。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否須注射晶片。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否須接受定期追蹤，不會無故打擾。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label"
-                                for="flexCheckDefault">是否需完成居家安全防護，紗窗夾、網格等，需附上環境及防護照片。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否接受放養(工廠、果園等等...)。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否須具有飼養寵物經驗。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否提供適當、乾淨且無害之食物及 24
-                                小時充足、乾淨之飲水。</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">是否同意不得以汽、機車牽引寵物。</label>
-                        </div>
-                        <div class="form-check mb-1">
-                            <input class="form-check-input border-dark" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label"
-                                for="flexCheckDefault">是否同意不放縱寵物於戶外，出入公共場所或大眾出入之場所時，由7歲以上之人伴同，</label>
-                        </div>
-                        <p>並採取適當之防護措施，如繫犬鍊、戴口罩。</p>
+
                         <div class="">
-                            <label for="exampleFormControlTextarea1" class="form-label">可自行新增認養條件(請條列式說明) </label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            <label for="adcond" class="form-label">填寫您的認養條件(請條列式說明) </label>
+                            <textarea class="form-control" id="adcond" name="adcond" rows="5"></textarea>
                         </div>
                     </div>
                 </div>
+                <!-- 跟領養人說的話 -->
+                <div class="d-flex justify-content-center mb-3 mt-5">
+                    <div class="text-white text-center fs-5 fw-bold p-1 mb-3"
+                        style="background-color: #647D5C;height: 38px;width: 180px;">跟領養人說的話</div>
+                </div>
+                <div class="row" style="font-size: 18px;font-weight: 600;">
+                    <div class="col-8 mx-auto">
+                        <div class="">
+                            <label for="exhort" class="form-label">填寫您想傳達的內容 </label>
+                            <textarea class="form-control" id="exhort" name="exhort" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                {{-- 圖片上傳 --}}
                 <div class="row align-items-center">
                     <div class="col-8">
                         <div class="mb-3 w-75 ms-auto">
-                            <label for="formFileMultiple" class="form-label"></label>
-                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                            <label for="image" class="form-label"></label>
+                            <input class="form-control" type="file" id="image" name="image" multiple onchange="imgupload()">
                         </div>
                     </div>
                     <div class="col-4 ">
-                        <button type="button" class="btn border-0 text-white" style="background-color: #647D5C;border-radius: unset;font-size: 18px;">確認發布認養文章</button>
+                        <button type="submit" class="btn border-0 text-white" style="background-color: #647D5C;border-radius: unset;font-size: 18px;">確認發布認養文章</button>
+                    </div>
+                    <div id="uploaded-img">
                     </div>
                 </div>
             </div>
         </section>
+    </form>
 
 @endsection
 
 @section('js')
+<script>
+    var input = document.querySelector('#image');
+    var uploaded = document.querySelector('#uploaded-img');
 
+    function imgupload() {
+        var formdata = new FormData();
+        formdata.append('_token','{{csrf_token()}}');
+        for (let index = 0; index < input.files.length; index++) {
+            console.log(input.files[index]);
+            formdata.append('img[]',input.files[index]);
+        }
+
+        fetch('/member/putadop/imgUpload',{
+            method: 'POST',
+            body: formdata
+        })
+    
+        // 接收回傳的資料
+        .then(response => response.json())
+        // .catch(error => console.error('Error:',error))
+        .then(response => {
+            console.log('Success:',response[0])
+            response.forEach(element => {
+                uploaded.innerHTML += `
+                <div class="img-card">
+                    <div class="delete-img" onclick="imgdelete(this, '${element}')"><i class="far fa-times-circle"></i></div>
+                    <img src="${element}" alt="">
+                    <input type="text" name="img[]" value="${element}" hidden>
+                </div>
+                `
+            });			
+        });
+    }
+
+function imgdelete(element, path) {
+    // console.log(path);
+    var formdata = new FormData();
+    formdata.append('_token','{{csrf_token()}}');
+    formdata.append('path',path);
+    fetch('/member/putadop/imgDelete',{
+            method: 'POST',
+            body: formdata
+    })
+    element.parentElement.remove();
+    // console.log(element.parentElement);
+}
+
+</script>
 @endsection

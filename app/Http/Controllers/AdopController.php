@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Animal;
+use App\AnimalImg;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -47,4 +49,60 @@ class AdopController extends Controller
     {
         return view('frontpage.center.putadop');
     }
+
+    // 會員中心 我要送養(資料儲存)
+    public function store(Request $request)
+    {
+        $animal = Animal::create([
+            // 我感覺下面這個user_id最可能會出問題
+            'user_id' => $request->user()->id,
+            'name' => $request->name,
+            'species' => $request->species,
+            'gender' => $request->gender,
+            'age' => $request->age,
+            'persona' => $request->persona,
+            'chara' => $request->chara,
+            'health' => $request->health,
+            'fixed' => $request->fixed,
+            'location' => $request->location,
+            'vaccine' => $request->vaccine,
+            'adcond' => $request->adcond,
+            'exhort' => $request->exhort,
+            'launched' => $request->launched,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+        ]);
+
+        foreach ($request->img as $value) {
+            AnimalImg::create([
+                'image' => $value,
+                'animal_id' => $animal ->id,
+            ]);
+        }
+        return redirect()->route('center.member');
+    }
+
+    // 會員中心 我要送養 上傳多圖片
+    public function imgUpload(Request $request)
+    {
+        $path = '[';
+        foreach ($request->img as $key => $value) {
+            $path = $path.'"'.FilesController::imgUpload($value, 'animal').'",';
+        }
+        $path = rtrim($path, ',');
+        $path = $path.']';
+        return $path;
+
+        return view('frontpage.center.putadop');
+    }
+
+    // 會員中心 我要送養 刪除選擇的原本要上傳的多圖片
+    public function imgDelete(Request $request)
+    {
+        AnimalImg::where('image', $request->path)->delete();
+        FilesController::deleteUpload($request->path);
+        return 'ok';
+    }
+
+
 }
