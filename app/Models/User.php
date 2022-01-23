@@ -46,4 +46,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function animal()
+    {
+        // 一個送養者 可以發布很多個寵物
+        return $this->hasMany(Animal::class,'user_id', 'id');
+    }
 }
