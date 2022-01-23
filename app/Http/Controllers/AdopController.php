@@ -13,14 +13,17 @@ class AdopController extends Controller
     // 寵物照片(前台)
     public function index()
     {
-        return view('frontpage.center.adoption');
+        $animal = Animal::get();
+        return view('frontpage.center.adoption',compact('animal'));
     }
 
     // 動物資訊&申請表(前台)
-    public function animal()
+    public function animal($id)
     {
-        return view('frontpage.center.animal');
+        $animal = Animal::find($id);
+        return view('frontpage.center.animal',compact('animal'));
     }
+
 
     // 會員中心 送養人的個人資料(前台) 希望能解開這麼謎
     // 在外面的網頁嘗試用這樣帶資料進來看看，好像有成功?
@@ -30,7 +33,6 @@ class AdopController extends Controller
     //     $member = User::find($id);
     //     return view('frontpage.center.member',compact('member'));
     // }
-
 
     // 會員中心 送養人的個人資料(前台)
     public function member()

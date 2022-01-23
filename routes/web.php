@@ -50,10 +50,10 @@ Route::get('/law',[PostController::class,'law'])->name('news.law');
 // 媒合故事 一起回家故事
 Route::get('/match',[PostController::class,'match'])->name('news.match');
 
-// 我要領養
+// 我要領養列表(全部動物)
 Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
 // 動物資訊&申請表 為了看頁面先去掉路徑裡的{id}
-Route::get('/adoption/animal',[AdopController::class,'animal'])->name('center.animal');
+Route::get('/adoption/{id}/animal',[AdopController::class,'animal'])->name('center.animal');
 
 // 最新消息單頁 還沒有頁面!!
 Route::get('/{id}/article',[PostController::class,'article'])->name('news.article');

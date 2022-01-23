@@ -28,16 +28,19 @@
 
                 <div class="row">
                     <!-- Gallery item -->
+                    @foreach ($animal as $item)
+                        
+                    @endforeach
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                        <a href="">
+                        <a href="{{route('center.animal',['id' => $item->id])}}">
                             <div class="card">
                                 <div class="pic h-50">
-                                    <img src="./team-img/adoption_pic/1.png" class="card-img-top" alt="...">
+                                    <img src="{{$item->imgs[0]->image}}" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
-                                    <p class="card-text">姓名：1月<span><i class="far fa-heart"></i></span></p>
-                                    <p class="card-text">姓別：男生</p>
-                                    <p class="card-text">年齡：3個月<span ><a href="">...more</a></span></p>
+                                    <p class="card-text">姓名：{{$item->name}}<span><i class="far fa-heart"></i></span></p>
+                                    <p class="card-text">姓別：{{$item->gender}}</p>
+                                    <p class="card-text">年齡：{{$item->age}}歲<span ><a href="">...more</a></span></p>
 
                                 </div>
                             </div>

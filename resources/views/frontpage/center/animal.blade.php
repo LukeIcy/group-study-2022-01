@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title','寵物領養照片')
+@section('title',$animal->name.'的資訊')
 
 @section('css')
     <!-- swiper 7.0 -->
@@ -14,79 +14,51 @@
     <section class="animal_information">
         <div class="container">
             <div class="next text-end mb-2">
-                <a class="text-dark fw-bolder fs-6 text-decoration-none" href="./adoption_pic.html"><i class="fas fa-caret-right"></i> 返回上一頁</a>
+                <a class="text-dark fw-bolder fs-6 text-decoration-none" href="{{route('center.index')}}"><i class="fas fa-caret-right"></i> 返回上一頁</a>
             </div>
             <div class="row mb-3">
                 <div class="col-12 col-lg-5">
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">
+
+                            @foreach ($animal->imgs as $img)                                
                             <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=1" />
+                                <img src="{{$img->image}}" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=2" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=3" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=4" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=5" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=6" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=7" />
-                            </div>
+                            @endforeach
+
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
                     <div thumbsSlider="" class="swiper mySwiper">
                         <div class="swiper-wrapper">
+
+                            @foreach ($animal->imgs as $img)                                
                             <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=1" />
+                                <img src="{{$img->image}}" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=2" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=3" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=4" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=5" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=6" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://picsum.photos/300?ramdon=7" />
-                            </div>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-7 information">
                     <div class="information_title p-4 py-lg-0 d-flex justify-content-between">
-                        <h5><i class="fas fa-square mx-2"></i>貓咪基本資料</h5>
+                        <h5><i class="fas fa-square mx-2"></i>{{$animal->name}}基本資料</h5>
                         <a href=""><i class="fas fa-share-alt"></i></a>
                     </div>
                     <ul>
-                        <li>名字：<span>7月</span></li>
-                        <li>性別：<span>男生</span></li>
-                        <li>年齡：<span>4歲</span></li>
-                        <li>個性：<span>活力充沛</span></li>
-                        <li>特色：<span>黑底虎斑</span></li>
-                        <li>健康狀況：<span>良好</span></li>
-                        <li>節育與否：<span>已節育(請認養人幫忙負擔500元節紮費用)</span></li>
-                        <li>所在地：<span>台中市</span></li>
-                        <li>預防針：<span>已施打兩劑</span></li>
-                        <li>附註事項：<span>1. 請認養人幫忙負擔500元節紮費用 2. 請認養人負擔500元的預防針費用(送養時會附上預防針手冊。)</span></li>
+                        <li>物種：<span>{{$animal->species}}</span></li>
+                        <li>名字：<span>{{$animal->name}}</span></li>
+                        <li>性別：<span>{{$animal->gender}}</span></li>
+                        <li>年齡：<span>{{$animal->age}}</span></li>
+                        <li>個性：<span>{{$animal->persona}}</span></li>
+                        <li>特色：<span>{{$animal->chara}}</span></li>
+                        <li>健康狀況：<span>{{$animal->health}}</span></li>
+                        <li>節育與否：<span>{{$animal->fixed}}</span></li>
+                        <li>所在地：<span>{{$animal->location}}</span></li>
+                        <li>預防針：<span>{{$animal->vaccine}}</span></li>
                     </ul>
                 </div>
             </div>
@@ -95,16 +67,16 @@
                 <div class="col-9">
                     <h6><i class="fas fa-square me-2"></i>中途基本資料</h6>
                     <ul class="p-0">
-                        <li>送養人：<span>林小雨</span></li>
-                        <li>中途資歷：<span>2 年</span></li>
+                        <li>送養人：<span>{{$animal->user->name}}</span></li>
+                        <li>中途資歷：<span>{{$animal->user->career}}</span></li>
                         <li>中途工作內容：<br>
-                            <span>會固定餵流浪貓，進行TRN</span>
+                            <span>{{$animal->user->experience}}</span>
                         </li>
                         <li>已送養的孩子數量：
-                            <span>185</span>隻
+                            <span>{{$animal->user->adopnumber}}</span>
                         </li>
                         <li>想對領養人說的話：<br>
-                            <span>每一個孩子都是我手中肉，視為已出。如果您認同我的理念和認養條件，歡迎跟我申請。</span>
+                            <span>{{$animal->exhort}}</span>
                         </li>
                     </ul>
                 </div>
@@ -147,15 +119,10 @@
                             <h2>認養條件</h2>
                             <span>【須簽署認養協議書，內容請參見：<a
                                     href="https://reurl.cc/DdyQv6">https://reurl.cc/DdyQv6</a>】</span>
-                            <ul>
-                                <li>(1)家人的支持以及意見是很重要的，必須經過家人或室友同意。(住學校宿舍不行)</li>
-                                <li>(2)有經濟能力可以照顧貓咪，並每年施打預防針，及貓咪生病時的醫藥費負擔。</li>
-                                <li>(3)不可關籠以及鏈貓，不可以給貓咪吃人的食物。</li>
-                                <li>(4)不排斥養貓新手，但必須有正確的飼養觀念，請先做好功課。</li>
-                                <li>(5)需接受定期追蹤，不會無故打擾。</li>
-                                <li>(6)不可以以『野放』的方式養貓。</li>
-                                <li>(7)需完成居家安全防護，紗窗夾、網格等，需附上環境及防護照片。</li>
-                            </ul>
+
+                                <div>{!! nl2br(e($animal->adcond)) !!}</div>
+
+
                             <div class="agree d-flex justify-content-lg-between">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="contract" value="agree"
