@@ -71,6 +71,15 @@ Route::get('/member',[AdopController::class,'member'])->name('center.member');
 Route::get('/member/edit',[AdopController::class,'memberedit'])->name('center.memberedit');
 // 會員中心 我要送養
 Route::get('/member/putadop',[AdopController::class,'putadop'])->name('center.putadop');
+
+// 會員中心 我要送養(資料儲存)
+Route::post('/member/putadop/store',[AdopController::class,'store'])->name('center.store');
+// 會員中心 我要送養 多圖片上傳
+Route::post('/member/putadop/imgUpload',[AdopController::class,'imgUpload'])->name('center.imgUpload');
+// 會員中心 刪除所選擇的"我要送養"的預備上傳圖片
+Route::post('/member/putadop/imgDelete',[AdopController::class,'imgDelete'])->name('center.imgDelete');
+
+
 });
 
 // 這邊也先套一下auth 都還沒設權限分級
