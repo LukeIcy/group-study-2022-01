@@ -36,7 +36,6 @@
     <hr class="first_line">
     <section class="member_centre_form">
         <div class="container">
-            <form action="" method="post">
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <div class="fw-bold fs-5 m-0">真實姓名</div>
@@ -92,7 +91,6 @@
                     <a type="button" class="btn btn-outline-success border-0 fw-bold fs-5 me-3"
                         href="{{ route('center.memberedit') }}">編輯個人資料</a>
                 </div>
-            </form>
         </div>
     </section>
 

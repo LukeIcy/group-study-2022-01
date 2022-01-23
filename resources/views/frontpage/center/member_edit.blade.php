@@ -13,17 +13,13 @@
                 <div class="row d-flex flex-column flex-md-row">
                     <div class="col-12 col-md-4 d-flex align-items-end mb-3 mb-md-0">
                         <div class="pic me-3">
-                            <img src="{{Auth::user()->avatar}}" alt="">
+                            <img src="{{ Auth::user()->avatar }}" alt="你的頭像">
                         </div>
-                        <h4 class="fw-bold m-0">{{Auth::user()->name}}</h4>
+                        <h4 class="fw-bold m-0">{{ Auth::user()->name }}</h4>
                     </div>
                     <div class="col-12 col-md-8 d-flex align-items-end">
                         <a class="btn rounded-0 fw-bold" href="#" role="button"
                             style="width: 160px;background-color: #d56246;color: #fff;font-size: 18px;">編輯個人資料</a>
-                        {{-- <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
-                        <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;">我要送養</a> --}}
                     </div>
                 </div>
             </div>
