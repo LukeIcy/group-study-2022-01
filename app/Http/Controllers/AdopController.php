@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Auth;
 
 class AdopController extends Controller
 {
-    // 寵物照片(前台)
+    // 送養寵物列表(前台)
     public function index()
     {
         $animal = Animal::get();
         return view('frontpage.center.adoption',compact('animal'));
     }
 
-    // 動物資訊&申請表(前台)
+    // 寵物各別資訊頁 & 申請表(前台)
     public function animal($id)
     {
         $animal = Animal::find($id);
@@ -46,6 +46,15 @@ class AdopController extends Controller
         return view('frontpage.center.member_edit');
     }
 
+    // 會員中心 我的送養紀錄
+    public function record()
+    {
+        // 我感覺要思考一下怎麼抓使用者的，好像有抓到
+        $animal = Animal::where('user_id', Auth::user()->id)->get();
+        // dd($animal);
+        return view('frontpage.center.member_record',compact('animal'));
+    }
+
     // 會員中心 我要送養
     public function putadop()
     {
@@ -56,7 +65,6 @@ class AdopController extends Controller
     public function store(Request $request)
     {
         $animal = Animal::create([
-            // 我感覺下面這個user_id最可能會出問題
             'user_id' => $request->user()->id,
             'name' => $request->name,
             'species' => $request->species,

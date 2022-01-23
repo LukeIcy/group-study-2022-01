@@ -69,6 +69,8 @@ Route::middleware('auth')->group(function(){
 Route::get('/member',[AdopController::class,'member'])->name('center.member');
 // 會員中心 編輯送養人個人資料
 Route::get('/member/edit',[AdopController::class,'memberedit'])->name('center.memberedit');
+// 會員中心 我的送養紀錄列表
+Route::get('/member/record',[AdopController::class,'record'])->name('center.record');
 // 會員中心 我要送養
 Route::get('/member/putadop',[AdopController::class,'putadop'])->name('center.putadop');
 
