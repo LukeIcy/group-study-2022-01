@@ -28,7 +28,7 @@ class CreateAnimalsTable extends Migration
             $table->longtext('adcond')->nullable()->comment('認養條件');
             $table->longtext('exhort')->nullable()->comment('對認養說的話');
             $table->bigInteger('user_id')->nullable()->comment('發布人/送養人');
-            $table->string('launched')->nullable()->comment('上下架');
+            $table->string('launched')->nullable()->default('上架中')->comment('上下架');
             $table->timestamps();
         });
     }
