@@ -169,4 +169,12 @@ class AdopController extends Controller
         return redirect()->route('center.record');
     }
 
+    // 調整寵物的上下架
+    public function launched($id,Request $request){
+        $animal = Animal::find($id);
+        $animal->launched = $request->launched;
+        $animal->save();
+
+        return redirect()->route('center.record');
+    }
 }

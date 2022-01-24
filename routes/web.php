@@ -84,6 +84,9 @@ Route::post('/member/putadop/imgDelete',[AdopController::class,'imgDelete'])->na
 Route::get('/member/putadop/{id}/edit',[AdopController::class,'edit'])->name('center.edit');
 // 會員中心 傳送寵物編輯好的資訊
 Route::patch('/member/putadop/{id}/update',[AdopController::class,'update'])->name('center.update');
+// 會員中心 寵物上下架 目前未實現 測試中
+// Route::patch('/member/putadop/{id}/launched',[AdopController::class,'launched'])->name('center.launched');
+Route::post('/member/putadop/{id}/launched',[AdopController::class,'launched'])->name('center.launched');
 
 });
 
