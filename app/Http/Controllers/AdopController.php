@@ -67,6 +67,17 @@ class AdopController extends Controller
     // 會員中心 我要送養(資料儲存)
     public function store(Request $request)
     {
+
+        // 可能要逐個判定
+        // if ($request->password != null){
+        //     $user->password = Hash::make($request->password);
+        // } else{
+        //     return redirect()->route('center.member')->with(msg,'xxxxxxx'); 
+        // }
+        // } else{return redirect()->back()->with(msg,'xxxxxxx'); }
+
+        // https://ithelp.ithome.com.tw/articles/10208905
+        // 有一個方法 在資料不足時 可以防止資料庫被存入
         $animal = Animal::create([
             'user_id' => $request->user()->id,
             'name' => $request->name,
