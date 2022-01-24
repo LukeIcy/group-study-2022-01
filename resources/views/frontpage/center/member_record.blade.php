@@ -54,8 +54,9 @@
                         <div class="row g-0">
                             <div class="col-12 col-md-2">
                                 <img
+                                {{-- ??代表判斷前面有沒有東西 沒有就印後面 --}}
                                     {{-- src="{{$item->imgs->image}}" --}}
-                                    src="{{$item->imgs[0]->image}}"
+                                    src="{{$item->imgs[0]->image??''}}"
                                     class="img-fluid mycard_img"
                                     alt="..."
                                 />
