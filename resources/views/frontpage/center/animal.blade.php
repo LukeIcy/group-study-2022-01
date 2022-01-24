@@ -8,7 +8,7 @@
     <!-- animal_information css -->
     <link rel="stylesheet" href="./css/animal_information.css">
     <style>
-        .swiper-slide{
+        #smallpic{
             height: 124px;
         }
     </style>
@@ -40,7 +40,7 @@
                         <div class="swiper-wrapper">
 
                             @foreach ($animal->imgs as $img)
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" id="smallpic">
                                 <img src="{{$img->image}}" />
                             </div>
                             @endforeach
