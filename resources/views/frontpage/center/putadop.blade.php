@@ -3,6 +3,12 @@
 @section('title', '會員中心 我要送養')
 
 @section('css')
+<style>
+    .img-card img{
+        width: 300px;
+        height: 300px;
+    }
+</style>
 
 @endsection
 
@@ -130,8 +136,9 @@
                     <div class="col-4 ">
                         <button type="submit" class="btn border-0 text-white" style="background-color: #647D5C;border-radius: unset;font-size: 18px;">確認發布認養文章</button>
                     </div>
-                    <div id="uploaded-img">
+                    <div id="uploaded-img" class="d-flex flex-wrap justify-content-between">
                     </div>
+
                 </div>
             </div>
         </section>
@@ -156,7 +163,7 @@
             method: 'POST',
             body: formdata
         })
-    
+
         // 接收回傳的資料
         .then(response => response.json())
         // .catch(error => console.error('Error:',error))
@@ -170,7 +177,7 @@
                     <input type="text" name="img[]" value="${element}" hidden>
                 </div>
                 `
-            });			
+            });
         });
     }
 

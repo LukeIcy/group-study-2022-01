@@ -29,26 +29,25 @@
                 <div class="row">
                     <!-- Gallery item -->
                     @foreach ($animal as $item)
-                        
-                    @endforeach
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="{{route('center.animal',['id' => $item->id])}}">
-                            <div class="card">
+                            <div class="card h-100">
                                 <div class="pic h-50">
                                     <img src="{{$item->imgs[0]->image}}" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
                                     <p class="card-text">姓名：{{$item->name}}<span><i class="far fa-heart"></i></span></p>
                                     <p class="card-text">姓別：{{$item->gender}}</p>
-                                    <p class="card-text">年齡：{{$item->age}}歲<span ><a href="">...more</a></span></p>
+                                    <p class="card-text">年齡：{{$item->age}}歲<span ><a href="{{route('center.animal',['id' => $item->id])}}">...more</a></span></p>
 
                                 </div>
                             </div>
                         </a>
                     </div>
+                    @endforeach
                     <!-- End -->
 
-                    <!-- Gallery item -->
+                    {{-- <!-- Gallery item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                         <a href="">
                             <div class="card">
@@ -233,8 +232,9 @@
                             </div>
                         </a>
                     </div>
-                    <!-- End -->
+                    <!-- End --> --}}
                 </div>
+
                 <!-- 按鈕區 -->
                 <div class="py-5 mb-5">
                     <div class="btn-toolbar mb-3 d-flex justify-content-center" role="toolbar"

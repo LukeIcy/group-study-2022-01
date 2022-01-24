@@ -8,8 +8,20 @@
     <!-- animal_information css -->
     <link rel="stylesheet" href="{{asset('css/animal_information.css')}}">
     <style>
-        #smallpic{
-            height: 124px;
+        .mySwiper2 img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .mySwiper{
+            height: 86.5px;
+        }
+        .mySwiper img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
         }
     </style>
 @endsection
@@ -41,7 +53,7 @@
 
                             @foreach ($animal->imgs as $img)
                             <div class="swiper-slide" id="smallpic">
-                                <img src="{{$img->image}}" />
+                                <img src="{{$img->image}}">
                             </div>
                             @endforeach
 

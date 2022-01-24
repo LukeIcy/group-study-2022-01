@@ -59,7 +59,7 @@ Route::get('/adoption/{id}/animal',[AdopController::class,'animal'])->name('cent
 Route::get('/{id}/article',[PostController::class,'article'])->name('news.article');
 // 動保法律單頁 還沒有頁面!!
 Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.lawarticle');
-// 一起回家故事單頁 還沒有頁面!!
+// 一起回家故事單頁 還沒有頁面!
 Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
 
 // 這個先套一下auth好了 不然沒登入會報錯
