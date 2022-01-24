@@ -80,10 +80,14 @@ class AdopController extends Controller
         // } else{
         //     return redirect()->route('center.member')->with(msg,'xxxxxxx'); 
         // }
-        // } else{return redirect()->back()->with(msg,'xxxxxxx'); }
+        // } else{
+        //     return redirect()->back()->with(msg,'xxxxxxx'); 
+        // }
 
         // https://ithelp.ithome.com.tw/articles/10208905
         // 有一個方法 在資料不足時 可以防止資料庫被存入
+        
+
         $animal = Animal::create([
             'user_id' => $request->user()->id,
             'name' => $request->name,
@@ -98,7 +102,8 @@ class AdopController extends Controller
             'vaccine' => $request->vaccine,
             'adcond' => $request->adcond,
             'exhort' => $request->exhort,
-            'launched' => $request->launched,
+            // 下面直接讓新增的寵物為上架中
+            'launched' => '上架中',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
@@ -134,5 +139,34 @@ class AdopController extends Controller
         return 'ok';
     }
 
+    // 會員中心 傳送送養動物編輯後的資料
+    public function update($id,Request $request)
+    {
+        $animal = Animal::find($id);
+        $animal->name = $request->name; 
+        $animal->species = $request->species; 
+        $animal->gender = $request->gender;
+        $animal->age = $request->age;
+        $animal->persona = $request->persona; 
+        $animal->chara = $request->chara;
+        $animal->health = $request->health; 
+        $animal->fixed = $request->fixed;
+        $animal->location = $request->location; 
+        $animal->vaccine = $request->vaccine;
+        $animal->adcond = $request->adcond;
+        $animal->exhort = $request->exhort;
+        $animal->save();
+
+        // 儲存新增的圖片檔案
+        if ($request->img != Null) {
+            foreach ($request->img as $value) {
+                AnimalImg::create([
+                    'image' => $value,
+                    'user_id' => $animal->id,
+                ]);
+            }
+        }
+        return redirect()->route('center.record');
+    }
 
 }

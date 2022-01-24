@@ -82,6 +82,8 @@ Route::post('/member/putadop/imgUpload',[AdopController::class,'imgUpload'])->na
 Route::post('/member/putadop/imgDelete',[AdopController::class,'imgDelete'])->name('center.imgDelete');
 // 會員中心 編輯送養動物頁面
 Route::get('/member/putadop/{id}/edit',[AdopController::class,'edit'])->name('center.edit');
+// 會員中心 傳送寵物編輯好的資訊
+Route::patch('/member/putadop/{id}/update',[AdopController::class,'update'])->name('center.update');
 
 });
 

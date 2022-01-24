@@ -23,14 +23,6 @@
                         </div>
                         <h4 class="fw-bold m-0">{{Auth::user()->name}}</h4>
                     </div>
-                    <div class="col-12 col-md-8 d-flex align-items-end">
-                        <a class="btn rounded-0 fw-bold" href="{{route('center.member')}}" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;">個人資料</a>
-                        <a class="btn rounded-0 ms-3 fw-bold" href="{{route('center.record')}}" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
-                        <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;color: #fff;">我要送養</a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -38,9 +30,9 @@
         <hr class="first_line">
 
         <!-- 我要送養表單 -->
-    <form action="{{route('center.store')}}" method="POST" enctype="multipart/form-data">
-        {{-- 忘記加@csrf，真是，難怪419 --}}
+    <form action="{{route('center.update',['id' =>$animal->id])}}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('PATCH')
         <section class="put_up mb-5">
             <div class="container">
 
@@ -85,7 +77,6 @@
                         <div class="mb-3">
                             <label for="vaccine" class="form-label fw-bold m-0">寵物是否施打預防針</label>
                             <input type="text" name="vaccine" id="vaccine" class="form-control" value="{{ $animal->vaccine }}">
-                            {{-- <p class="fw-bold">附註事項 (如有特殊事項 請在此欄位填寫)</p> --}}
                         </div>
                     </div>
                 </div>
@@ -131,9 +122,17 @@
                         </div>
                     </div>
                     <div class="col-4 ">
-                        <button type="submit" class="btn border-0 text-white" style="background-color: #647D5C;border-radius: unset;font-size: 18px;">確認發布認養文章</button>
+                        <a href="{{route('center.record')}}"  type="submit" class="btn border-0 text-white" style="background-color: #e98533;border-radius: unset;font-size: 18px;">返回</a>
+                        <button type="submit" class="btn border-0 text-white" style="background-color: #647D5C;border-radius: unset;font-size: 18px;">更新</button>
                     </div>
                     <div id="uploaded-img" class="d-flex flex-wrap justify-content-between">
+                        @foreach ($animal->imgs as $img)
+                        <div class="img-card" >
+                            <div class="delete-img" onclick="imgdelete(this,'{{$img->image}}')"><i class="far fa-times-circle"></i></div>
+                            <img src="{{$img->image}}" alt="">
+                            <input type="text" value="{{$img->image}}" hidden>
+                        </div>
+                        @endforeach
                     </div>
 
                 </div>
@@ -180,6 +179,8 @@
 
 function imgdelete(element, path) {
     // console.log(path);
+    var choice = confirm('按下刪除圖片就無法挽回喔，除非加錢');
+	if(choice){
     var formdata = new FormData();
     formdata.append('_token','{{csrf_token()}}');
     formdata.append('path',path);
@@ -189,6 +190,7 @@ function imgdelete(element, path) {
     })
     element.parentElement.remove();
     // console.log(element.parentElement);
+    }
 }
 
 </script>
