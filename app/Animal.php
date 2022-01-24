@@ -57,4 +57,9 @@ class Animal extends Model
 
     // 理論上不importClass也可以執行，因為laravel會自動去找Class，目前這個版本預設是去(app/)資料夾下找model，除非路徑有誤，偏偏user在(app/model裡面)
 
+        // 一個寵物 可以被申請很多次領養
+        public function apply()
+        {
+            return $this->hasMany(Apply::class,'animal_id', 'id');
+        }
 }

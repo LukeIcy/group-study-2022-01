@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Apply;
+use App\Animal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ApplyController extends Controller
 {
@@ -34,11 +36,33 @@ class ApplyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id,Request $request)
     {
-        $userApply = $request->all();
-        Apply::create($userApply);
-        return redirect('/admin');
+        // $userApply = $request->all();
+        // Apply::create($userApply);
+
+        $animal = Animal::find($id);
+        $user = Auth::user();
+        Apply::create([
+            // 'user_id' => $request->user()->id,
+            'user_id' => $user->id,
+            'animal_id' => $animal->id,
+            'contract' => $request->contract,
+            'age' => $request->age,
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'line' => $request->line,
+            'fbName' => $request->fbName,
+            'address' => $request->address,
+            'myself' => $request->myself,
+            'situation' => $request->situation,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+        ]);
+
+        
+        // return redirect('/admin');
+        return redirect('/index');
     }
 
     /**

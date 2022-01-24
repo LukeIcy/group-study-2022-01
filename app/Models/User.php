@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Apply;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -47,9 +48,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // 一個送養者 可以發布很多個寵物
     public function animal()
     {
-        // 一個送養者 可以發布很多個寵物
         return $this->hasMany(Animal::class,'user_id', 'id');
+    }
+
+    // 一個領養者 可以申請很多次寵物 所以有很多張申請表
+    public function apply()
+    {
+        return $this->hasMany(Apply::class,'user_id', 'id');
     }
 }

@@ -130,5 +130,5 @@ Route::patch('/user/{id}/update',[UserController::class,'update'])->name('user.u
 Route::prefix('admin')->group(function ()
 {
     Route::get('/', [ApplyController::class, 'index']);
-    Route::post('store', [ApplyController::class, 'store']);
+    Route::post('/{id}/store', [ApplyController::class, 'store'])->name('apply.create');
 });

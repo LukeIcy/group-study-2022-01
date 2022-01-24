@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -37,5 +38,17 @@ class Apply extends Model
      * @var array
      */
     protected $fillable = ['contract', 'age', 'name', 'phone', 'line', 'fbName', 'address', 'myself', 'created_at', 'updated_at'];
+
+    // 每張申請表都只有一個申請人
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // 每張申請表都只針對一個寵物
+    public function animal()
+    {
+        return $this->belongsTo(Animal::class);
+    }
 
 }

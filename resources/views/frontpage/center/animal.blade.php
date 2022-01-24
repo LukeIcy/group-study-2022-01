@@ -132,7 +132,7 @@
     <section class="conditions mb-5">
         <div class="container">
             <!-- 認養條件 -->
-            <form action="/admin/store" method="post">
+            <form action="{{route('apply.create',['id' => $animal->id])}}" method="post">
                 @csrf
                 <div class="row mb-5">
                     <div class="col">
@@ -173,6 +173,9 @@
                         <div class="requisition py-3 d-flex flex-column align-items-center">
                             <h2>申請單填寫</h2>
                             <div class="requisition_write">
+                                {{-- 下面是偷渡失敗的關聯id --}}
+                                {{-- <input type="text" name="animal_id" id="animal_id" class="form-control d-none" value="{{ $animal->id }}"> --}}
+
                                 <div class="mb-3">
                                     <label for="name" class="form-label">姓名<span class="text-danger mx-2">*</span>
                                         務必是本人申請認養，謝絕代認養</label>
