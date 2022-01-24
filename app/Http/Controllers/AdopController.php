@@ -13,11 +13,11 @@ class AdopController extends Controller
     // 送養寵物列表(前台)
     public function index()
     {
-        $animal = Animal::get();
+        $animal = Animal::where('launched', '上架中')->get();
         return view('frontpage.center.adoption',compact('animal'));
     }
 
-    // 寵物各別資訊頁 & 申請表(前台)
+    // 寵物各別內容頁 & 申請表(前台)
     public function animal($id)
     {
         $animal = Animal::find($id);

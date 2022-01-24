@@ -68,20 +68,26 @@
 
                                 {{-- 上下架功能 感覺有問題 還不能實現--}}
                                 @if ($item->launched == "上架中")
-                                <form action="{{route('center.launched', ['id' =>$item->id])}}" method="post">
-                                    @csrf
-                                    @method('PATCH')
-                                    <input type="text" name="launched" value="下架" class="d-none">
-                                    <button type="submit" class="btn btn-secondary">下架</button>
-                                </form>
-
+                                <a href="" type="button" class="launched-btn btn btn-secondary">下架</a>
                                 @else
+                                <a href="" type="button" class="launched-btn btn btn-success">上架</a>
+                                @endif
 
-                                <form action="{{route('center.launched', ['id'=>$item->id])}}" method="post">
+                                @if ($item->launched == "上架中")
+                                <form action="{{route('center.launched', ['id' =>$item->id])}}" method="post" class="d-none">
                                     @csrf
-                                    @method('PATCH')
-                                    <input type="text" name="launched" value="上架中" class="d-none">
-                                    <button type="submit" class="btn btn-success">上架</button>
+                                    {{-- @method('PATCH') --}}
+                                    <input type="text" name="launched" value="下架">
+                                    {{-- 下面加一個按鈕看看 --}}
+                                    <button type="submit" class="d-none"></button>
+                                </form>
+                                @else
+                                <form action="{{route('center.launched', ['id'=>$item->id])}}" method="post" class="d-none">
+                                    @csrf
+                                    {{-- @method('PATCH') --}}
+                                    <input type="text" name="launched" value="上架中">
+                                    {{-- 下面加一個按鈕看看 --}}
+                                    <button type="submit" class="d-none"></button>
                                 </form>
                                 @endif
 
@@ -98,5 +104,17 @@
 @endsection
 
 @section('js')
+
+<script>
+    const launchedElements = document.querySelectorAll('.launched-btn');
+    launchedElements.forEach(function(launchedElement){
+        launchedElement.addEventListener('click',function () {
+                // this.nextElementSibling.submit();
+                // this.nextElementSibling.children.submit();
+                // this.nextElementSibling.lastElementChild.submit();
+                this.nextElementSibling.lastElementChild.click();
+        });
+    });
+    </script>
 
 @endsection
