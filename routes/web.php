@@ -80,7 +80,8 @@ Route::post('/member/putadop/store',[AdopController::class,'store'])->name('cent
 Route::post('/member/putadop/imgUpload',[AdopController::class,'imgUpload'])->name('center.imgUpload');
 // 會員中心 刪除所選擇的"我要送養"的預備上傳圖片
 Route::post('/member/putadop/imgDelete',[AdopController::class,'imgDelete'])->name('center.imgDelete');
-
+// 會員中心 編輯送養動物頁面
+Route::get('/member/putadop/{id}/edit',[AdopController::class,'edit'])->name('center.edit');
 
 });
 

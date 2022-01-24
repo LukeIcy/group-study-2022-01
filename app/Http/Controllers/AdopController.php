@@ -52,7 +52,6 @@ class AdopController extends Controller
     // 會員中心 我的送養紀錄
     public function record()
     {
-        // 我感覺要思考一下怎麼抓使用者的，好像有抓到
         $animal = Animal::where('user_id', Auth::user()->id)->get();
         // dd($animal);
         return view('frontpage.center.member_record',compact('animal'));
@@ -62,6 +61,13 @@ class AdopController extends Controller
     public function putadop()
     {
         return view('frontpage.center.putadop');
+    }
+
+    // 會員中心 編輯送養動物頁
+    public function edit($id)
+    {
+        $animal = Animal::find($id);
+        return view('frontpage.center.putadopedit',compact('animal'));
     }
 
     // 會員中心 我要送養(資料儲存)
