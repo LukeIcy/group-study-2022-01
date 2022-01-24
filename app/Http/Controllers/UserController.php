@@ -56,6 +56,9 @@ class UserController extends Controller
         $user->experience = $request->experience;
         $user->email = $request->email;
         $user->adopnumber = $request->adopnumber;
+        // if ($request->password != null){
+        //     $user->password = Hash::make($request->password);
+        // }
         $user->save();
 
         return redirect()->route('center.member');
