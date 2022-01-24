@@ -77,7 +77,7 @@
                     <div class="col-12 col-md-6 mb-3 mb-md-0">
                         {{-- 圖片跟標題都設置為能連到文章主頁 --}}
                         <a href="#">
-                            <img class="w-100" style="height: 250px" src="{{ $item->image }}" alt="">
+                            <img class="w-100" style="height: 320px" src="{{ $item->image }}" alt="">
                         </a>
                     </div>
                     <div class="col-12 col-md-6">
