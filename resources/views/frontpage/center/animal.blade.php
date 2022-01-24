@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <!-- animal_information css -->
     <link rel="stylesheet" href="./css/animal_information.css">
+    <style>
+        .swiper-slide{
+            height: 124px;
+        }
+    </style>
 @endsection
 
 @section('main')
@@ -21,7 +26,7 @@
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">
 
-                            @foreach ($animal->imgs as $img)                                
+                            @foreach ($animal->imgs as $img)
                             <div class="swiper-slide">
                                 <img src="{{$img->image}}" />
                             </div>
@@ -34,7 +39,7 @@
                     <div thumbsSlider="" class="swiper mySwiper">
                         <div class="swiper-wrapper">
 
-                            @foreach ($animal->imgs as $img)                                
+                            @foreach ($animal->imgs as $img)
                             <div class="swiper-slide">
                                 <img src="{{$img->image}}" />
                             </div>
@@ -88,7 +93,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="advise">
         <div class="container">
             <!-- 申請前叮嚀 -->
