@@ -70,8 +70,8 @@
                         <a href=""><i class="fas fa-share-alt"></i></a>
                     </div>
                     <ul>
-                        <li>物種：<span>{{ $animal->species }}</span></li>
                         <li>名字：<span>{{ $animal->name }}</span></li>
+                        <li>物種：<span>{{ $animal->species }}</span></li>
                         <li>性別：<span>{{ $animal->gender }}</span></li>
                         <li>年齡：<span>{{ $animal->age }}</span></li>
                         <li>個性：<span>{{ $animal->persona }}</span></li>
