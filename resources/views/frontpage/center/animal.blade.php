@@ -6,7 +6,7 @@
     <!-- swiper 7.0 -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <!-- animal_information css -->
-    <link rel="stylesheet" href="./css/animal_information.css">
+    <link rel="stylesheet" href="{{asset('css/animal_information.css')}}">
     <style>
         #smallpic{
             height: 124px;
