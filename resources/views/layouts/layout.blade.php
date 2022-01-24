@@ -136,10 +136,11 @@
     <footer class="footdown">
         <div class="container">
             <div class="pic">
-                <img src="./team-img/illustration/footer02.png" alt="">
+                <img src="{{ asset('team-img/illustration/footer02.png') }}" alt="">
             </div>
             <div class="adove">
-                <img src="./team-img/LOGO/LOGO-3.png" width="190px" height="230px" alt="">
+                <img src="{{ asset('team-img/LOGO/LOGO-3.png') }}" width="190px" height="230px" alt="">
+
             </div>
             <div class="footer-below">
                 <div class="below mb-3 border-bottom pb-3">
