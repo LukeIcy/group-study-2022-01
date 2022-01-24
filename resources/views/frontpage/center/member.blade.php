@@ -39,10 +39,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <div class="fw-bold fs-5 m-0">真實姓名</div>
+                        {{-- 老師推薦我保持原本用Auth帶資料的做法最直接 --}}
                         <div class="mb-3">{{ Auth::user()->name }}</div>
-                        {{-- 下面嘗試會員中心帶入顯示的會員資料->名字 --}}
+                        {{-- <div class="mb-3">{{ $member->name }}</div>  這個可以用 搭配route跟controller改動 --}}
+                        {{-- 下面是嘗試會員中心帶入顯示的會員資料->名字的過程 --}}
                         {{-- <div class="mb-3">{{$member[0]->name}}</div> --}}
-                        {{-- <div class="mb-3">{{ $member->name }}</div> --}}
                         {{-- <div class="mb-3">{{$member['name']}}</div> --}}
                         {{-- <div class="mb-3">{{$name = $member['name']}}</div> --}}
                         {{-- <div class="mb-3">{{$name => $member['name']}}</div> --}}
@@ -56,15 +57,10 @@
                         {{-- <div class="mb-3">{{$member[0]["name"]}}</div> --}}
                         {{-- <div class="mb-3">{{$member->data["name"]}}</div> --}}
                         {{-- <div class="mb-3">{{$member[0]->data['name']}}</div> --}}
-                        {{-- 我感覺我真的要換一個思路了... --}}
-                        {{-- 我是不是乾脆看看都從Auth抓資料出來 --}}
-                        {{-- 累了 先這樣... --}}
-                        {{-- 等等 雖然只有一筆資料 我要不要乾脆試試看foreach --}}
                         {{-- @foreach ($member as $item) --}}
                         {{-- <div class="mb-3">{{$item->name}}</div> --}}
                         {{-- <div class="mb-3">{{$item->['name']}}</div> --}}
                         {{-- @endforeach --}}
-                        {{-- 很好 當我沒說 --}}
                         {{-- 下面dd測試，資料應該大概或許有帶進來 --}}
                         {{-- @php
                                 dd($member);

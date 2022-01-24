@@ -26,11 +26,14 @@ class AdopController extends Controller
 
 
     // 會員中心 送養人的個人資料(前台) 希望能解開這麼謎
-    // 在外面的網頁嘗試用這樣帶資料進來看看，好像有成功?
-    // href="{{ route('center.member',['id' =>Auth::user()->id]) }}"
+    // 在latout網頁加上下面按鈕，嘗試用這樣帶資料進來看看，好像有成功?
+    // <a class="btn" href="{{ route('center.member',['id' => Auth::user()->id]) }}">會員中心</a>
+    // 或<a class="btn" href="/member/{{Auth::user()->id}}">會員中心</a>
+    // 
     // public function member($id)
     // {
     //     $member = User::find($id);
+    //     dd($member);
     //     return view('frontpage.center.member',compact('member'));
     // }
 

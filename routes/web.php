@@ -65,7 +65,7 @@ Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
 // 這個先套一下auth好了 不然沒登入會報錯
 Route::middleware('auth')->group(function(){
 // 會員中心 送養人個人資料
-// Route::get('/{id}/member',[AdopController::class,'member'])->name('center.member');
+// Route::get('/member/{id}',[AdopController::class,'member'])->name('center.member');
 Route::get('/member',[AdopController::class,'member'])->name('center.member');
 // 會員中心 編輯送養人個人資料
 Route::get('/member/edit',[AdopController::class,'memberedit'])->name('center.memberedit');
