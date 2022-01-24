@@ -26,13 +26,10 @@
                     <div class="col-12 col-md-8 d-flex align-items-end">
                         <a class="btn rounded-0 fw-bold" href="{{route('center.member')}}" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">個人資料</a>
-                        <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
+                        <a class="btn rounded-0 ms-3 fw-bold" href="{{route('center.record')}}" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
                         <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
                             style="width: 160px;background-color: #d56246;font-size: 18px;color: #fff;">我要送養</a>
-                        <a class="text-dark fw-bolder fs-6 text-decoration-none ms-auto none" href="{{route('front.index')}}">
-                            <i class="fas fa-caret-right me-2"></i>返回首頁
-                        </a>
                     </div>
                 </div>
             </div>
