@@ -35,9 +35,7 @@
                         style="width: 160px;background-color: #d56246;font-size: 18px;color: #fff;">送養紀錄</a>
                     <a class="btn rounded-0 ms-3 fw-bold" href="{{ route('center.putadop') }}" role="button"
                         style="width: 160px;background-color: #d56246;font-size: 18px;">我要送養</a>
-                    <a class="text-dark fw-bolder fs-6 text-decoration-none ms-auto none" href="./index.html">
-                        <i class="fas fa-caret-right me-2"></i>返回首頁
-                    </a>
+
                 </div>
             </div>
         </div>
@@ -62,32 +60,13 @@
                                 <h4 class="card-title">{{ $item->name }}</h4>
                                 <h4 class="gender">{{ $item->gender }}</h4>
                                 <h4 class="card-text">{{ $item->created_at }}</h4>
-                                <p class="status">發布狀態</p>
-                                <div class="btn-group p-20 my_btn" role="group" aria-label="Basic radio toggle button ">
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
-                                        autocomplete="off" />
-                                    <label class="btn btn-outline-warning" for="btnradio1">發布</label>
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
-                                        autocomplete="off" />
-                                    <label class="btn btn-outline-warning" for="btnradio2">查看</label>
-
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3"
-                                        autocomplete="off" />
-                                    <label class="btn btn-outline-warning" for="btnradio3">編輯</label>
-
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4"
-                                        autocomplete="off" />
-                                    <label class="btn btn-outline-warning" for="btnradio4">刪除</label>
-                                </div>
-                                <button class="btn btn-primary active" data-bs-toggle="button" autocomplete="off"
-                                    type="submit" form="form1">
-                                    上架
-                                </button>
-
-                                <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off"
-                                    aria-pressed="true" form="form1">
-                                    下架
-                                </button>
+                                <p class="status 
+                                @if ($item->launched == "上架中")  success @else secondary @endif
+                                ">{{ $item->launched }}</p>
+                                <a href="{{route('center.animal',['id' => $item->id])}}" type="button" class="btn btn-info">查看</a>
+                                <a href="{{route('center.edit',['id' => $item->id])}}"  type="button" class="btn btn-warning">編輯</a>
+                                <button type="button" class="btn btn-success">上架</button>
+                                <button type="button" class="btn btn-secondary">下架</button>
                             </div>
                         </div>
                     </div>
