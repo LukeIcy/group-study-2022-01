@@ -19,6 +19,8 @@ use App\Http\Controllers\FrontController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// 測試用
 Route::get('template', function () {
     return view('layouts.layout');
 });
