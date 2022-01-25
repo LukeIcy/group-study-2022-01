@@ -34,18 +34,28 @@
                         <div class="col-md-6 mb-3 mb-md-0">
                             <label for="name" class="form-label fw-bold fs-5 m-0">真實姓名</label>
                             <input type="text" name="name" id="name" class="form-control mb-3" value="{{Auth::user()->name}}">
+
+                            @if (Auth::user()->role == '領養者')
+                            @else
                             <label for="career" class="form-label fw-bold fs-5 m-0">中途資歷</label>
                             <input type="text" name="career" id="career" class="form-control mb-3" value="{{Auth::user()->career}}">
                             <label for="experience" class="form-label fw-bold fs-5 m-0">中途項目<span
                                     class="fs-6">(簡述中途工作內容)</span></label>
                             <textarea class="form-control" name="experience" id="experience" rows="5">{{Auth::user()->experience}}</textarea>
+                            @endif
+
                         </div>
                         <div class="col-md-6">
                             <label for="email" class="form-label fw-bold fs-5 m-0">電子郵件</label>
                             <input type="text" name="email" id="email" class="form-control mb-3" value="{{Auth::user()->email}}">
+
+                            @if (Auth::user()->role == '領養者')
+                            @else
                             <label for="adopnumber" class="form-label fw-bold fs-5 m-0">送養數量<span class="fs-6"> (例如：犬 5隻; 貓
                                     5隻)</span></label>
                             <input type="text" name="adopnumber" id="adopnumber" class="form-control mb-3" value="{{Auth::user()->adopnumber}}">
+                            @endif
+                            
                         </div>
                     </div>
                     <div class="row mb-3">
