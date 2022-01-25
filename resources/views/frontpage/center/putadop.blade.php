@@ -3,42 +3,49 @@
 @section('title', '會員中心 我要送養')
 
 @section('css')
-<style>
-    .img-card img{
-        width: 300px;
-        height: 300px;
-    }
-</style>
+    <style>
+        .img-card img {
+            width: 300px;
+            height: 300px;
+        }
+
+        @media (max-width: 576px) {
+            .ccc {
+                font-size: 14px !important;
+            }
+        }
+
+    </style>
 
 @endsection
 
 @section('main')
-        <section class="member_centre">
-            <div class="container">
-                <h1 class="text-center fw-bold">會員中心</h1>
-                <div class="row d-flex flex-column flex-md-row">
-                    <div class="col-12 col-md-4 d-flex align-items-end mb-3 mb-md-0">
-                        <div class="pic me-3">
-                            <img src="{{Auth::user()->avatar}}" alt="你的頭像">
-                        </div>
-                        <h4 class="fw-bold m-0">{{Auth::user()->name}}</h4>
+    <section class="member_centre">
+        <div class="container">
+            <h1 class="text-center fw-bold">會員中心</h1>
+            <div class="row d-flex flex-column flex-md-row">
+                <div class="col-12 col-md-4 d-flex align-items-end mb-3 mb-md-0">
+                    <div class="pic me-3">
+                        <img src="{{ Auth::user()->avatar }}" alt="你的頭像">
                     </div>
-                    <div class="col-12 col-md-8 d-flex align-items-end">
-                        <a class="btn rounded-0 fw-bold" href="{{route('center.member')}}" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;">個人資料</a>
-                        <a class="btn rounded-0 ms-3 fw-bold" href="{{route('center.record')}}" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
-                        <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
-                            style="width: 160px;background-color: #d56246;font-size: 18px;color: #fff;">我要送養</a>
-                    </div>
+                    <h4 class="fw-bold m-0">{{ Auth::user()->name }}</h4>
+                </div>
+                <div class="col-12 col-md-8 d-flex align-items-end">
+                    <a class="btn rounded-0 fw-bold" href="{{ route('center.member') }}" role="button"
+                        style="width: 160px;background-color: #d56246;font-size: 18px;">個人資料</a>
+                    <a class="btn rounded-0 ms-3 fw-bold" href="{{ route('center.record') }}" role="button"
+                        style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
+                    <a class="btn rounded-0 ms-3 fw-bold" href="#" role="button"
+                        style="width: 160px;background-color: #d56246;font-size: 18px;color: #fff;">我要送養</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <hr class="first_line">
+    <hr class="first_line">
 
-        <!-- 我要送養表單 -->
-    <form action="{{route('center.store')}}" method="POST" enctype="multipart/form-data">
+    <!-- 我要送養表單 -->
+    <form action="{{ route('center.store') }}" method="POST" enctype="multipart/form-data">
         {{-- 忘記加@csrf，真是，難怪419 --}}
         @csrf
         <section class="put_up mb-5">
@@ -127,11 +134,13 @@
                     <div class="col-8">
                         <div class="mb-3 w-75 ms-auto">
                             <label for="image" class="form-label"></label>
-                            <input class="form-control" type="file" id="image" name="image" multiple onchange="imgupload()">
+                            <input class="form-control" type="file" id="image" name="image" multiple
+                                onchange="imgupload()">
                         </div>
                     </div>
                     <div class="col-4 ">
-                        <button type="submit" class="btn border-0 text-white" style="background-color: #647D5C;border-radius: unset;font-size: 18px;">確認發布認養文章</button>
+                        <button type="submit" class="ccc btn border-0 text-white"
+                            style="background-color: #647D5C;border-radius: unset;font-size: 18px;">確認發布認養文章</button>
                     </div>
                     <div id="uploaded-img" class="d-flex flex-wrap justify-content-between">
                     </div>
@@ -144,52 +153,51 @@
 @endsection
 
 @section('js')
-<script>
-    var input = document.querySelector('#image');
-    var uploaded = document.querySelector('#uploaded-img');
+    <script>
+        var input = document.querySelector('#image');
+        var uploaded = document.querySelector('#uploaded-img');
 
-    function imgupload() {
-        var formdata = new FormData();
-        formdata.append('_token','{{csrf_token()}}');
-        for (let index = 0; index < input.files.length; index++) {
-            console.log(input.files[index]);
-            formdata.append('img[]',input.files[index]);
-        }
+        function imgupload() {
+            var formdata = new FormData();
+            formdata.append('_token', '{{ csrf_token() }}');
+            for (let index = 0; index < input.files.length; index++) {
+                console.log(input.files[index]);
+                formdata.append('img[]', input.files[index]);
+            }
 
-        fetch('/member/putadop/imgUpload',{
-            method: 'POST',
-            body: formdata
-        })
+            fetch('/member/putadop/imgUpload', {
+                    method: 'POST',
+                    body: formdata
+                })
 
-        // 接收回傳的資料
-        .then(response => response.json())
-        // .catch(error => console.error('Error:',error))
-        .then(response => {
-            console.log('Success:',response[0])
-            response.forEach(element => {
-                uploaded.innerHTML += `
+                // 接收回傳的資料
+                .then(response => response.json())
+                // .catch(error => console.error('Error:',error))
+                .then(response => {
+                    console.log('Success:', response[0])
+                    response.forEach(element => {
+                        uploaded.innerHTML += `
                 <div class="img-card">
                     <div class="delete-img" onclick="imgdelete(this, '${element}')"><i class="far fa-times-circle"></i></div>
                     <img src="${element}" alt="">
                     <input type="text" name="img[]" value="${element}" hidden>
                 </div>
                 `
-            });
-        });
-    }
+                    });
+                });
+        }
 
-function imgdelete(element, path) {
-    // console.log(path);
-    var formdata = new FormData();
-    formdata.append('_token','{{csrf_token()}}');
-    formdata.append('path',path);
-    fetch('/member/putadop/imgDelete',{
-            method: 'POST',
-            body: formdata
-    })
-    element.parentElement.remove();
-    // console.log(element.parentElement);
-}
-
-</script>
+        function imgdelete(element, path) {
+            // console.log(path);
+            var formdata = new FormData();
+            formdata.append('_token', '{{ csrf_token() }}');
+            formdata.append('path', path);
+            fetch('/member/putadop/imgDelete', {
+                method: 'POST',
+                body: formdata
+            })
+            element.parentElement.remove();
+            // console.log(element.parentElement);
+        }
+    </script>
 @endsection
