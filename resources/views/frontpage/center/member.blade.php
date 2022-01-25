@@ -21,14 +21,15 @@
                 <div class="col-12 col-md-8 d-flex align-items-end">
                     <a class="btn rounded-0 fw-bold" href="#" role="button"
                         style="width: 160px;background-color: #d56246;color: #fff;font-size: 18px;">個人資料</a>
+
+                    @if (Auth::user()->role == '領養者')
+                    @else	
                     <a class="btn rounded-0 ms-3 fw-bold" href="{{route('center.record')}}" role="button"
                         style="width: 160px;background-color: #d56246;font-size: 18px;">送養紀錄</a>
                     <a class="btn rounded-0 ms-3 fw-bold" href="{{ route('center.putadop') }}" role="button"
                         style="width: 160px;background-color: #d56246;font-size: 18px;">我要送養</a>
-                    {{-- 因為可以透過navbar的icon返回首頁 下面先不用 --}}
-                    {{-- <a class="text-dark fw-bolder fs-6 text-decoration-none ms-auto none" href="./index.html">
-                            <i class="fas fa-caret-right me-2"></i>返回首頁
-                        </a> --}}
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -42,45 +43,29 @@
                         {{-- 老師推薦我保持原本用Auth帶資料的做法最直接 --}}
                         <div class="mb-3">{{ Auth::user()->name }}</div>
                         {{-- <div class="mb-3">{{ $member->name }}</div>  這個可以用 搭配route跟controller改動 --}}
-                        {{-- 下面是嘗試會員中心帶入顯示的會員資料->名字的過程 --}}
-                        {{-- <div class="mb-3">{{$member[0]->name}}</div> --}}
-                        {{-- <div class="mb-3">{{$member['name']}}</div> --}}
-                        {{-- <div class="mb-3">{{$name = $member['name']}}</div> --}}
-                        {{-- <div class="mb-3">{{$name => $member['name']}}</div> --}}
-                        {{-- <div class="mb-3">{{$member['name']->name}}</div> --}}
-                        {{-- <div class="mb-3">{{{$member['name']}}}</div> --}}
-                        {{-- <div class="mb-3">{{$member[0]['name']}}</div> --}}
-                        {{-- <div class="mb-3">{{$member->data['name']}}</div> --}}
-                        {{-- <div class="mb-3">{{$member}}</div> --}}
-                        {{-- <div class="mb-3">{{$member["name"]}}</div> --}}
-                        {{-- <div class="mb-3">{{{$member["name"]}}}</div> --}}
-                        {{-- <div class="mb-3">{{$member[0]["name"]}}</div> --}}
-                        {{-- <div class="mb-3">{{$member->data["name"]}}</div> --}}
-                        {{-- <div class="mb-3">{{$member[0]->data['name']}}</div> --}}
-                        {{-- @foreach ($member as $item) --}}
-                        {{-- <div class="mb-3">{{$item->name}}</div> --}}
-                        {{-- <div class="mb-3">{{$item->['name']}}</div> --}}
-                        {{-- @endforeach --}}
-                        {{-- 下面dd測試，資料應該大概或許有帶進來 --}}
-                        {{-- @php
-                                dd($member);
-                            @endphp --}}
 
+                        @if (Auth::user()->role == '領養者')
+                        <div class="fw-bold fs-5 m-0">會員身分</div>
+                        <div class="mb-3">{{ Auth::user()->role }}</div>
+                        @else
                         <div class="fw-bold fs-5 m-0">中途資歷</div>
                         <div class="mb-3">{{ Auth::user()->career }}</div>
                         <div class="fw-bold fs-5 m-0">中途項目
                             <span class="fs-6">(簡述中途工作內容)</span>
                         </div>
                         <div>{{ Auth::user()->experience }}</div>
+                        @endif
                     </div>
                     <div class="col-md-6">
                         <label class="fw-bold fs-5 m-0">電子郵件</label>
                         <div class="mb-3">{{ Auth::user()->email }}</div>
+                        @if (Auth::user()->role == '領養者')
+                        @else
                         <label class="fw-bold fs-5 m-0">送養數量
                             <span class="fs-6"> (例如：犬 5隻; 貓5隻)</span>
                         </label>
                         <div class="mb-3">{{ Auth::user()->adopnumber }}</div>
-
+                        @endif
                     </div>
                 </div>
                 <div class="btn_group d-flex justify-content-center justify-content-md-end mb-3">
