@@ -105,7 +105,7 @@
                                 </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                {{-- 下面這行，嘗試加入會員中心按鈕，之後會設權限只有送養人看得到 --}}
+                                {{-- 下面這行，嘗試加入會員中心按鈕 --}}
                                 {{-- <a class="btn" href="{{ route('center.member',['id' => Auth::user()->id]) }}">會員中心</a> --}}
                                 {{-- 下面舊版作法可以抓到資料，上面新版好像還有點沒搞懂的地方，要測試要記得連route跟controller一起改動--}}
                                 {{-- <a class="btn" href="/member/{{Auth::user()->id}}">會員中心</a> --}}
