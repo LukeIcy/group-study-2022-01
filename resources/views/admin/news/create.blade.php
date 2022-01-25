@@ -19,6 +19,7 @@
                         <option selected>文章類型</option>
                         <option value="最新消息">最新消息</option>
                         <option value="寵物保姆">寵物保姆</option>
+                        <option value="動物新聞">動物新聞</option>
                         <option value="動保法律">動保法律</option>
                         <option value="一起回家故事">一起回家故事</option>
                     </select>
