@@ -33,7 +33,7 @@
                         <a href="{{route('center.animal',['id' => $item->id])}}">
                             <div class="card h-100">
                                 <div class="pic h-50">
-                                    <img src="{{$item->imgs[0]->image}}" class="card-img-top" alt="...">
+                                    <img src="{{$item->imgs[0]->image ?? ''}}" class="card-img-top" alt="...">
                                 </div>
                                 <div class="card-body fw-bolder fs-5">
                                     <p class="card-text">姓名：{{$item->name}}<span><i class="far fa-heart"></i></span></p>
