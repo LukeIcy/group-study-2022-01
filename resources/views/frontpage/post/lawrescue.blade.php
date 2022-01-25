@@ -25,15 +25,17 @@
                 @foreach ($lawrescue as $item)
 
                     <div class="col-6">
-                        <div class="card h-100 border-0 p-3">
-                            <img src="{{ $item->image }}" class="card-img-top shadow mb-3" alt="...">
-                            <div class="card-body">
-                                <a href="">
-                                    <h2>{{ $item->title }}</h2>
-                                </a>
-                                <p>{{ $item->content }}</p>
+                        <a href="{{ route('news.lawarticle', ['id' => $item->id]) }}">
+                            <div class="card h-100 border-0 p-3">
+                                <img src="{{ $item->image }}" class="card-img-top shadow mb-3" alt="...">
+                                <div class="card-body">
+                                    <a href="">
+                                        <h2>{{ $item->title }}</h2>
+                                    </a>
+                                    <p>{{ $item->content }}</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 @endforeach
@@ -42,39 +44,6 @@
                     <a href="{{ route('news.law') }}" type="button" class="btn px-3"
                         style="background-color: #647D5C;color: azure;">more</a>
                 </div>
-                {{-- 原資料1 --}}
-                {{-- <div class="col-6">
-                <div class="card h-100 border-0 p-3">
-                    <img src="./team-img/pic1030px/11.png" class="card-img-top shadow mb-3" alt="...">
-                    <div class="card-body">
-                        <a href="">
-                            <h2>送養協議都簽完了 才發現對方是認養 黑名單怎麼辦?</h2>
-                        </a>
-                        <p>很多中途最常遇到的事件之一: 都簽好協議才知道對方是認養黑名單，因為害怕被告只好無奈送毛孩入虎口~</p>
-                        <p>文 | 將小薏</p>
-                        <p>長年協助動保弱勢法律服務的顏律師提醒各位愛媽愛爸，依民法第408條第1項規定，贈與物之權利未移轉前，贈與人得撤銷其贈與，所以雖然已經答應送養之後卻發現對方是黑名單，只要撤銷贈與即可﹐不要因為擔心不交付浪浪會被告而送出，陷浪浪於險地。
-                        </p>
-                    </div>
-                </div>
-            </div> --}}
-
-                {{-- 原資料2 --}}
-                {{-- <div class="col-6">
-                <div class="card h-100 border-0 p-3">
-                    <img src="./team-img/pic1030px/25.png" class="card-img-top shadow mb-3" alt="...">
-                    <div class="card-body">
-                        <a href="">
-                            <h2>何謂具有法律效力的送養切結書?</h2>
-                        </a>
-                        <p>文 | 三色書房 顏紘頤律師</p>
-                        <p>1 雙方互相意思表示一致者，契約即為成立，所以只要認養切結書一方講好願意送養貓狗，一方願意領養貓狗，這份認養切結書就可能成立契約，只要契約成立且沒有無效的原因，就是有效的契約，就有法律效力。
-                        </p>
-                        <p>2 為保護交易安全，我們的法律實務會盡量讓契約有效，契約無效其實是很例外的狀況，依契約總數量來看，無效契約算是非常稀少。.....詳見內文
-                        </p>
-                        <p class="text-end">原文出處：本文獲作者授權刊登，未經同意請勿任意轉載。</p>
-                    </div>
-                </div>
-            </div> --}}
 
             </div>
         </div>
