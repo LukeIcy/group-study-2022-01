@@ -36,6 +36,8 @@ class ApplyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    // 送出申請單
     public function store($id,Request $request)
     {
         // $userApply = $request->all();
@@ -56,7 +58,7 @@ class ApplyController extends Controller
             'fbName' => $request->fbName,
             'address' => $request->address,
             'myself' => $request->myself,
-            'situation' => $request->situation,
+            'situation' => '申請中',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
