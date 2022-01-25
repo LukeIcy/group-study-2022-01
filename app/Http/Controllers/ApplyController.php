@@ -45,7 +45,8 @@ class ApplyController extends Controller
         $user = Auth::user();
         Apply::create([
             // 'user_id' => $request->user()->id,
-            'user_id' => $user->id,
+            // 'user_id' => $user->id,
+            'user_id' => Auth::id(),
             'animal_id' => $animal->id,
             'contract' => $request->contract,
             'age' => $request->age,
