@@ -47,19 +47,19 @@ Route::get('/news',[PostController::class,'index'])->name('news.index');
 Route::get('/babysitter',[PostController::class,'sitter'])->name('news.sitter');
 // 動保法律&動物救援
 Route::get('/lawrescue',[PostController::class,'lawrescue'])->name('news.lawrescue');
-// 動保法律 這一頁沒人做!!
+// 動保法律
 Route::get('/law',[PostController::class,'law'])->name('news.law');
 // 媒合故事 一起回家故事
 Route::get('/match',[PostController::class,'match'])->name('news.match');
 
 // 我要領養列表(全部動物)
 Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
-// 動物資訊&申請表 為了看頁面先去掉路徑裡的{id}
+// 動物資訊&申請表
 Route::get('/adoption/{id}/animal',[AdopController::class,'animal'])->name('center.animal');
 
 // 最新消息的內容頁
 Route::get('/{id}/article',[PostController::class,'article'])->name('news.article');
-// 動保法律單頁 還沒有頁面!!
+// 動保法律單頁
 Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.lawarticle');
 // 一起回家故事單頁 還沒有頁面!
 Route::get('/{id}/story',[PostController::class,'story'])->name('news.story');
