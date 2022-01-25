@@ -117,7 +117,7 @@ Route::get('/user/create',[UserController::class,'create'])->name('user.create')
 Route::post('/user/store',[UserController::class,'store'])->name('user.store');
 // 編輯頁 目前沒做
 Route::get('/user/{id}/edit',[UserController::class,'edit'])->name('user.edit');
-// 權限管理
+// 權限管理 js未實現
 Route::patch('/user/{id}/updaterole',[UserController::class,'updaterole'])->name('user.updaterole');
 // 儲存編輯 針對修改密碼(後台管理專用)
 Route::patch('/user/{id}/updatepassword',[UserController::class,'updatepassword'])->name('user.updatepassword');
