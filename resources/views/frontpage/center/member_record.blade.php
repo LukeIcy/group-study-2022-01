@@ -66,28 +66,22 @@
                                 <a href="{{route('center.animal',['id' => $item->id])}}" type="button" class="btn btn-info">查看</a>
                                 <a href="{{route('center.edit',['id' => $item->id])}}"  type="button" class="btn btn-warning">編輯</a>
 
-                                {{-- 上下架功能 這邊把原本的a標籤換成div 因為a標籤可能會先啟動 導致不能被js抓到--}}
+                                {{-- 上下架功能 感覺有問題 還不能實現--}}
                                 @if ($item->launched == "上架中")
-                                <div class="launched-btn btn btn-secondary">下架</div>
-                                @else
-                                <div class="launched-btn btn btn-success">上架</div>
-                                @endif
-
-                                @if ($item->launched == "上架中")
-                                <form action="{{route('center.launched', ['id' =>$item->id])}}" method="post" class="d-none">
+                                <form action="{{route('center.launched', ['id' =>$item->id])}}" method="post">
                                     @csrf
                                     @method('PATCH')
-                                    <input type="text" name="launched" value="下架">
-                                    {{-- 下面加一個按鈕看看 --}}
-                                    {{-- <button type="submit" class="d-none"></button> --}}
+                                    <input type="text" name="launched" value="下架" class="d-none">
+                                    <button type="submit" class="btn btn-secondary">下架</button>
                                 </form>
+
                                 @else
-                                <form action="{{route('center.launched', ['id'=>$item->id])}}" method="post" class="d-none">
+
+                                <form action="{{route('center.launched', ['id'=>$item->id])}}" method="post">
                                     @csrf
                                     @method('PATCH')
-                                    <input type="text" name="launched" value="上架中">
-                                    {{-- 下面加一個按鈕看看 --}}
-                                    {{-- <button type="submit" class="d-none"></button> --}}
+                                    <input type="text" name="launched" value="上架中" class="d-none">
+                                    <button type="submit" class="btn btn-success">上架</button>
                                 </form>
                                 @endif
 
@@ -104,18 +98,5 @@
 @endsection
 
 @section('js')
-
-<script>
-    // 一定要做console log來檢驗問題
-    const launchedElements = document.querySelectorAll('.launched-btn');
-    launchedElements.forEach(function(launchedElement){
-        launchedElement.addEventListener('click',function () {
-                this.nextElementSibling.submit();
-                // this.nextElementSibling.children.submit();
-                // this.nextElementSibling.lastElementChild.submit();
-                // this.nextElementSibling.lastElementChild.click();
-        });
-    });
-    </script>
 
 @endsection
