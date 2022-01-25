@@ -68,6 +68,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            // 註冊者，預設權限為"領養者"
+            'role' => '領養者',
         ]);
     }
 }
