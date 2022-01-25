@@ -22,6 +22,16 @@ class PostController extends Controller
         return view('frontpage.post.news',compact('news'));
     }
 
+    // 最新消息內容頁
+    public function article($id)
+    {
+        $news = News::find($id);
+        // 我想排除本篇內容的id
+        // $post = News::where('id',!=,$news->id)->orderbydesc('id')->take(3)->get();
+        $post = News::orderbydesc('id')->take(3)->get();
+        return view('frontpage.post.article',compact('news','post'));
+    }
+
     // 寵物保姆(前台)
     public function sitter()
     {

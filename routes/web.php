@@ -57,7 +57,7 @@ Route::get('/adoption',[AdopController::class,'index'])->name('center.index');
 // 動物資訊&申請表 為了看頁面先去掉路徑裡的{id}
 Route::get('/adoption/{id}/animal',[AdopController::class,'animal'])->name('center.animal');
 
-// 最新消息單頁 還沒有頁面!!
+// 最新消息的內容頁
 Route::get('/{id}/article',[PostController::class,'article'])->name('news.article');
 // 動保法律單頁 還沒有頁面!!
 Route::get('/{id}/lawarticle',[PostController::class,'lawarticle'])->name('news.lawarticle');
