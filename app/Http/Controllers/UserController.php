@@ -16,7 +16,17 @@ class UserController extends Controller
         return view('admin.user.list',compact('user'));
     }
 
-    // 更改使用者資料 會員中心編輯個人資料專用
+    // 後台使用者列表編輯更新使用者權限專用
+    public function updaterole($id, Request $request)
+    {
+        $user = User::find($id);
+        $user->role = $request->role;
+        $user->save();
+
+        return redirect()->route('user.list');
+    }
+
+    // 後台使用者列表編輯更新使用者密碼專用
     public function updatepassword($id, Request $request)
     {
         $user = User::find($id);

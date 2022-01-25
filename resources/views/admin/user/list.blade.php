@@ -43,7 +43,19 @@
                 <td>{{$item->name}}</td>
                 <td>{{$item->email}}</td>
                 <td>{{$item->created_at}}</td>
-                <td>之後會放權限</td>
+                <td>
+					<form action="{{route('user.updaterole',['id'=>$item->id])}}" method="post">
+						@csrf
+						@method('PATCH')
+						{{-- <select name="role" onchange="roleChange(this)" class="form-select" aria-label="Default select example"> --}}
+						<select name="role" class="form-select" aria-label="Default select example">
+							<option class="rolechange" value="工程師" @if($item->role == "工程師") selected @endif>工程師</option>
+							<option class="rolechange" value="管理者" @if($item->role == "管理者") selected @endif>管理者</option>
+							<option class="rolechange" value="送養者" @if($item->role == "送養者") selected @endif>送養者</option>
+							<option class="rolechange" value="領養者" @if($item->role == "領養者") selected @endif>領養者</option>
+						</select>
+					</form>
+				</td>
 				{{-- <td>{{($item->role)}}</td> --}}
                 <td>
 					<!-- Button trigger modal -->
@@ -51,7 +63,7 @@
 						重設密碼
 					</button>					
 					<!-- Modal 要把按鈕跟裡面的div填入{{$item->id}}互相對應到 才能抓到每一筆資料-->
-					<form action="/user/{{$item->id}}/updatepassword" method="post">
+					<form action="{{route('user.updatepassword',['id'=>$item->id])}}" method="post">
 						@csrf
 						@method('PATCH')
 						<div class="modal fade" id="catch{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,7 +76,7 @@
 								<div class="modal-body">
 									<div class="modal-body">
 										<label for="password">輸入新密碼</label>
-										<input type="password" name="password" id="password">
+										<input type="password" name="password">
 									</div>
 								</div>
 								<div class="modal-footer">
@@ -96,6 +108,24 @@
 @section('js')
 
 <script>
+	const roleElements = document.querySelectorAll('.rolechange')
+	roleElements.forEach(function (roleElement) {
+		roleElement.addEventListener('click',function () {
+			if (confirm('是否更改使用者權限?')) {
+				this.parentElement.parentElement.submit();
+			}
+		});
+	});
+
+	// console.log(roleElements);
+	console.log(roleElements.parentElement.parentElement);
+
+	// function roleChange(this) {
+	// 	this.parentElement.submit();
+	// }
+</script>
+
+<script>
 	const deleteElements = document.querySelectorAll('.delete-btn');
 	deleteElements.forEach(function(deleteElement){
 		deleteElement.addEventListener('click',function () {
@@ -104,6 +134,12 @@
 			}
 		});
 	});
+
+	// 下面這個有
+	// console.log(deleteElements);
+	// 下面這個沒
+	// console.log(deleteElements.nextElementSibling);
+
 </script>
 
 @endsection
