@@ -162,7 +162,7 @@ class AdopController extends Controller
             foreach ($request->img as $value) {
                 AnimalImg::create([
                     'image' => $value,
-                    'user_id' => $animal->id,
+                    'animal_id' => $animal->id,
                 ]);
             }
         }
