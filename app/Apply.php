@@ -37,7 +37,7 @@ class Apply extends Model
     /**
      * @var array
      */
-    protected $fillable = ['contract', 'age', 'name', 'phone', 'line', 'fbName', 'address', 'myself', 'created_at', 'updated_at','user_id','animal_id',];
+    protected $fillable = ['contract', 'age', 'name', 'phone', 'line', 'fbName', 'address', 'myself', 'created_at', 'updated_at','user_id','animal_id','situation',];
 
     // 每張申請表都只有一個申請人
     public function user()
