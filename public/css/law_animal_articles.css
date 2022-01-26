@@ -5,6 +5,10 @@
      object-fit: cover;
 }
 
+.row{
+  display: block;
+}
+
 .fas {
   color: #d56246;
 }

@@ -24,25 +24,26 @@
     <!-- 動物保護法列表 -->
     <section class="low_animal_articles">
         <div class="container">
-            <div class="row">
+            {{-- <div class="row "> --}}
 
                 @foreach ($law as $item)
-                    
-                <div class="col">
-                    <div class="card mb-3 "> <a href="{{route('news.lawarticle',['id'=>$item->id])}}" class="list-group-item list-group-item-action">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="{{$item->image}}" class="w-100 my-card-img">
-                                </div>
-                                <p class="fs-1"></i>
+
+                {{-- <div class="col"> --}}
+                    <div class="card mb-5">
+                        <a href="{{route('news.lawarticle',['id'=>$item->id])}}" class="list-group-item list-group-item-action">
+                            <div class="row d-flex">
+                                <p class="fs-1 "></i>
                                     {{$item->type}}
                                     </p>
-                                <div class="col-md-8">
-                                    <div class="card-body h-100">
-                                        <span clss="lh-lg text-wrap">
+                                <div class="col-lg-4">
+                                    <img src="{{$item->image}}" class="my-card-img">
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="">
+                                        <span clss="">
                                             <p class="fs-1"><i class="fas fa-balance-scale"></i>
                                             {{$item->title}}
-                                            </p><br><br>
+                                            </p>
                                             {{$item->content}}
                                         </span>
                                     </div>
@@ -50,11 +51,11 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                {{-- </div> --}}
 
                 @endforeach
 
-            </div>
+            {{-- </div> --}}
 
             <div class="row">
                 <div class="col d-flex justify-content-center mb-5">
