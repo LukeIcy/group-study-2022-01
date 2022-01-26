@@ -47,8 +47,8 @@
 					<form action="{{route('user.updaterole',['id'=>$item->id])}}" method="post">
 						@csrf
 						@method('PATCH')
-						{{-- <select name="role" onchange="roleChange(this)" class="form-select" aria-label="Default select example"> --}}
-						<select name="role" class="form-select" aria-label="Default select example">
+						<select name="role" onchange="roleChange(this)" class="form-select" aria-label="Default select example">
+						{{-- <select name="role" class="form-select" aria-label="Default select example"> --}}
 							<option class="rolechange" value="工程師" @if($item->role == "工程師") selected @endif>工程師</option>
 							<option class="rolechange" value="管理者" @if($item->role == "管理者") selected @endif>管理者</option>
 							<option class="rolechange" value="送養者" @if($item->role == "送養者") selected @endif>送養者</option>
@@ -108,21 +108,25 @@
 @section('js')
 
 <script>
-	const roleElements = document.querySelectorAll('.rolechange')
-	roleElements.forEach(function (roleElement) {
-		roleElement.addEventListener('click',function () {
-			if (confirm('是否更改使用者權限?')) {
-				this.parentElement.parentElement.submit();
-			}
-		});
-	});
+	// const roleElements = document.querySelectorAll('.rolechange')
+	// roleElements.forEach(function (roleElement) {
+	// 	roleElement.addEventListener('click',function () {
+	// 		if (confirm('是否更改使用者權限?')) {
+	// 			this.parentElement.parentElement.submit();
+	// 		}
+	// 	});
+	// });
 
 	// console.log(roleElements);
-	console.log(roleElements.parentElement.parentElement);
+	// console.log(roleElements.parentElement.parentElement);
 
-	// function roleChange(this) {
-	// 	this.parentElement.submit();
-	// }
+	// this是保留字 不能寫道函式的()
+	function roleChange(role) {
+
+		role.parentElement.submit();
+
+		// console.log(this.parentElement);
+}
 </script>
 
 <script>
