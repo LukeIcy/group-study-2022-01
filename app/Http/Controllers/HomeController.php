@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // 所有到home的，都給我到index吧!20220126
+        // return view('home');
+        return redirect()->route('front.index');
     }
 }
