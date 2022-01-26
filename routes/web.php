@@ -28,10 +28,13 @@ Route::get('template', function () {
 // user系統加入的
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-// 預設 先放著
-Route::get('/', function () {
-    return view('welcome');
-});
+// 預設 先放著 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// 還先放著阿 一打開往頁看到框架預設頁面 使用者不會傻眼嗎>_> 先ㄅ幫你導到首頁了 by 老師 
+Route::get('/',[FrontController::class,'index'])->name('front.index');
 
 
 // 前台頁面
