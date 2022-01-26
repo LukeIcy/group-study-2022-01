@@ -18,7 +18,7 @@ class CreateAnimalsTable extends Migration
             $table->string('name')->nullable()->comment('寵物姓名');
             $table->string('species')->nullable()->comment('寵物物種');
             $table->string('gender')->nullable()->comment('寵物性別');
-            $table->integer('age')->nullable()->comment('寵物年齡');
+            $table->string('age')->nullable()->comment('寵物年齡');
             $table->string('persona')->nullable()->comment('寵物個性');
             $table->string('chara')->nullable()->comment('寵物特色');
             $table->string('health')->nullable()->comment('寵物健康');
