@@ -22,7 +22,7 @@ class BackStage
             if (Auth::user()->role == '管理者' || Auth::user()->role == '工程師'){
                 return $next($request);
             }
-            return redirect('/index');
+            return redirect()->route('front.index');
         }
     }
 }
