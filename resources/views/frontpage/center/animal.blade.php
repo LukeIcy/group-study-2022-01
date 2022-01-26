@@ -142,7 +142,7 @@
             @guest
 
             @else
-
+            @if (Auth::user()->id != $animal->user_id)
                     <form action="{{ route('apply.create', ['id' => $animal->id]) }}" method="post">
                         @csrf
                         <div class="row mb-5">
@@ -153,7 +153,7 @@
 
                                     <div>{!! nl2br(e($animal->adcond)) !!}</div>
 
-            @if (Auth::user()->id != $animal->user_id)
+            
                                     <div class="agree d-flex justify-content-lg-between">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="contract" value="agree"
