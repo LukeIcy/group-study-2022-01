@@ -4,6 +4,15 @@
 
 @section('css')
     <link rel="stylesheet" href="./css/law_animal.css">
+    <style>
+        .card_content {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 8;
+            -webkit-box-orient: vertical;
+        }
+
+    </style>
 @endsection
 
 @section('main')
@@ -20,11 +29,11 @@
 
     <section class="law_animal_content">
         <div class="container">
-            <div class="row p-3 mx-auto">
+            <div class="row mx-auto">
 
                 @foreach ($lawrescue as $item)
 
-                    <div class="col-6">
+                    <div class="col-md-12 col-lg-6 mb-3">
                         <a href="{{ route('news.lawarticle', ['id' => $item->id]) }}">
                             <div class="card h-100 border-0 p-3">
                                 <img src="{{ $item->image }}" class="card-img-top shadow mb-3" alt="...">
@@ -32,18 +41,18 @@
                                     <a href="">
                                         <h2>{{ $item->title }}</h2>
                                     </a>
-                                    <p>{{ $item->content }}</p>
+                                    <p class="card_content">{{ $item->content }}</p>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                @endforeach
+                    @endforeach
 
-                <div class="content m-auto mt-2">
-                    <a href="{{ route('news.law') }}" type="button" class="btn px-3"
-                        style="background-color: #647D5C;color: azure;">more</a>
-                </div>
+                    <div class="d-flex justify-content-end">
+                        <a href="{{ route('news.law') }}" type="button" class="btn px-3"
+                            style="background-color: #647D5C;color: azure;width:180px;font-size:18px">更多新聞</a>
+                    </div>
 
             </div>
         </div>
