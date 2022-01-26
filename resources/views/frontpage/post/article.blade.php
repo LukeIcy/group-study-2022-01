@@ -51,6 +51,13 @@
             background-size: contain;
         }
 
+        .cardtext{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+
     </style>
 @endsection
 
@@ -83,6 +90,7 @@
             </div>
         </div>
     </section>
+    {{-- 為您推薦 --}}
     <section class="newspicture" style="margin-bottom: 120px;">
         <div class="container">
             <div class="picturetext">
@@ -92,7 +100,7 @@
             <div class="row">
                 <!-- 下面這些我會引入別的最新消息 以後做要有個習慣 這種一定要有地方可以按按鈕連結去別的網頁 -->
                 @foreach ($post as $item)
-                    <div class="col-md">
+                    <div class="col-md-4 mb-2">
                         <div class="imgcard" style="border: double #020202;">
                             <a href="{{ route('news.article', ['id' => $item->id]) }}">
                                 <img src="{{ $item->image }}" class="card-img-top" alt="" title="{{ $item->title }}">
