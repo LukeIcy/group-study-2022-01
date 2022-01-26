@@ -194,7 +194,7 @@
                                             <label for="phone" class="form-label">聯絡電話<span
                                                     class="text-danger mx-2">*</span></label>
                                             <input type="text" name="phone" id="phone" class="form-control"
-                                                placeholder="請填能聯繫到本人的電話">
+                                                placeholder="請填能聯繫到本人的電話"  required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="line" class="form-label">使用的通訊軟體<span
