@@ -92,8 +92,8 @@ Route::patch('/member/putadop/{id}/launched',[AdopController::class,'launched'])
 
 });
 
-// 這邊也先套一下auth 都還沒設權限分級
-Route::middleware('auth')->group(function(){
+// 後台套用專門的middleware backstage，只有管理者跟工程師可以進入
+Route::middleware('backstage')->group(function(){
 // 文章列表 - 後台
 // 列表頁
 Route::get('/news/list',[PostController::class,'list'])->name('news.list');
