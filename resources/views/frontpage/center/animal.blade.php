@@ -88,7 +88,7 @@
                 <div class="col-9">
                     <h6><i class="fas fa-square me-2"></i>中途基本資料</h6>
                     {{-- 新增送養者頭像 有點肥 --}}
-                    <img src="{{ $animal->user->avatar }}" class="img-fluid-sm img-thumbnail rounded float-start me-3" alt="...">
+                    {{-- <img src="{{ $animal->user->avatar }}" class="img-fluid-sm img-thumbnail rounded me-3 w-25" alt="..."> --}}
 
                     <ul class="p-0">
                         <li>送養人：<span>{{ $animal->user->name }}</span></li>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="col-3">
                     <div class="pic d-flex justify-content-end">
-                        <img src="./team-img/information/icon-5.jpg" width="120px" alt="">
+                        <img src="{{ $animal->user->avatar }}" width="250px" alt="">
                     </div>
                 </div>
             </div>
@@ -153,7 +153,7 @@
 
                                     <div>{!! nl2br(e($animal->adcond)) !!}</div>
 
-            
+
                                     <div class="agree d-flex justify-content-lg-between">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="contract" value="agree"
