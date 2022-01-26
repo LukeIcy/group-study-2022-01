@@ -7,7 +7,7 @@
 @endsection
 
 @section('main')
-    
+
 <section class="babysitter position-relative">
     <div class="container">
         <div class="babysitter_title d-flex justify-content-center mb-5">
@@ -49,7 +49,7 @@
 
         <div class="row">
             <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-end">
-                <img class="w-100" src="{{ $item->image }}" alt="">
+                <img class="w-100" src="{{ $item->image }}" style="height:370px;object-fit: cover;" alt="">
             </div>
             <div class="col-12 col-md-6 d-flex flex-column">
                 <div class="content_top">
@@ -59,12 +59,12 @@
                     {{-- <p class="fw-bold mx-3">{{ $item->content }}</p> --}}
                     <p class="fw-bold mx-3">{!! nl2br(e($item->content)) !!}</p>
                     {{-- <p class="fw-bold mx-3">{{ nl2br(e($item->content)) }}</p> --}}
-                    
+
                 </div>
             </div>
         </div>
         <hr class="mb-5" style="height: 2px;background-color: #d56246;opacity: 0.8;">
-            
+
         @endforeach
 
         <!-- end -->
