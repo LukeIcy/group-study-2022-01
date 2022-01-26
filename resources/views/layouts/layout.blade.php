@@ -105,11 +105,14 @@
                                 </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                {{-- 下面這行，嘗試加入會員中心按鈕 --}}
-                                {{-- <a class="btn" href="{{ route('center.member',['id' => Auth::user()->id]) }}">會員中心</a> --}}
-                                {{-- 下面舊版作法可以抓到資料，上面新版好像還有點沒搞懂的地方，要測試要記得連route跟controller一起改動--}}
-                                {{-- <a class="btn" href="/member/{{Auth::user()->id}}">會員中心</a> --}}
+
+                                @if (Auth::user()->role == '管理者' OR Auth::user()->role == '工程師' )
+                                {{-- 下面這行加入後台頁面按紐，只有管理者跟工程師可以看到 --}}
+                                <a class="btn" href="{{ route('user.list') }}">管理後台</a>
+                                @else
+                                {{-- 下面這行加入會員中心按鈕，只有送養者跟領養者可以看到，管理者跟工程師無法--}}
                                 <a class="btn" href="{{ route('center.member') }}">會員中心</a>
+                                @endif
 
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">登出</a>
