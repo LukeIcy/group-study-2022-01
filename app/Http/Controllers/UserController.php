@@ -13,7 +13,8 @@ class UserController extends Controller
     public function list()
     {
         $user = User::get();
-        return view('admin.user.list',compact('user'));
+        $usernord = User::where('role' , '!=' , '工程師')->get();
+        return view('admin.user.list',compact('user','usernord'));
     }
 
     // 後台使用者列表編輯更新使用者權限專用
