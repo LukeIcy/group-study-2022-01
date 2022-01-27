@@ -55,43 +55,43 @@
                     <div class="col-8 mx-auto">
                         <div class="mb-3">
                             <label for="name" class="form-label fw-bold m-0">寵物姓名</label>
-                            <input type="text" name="name" id="name" class="form-control w-50">
+                            <input type="text" name="name" id="name" class="form-control w-50"  required>
                         </div>
                         <div class="mb-3">
                             <label for="species" class="form-label fw-bold m-0">寵物物種</label>
-                            <input type="text" name="species" id="species" class="form-control">
+                            <input type="text" name="species" id="species" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="gender" class="form-label fw-bold m-0">寵物性別</label>
-                            <input type="text" name="gender" id="gender" class="form-control">
+                            <input type="text" name="gender" id="gender" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="age" class="form-label fw-bold m-0">寵物年齡</label>
-                            <input type="text" name="age" id="age" class="form-control">
+                            <input type="text" name="age" id="age" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="persona" class="form-label fw-bold m-0">寵物個性</label>
-                            <input type="text" name="persona" id="persona" class="form-control">
+                            <input type="text" name="persona" id="persona" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="chara" class="form-label fw-bold m-0">寵物特色</label>
-                            <input type="text" name="chara" id="chara" class="form-control">
+                            <input type="text" name="chara" id="chara" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="health" class="form-label fw-bold m-0">寵物健康狀況</label>
-                            <input type="text" name="health" id="health" class="form-control">
+                            <input type="text" name="health" id="health" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="fixed" class="form-label fw-bold m-0">寵物是否節育</label>
-                            <input type="text" name="fixed" id="fixed" class="form-control">
+                            <input type="text" name="fixed" id="fixed" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="location" class="form-label fw-bold m-0">寵物所在地</label>
-                            <input type="text" name="location" id="location" class="form-control">
+                            <input type="text" name="location" id="location" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label for="vaccine" class="form-label fw-bold m-0">寵物是否施打預防針</label>
-                            <input type="text" name="vaccine" id="vaccine" class="form-control">
+                            <input type="text" name="vaccine" id="vaccine" class="form-control"  required>
                             {{-- <p class="fw-bold">附註事項 (如有特殊事項 請在此欄位填寫)</p> --}}
                         </div>
                     </div>
@@ -134,8 +134,7 @@
                     <div class="col-8">
                         <div class="mb-3 w-75 ms-auto">
                             <label for="image" class="form-label"></label>
-                            <input class="form-control" type="file" id="image" name="image" multiple
-                                onchange="imgupload()">
+                            <input class="form-control" type="file" id="image" name="image" multiple onchange="imgupload()">
                         </div>
                     </div>
                     <div class="col-4 ">
