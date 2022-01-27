@@ -4,7 +4,7 @@
 
 @section('css')
 
-    <link rel="stylesheet" href="./css/match_story.css">
+    <link rel="stylesheet" href="{{asset('css/match_story.css')}}">
     <style>
         /* .card{
             -webkit-filter:brightness(1);
