@@ -29,12 +29,12 @@
 	<table id="backstage_table" class="pt-3">
 		<thead>
 			<tr>
-				<th style="width: 40px">id</th>
-				<th style="width: 300px">標題</th>
+				<th style="width: 60px">id</th>
+				<th style="width: 380px">標題</th>
 				<th style="width: 80px">文章內容</th>
 				<th style="width: 60px">圖片</th>
 				<th style="width: 80px">類型</th>
-				<th style="width: 120px">發布時間</th>
+				<th style="width: 200px">發布時間</th>
 				<th>操作</th>
 			</tr>
 		</thead>
@@ -47,7 +47,7 @@
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#catch{{$item->id}}">
 						文章內容
-					</button>					
+					</button>
 					<!-- Modal 要把按鈕跟裡面的div填入{{$item->id}}互相對應到 才能抓到每一筆資料-->
 					<div class="modal fade" id="catch{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
@@ -69,8 +69,8 @@
 				</td>
                 <td>{{$item->type}}</td>
 				<td>{{$item->created_at}}</td>
-                <td>
-					<a href="{{route('news.edit', ['id' =>$item->id])}}"  class="btn btn-outline-info">編輯</a>
+                <td class="d-flex justify-content-end">
+					<a href="{{route('news.edit', ['id' =>$item->id])}}"  class="btn btn-outline-info mx-3">編輯</a>
 					{{-- 新方法 神技 用js把你按鈕下面的表單送出 --}}
 					<button href="" class="delete-btn btn btn-outline-danger">刪除</button>
 					<form action="{{route('news.destroy', ['id' =>$item->id])}}" method="post" class="d-none">
