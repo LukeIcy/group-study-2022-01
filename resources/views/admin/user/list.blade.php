@@ -128,7 +128,6 @@
                                 <select name="role" onchange="roleChange(this)" class="form-select"
                                     aria-label="Default select example">
                                     {{-- <select name="role" class="form-select" aria-label="Default select example"> --}}
-                                    <option value="工程師" @if ($item->role == '工程師') selected @endif>工程師</option>
                                     <option value="管理者" @if ($item->role == '管理者') selected @endif>管理者</option>
                                     <option value="送養者" @if ($item->role == '送養者') selected @endif>送養者</option>
                                     <option value="領養者" @if ($item->role == '領養者') selected @endif>領養者</option>
