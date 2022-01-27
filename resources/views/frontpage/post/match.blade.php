@@ -105,7 +105,7 @@
             <div class="col-md-12 col-lg-6  picture05">
                 <div class="card p-4">
                     <div class="pic">
-                        <img src="./team-img/mach_story/071.png" class="card-img-top" alt="...">
+                        <img src="./team-img/mach_story/07.png" class="card-img-top" alt="...">
                     </div>
                     <div class="card-body" style="background-color: #fff;height: 60px;">
                     </div>
