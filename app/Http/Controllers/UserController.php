@@ -13,14 +13,26 @@ class UserController extends Controller
     //使用者列表
     public function list()
     {
-        $user = User::get();
-        $usernord = User::where('role' , '!=' , '工程師')->get();
-        return view('admin.user.list',compact('user','usernord'));
+        // 用身分來判定回傳的資料內容
+        if(Auth::user()->role == '管理者'){
+            $user = User::where('role' , '!=' , '工程師')->get();
+            return view('admin.user.list',compact('user'));
+        };
+
+        if(Auth::user()->role == '工程師'){
+            $user = User::get();
+            return view('admin.user.list',compact('user'));
+        };
+
+        // $user = User::get();
+        // $usernord = User::where('role' , '!=' , '工程師')->get();
+        // return view('admin.user.list',compact('user','usernord'));
     }
 
     // 後台使用者列表編輯更新使用者權限專用
     public function updaterole($id, Request $request)
     {
+        // 如果進入這個頁面的使用者是管理者，他傳回來的資料有工程師，則不存入資料，直接回去使用者列表
         if(Auth::user()->role == '管理者'){
             if($request->role == '工程師'){
                 return redirect()->route('user.list');
