@@ -94,6 +94,10 @@ Route::patch('/member/putadop/{id}/update',[AdopController::class,'update'])->na
 Route::patch('/member/putadop/{id}/launched',[AdopController::class,'launched'])->name('center.launched');
 // Route::post('/member/putadop/{id}/launched',[AdopController::class,'launched'])->name('center.launched');
 
+// 儲存編輯 這一頁專門給會員中心編輯個人資料用
+Route::patch('/user/{id}/update',[UserController::class,'update'])->name('user.update');
+
+
 });
 
 // 後台套用專門的middleware backstage，只有管理者跟工程師可以進入
@@ -128,8 +132,6 @@ Route::patch('/user/{id}/updatepassword',[UserController::class,'updatepassword'
 // 刪除
 Route::delete('/user/{id}',[UserController::class,'destroy'])->name('user.destroy');
 
-// 儲存編輯 這一頁專門給會員中心編輯個人資料用
-Route::patch('/user/{id}/update',[UserController::class,'update'])->name('user.update');
 });
 
 // 後台頁面-申請表列表
