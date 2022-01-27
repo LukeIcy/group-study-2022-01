@@ -491,10 +491,11 @@
         <div class="row">
             <div class="left-news col-12 col-md-6 d-flex flex-column align-items-center mb-5 mb-md-0">
                 <div class="content m-auto">
-                    <p class="fw-bolder fs-2">{{$news[0]->title}}</p>
-                    {{-- <p class="fw-bolder fs-2">我家的貓每天都偷偷跑去和隔壁鄰居家的狗幽會</p> --}}
-                    <a href="{{route('news.article',['id'=> $news[0]->id])}}" type="button" class="btn px-3"
-                        style="background-color: #647D5C;color: azure;">more</a>
+                    {{-- 這邊要思考一下解法 --}}
+                    {{-- <p class="fw-bolder fs-2">{{$news[0]->title ?? ''}}</p> --}}
+                    <p class="fw-bolder fs-2">我家的貓每天都偷偷跑去和隔壁鄰居家的狗幽會</p>
+                    {{-- <a href="{{route('news.article',['id'=> $news[0]->id ?? ''])}}" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a> --}}
+                    <a href="#" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a>
                 </div>
             </div>
             <div class="right-news col-12 col-md-6">
