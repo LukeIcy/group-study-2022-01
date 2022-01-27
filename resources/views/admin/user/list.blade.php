@@ -31,7 +31,7 @@
 
 @section('main')
     <div class="container">
-        <table id="backstage_table" class="display">
+        <table id="backstage_table" class="display pt-3">
             <thead>
                 <tr>
                     <th>姓名</th>
