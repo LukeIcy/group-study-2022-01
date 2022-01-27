@@ -28,8 +28,8 @@
         <div class="home-content">
             <div class="home-content-left py-lg-5 position-absolute top-50">
                 <h1 class="text-2">不只有人需要<br>一個家</h1>
-                <button type="button" class="btn py-2 mt-3 home-btn"
-                    style="background-color: #d56246;">一起回家吧!</button>
+                    <a href="{{route('news.match')}}"  type="button" class="btn py-2 mt-3 home-btn"
+                    style="background-color: #d56246;">一起回家吧!</a>
             </div>
         </div>
     </div>
@@ -68,11 +68,17 @@
         <div class="row mb-5">
             <div class="swiper">
                 <div class="swiper-wrapper">
+
+                    @foreach ($animal as $item)
+                        
                     <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/1.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper1" alt="">
+                        <img src="{{$item->imgs[0]->image ?? ''}}"
+                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animal{{$item->id}}" alt="">
                     </div>
-                    <div class="swiper-slide">
+
+                    @endforeach
+
+                    {{-- <div class="swiper-slide">
                         <img src="./team-img/450 x 600 px/2.png"
                             style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper2" alt="">
                     </div>
@@ -99,7 +105,8 @@
                     <div class="swiper-slide">
                         <img src="./team-img/450 x 600 px/4.png"
                             style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper8" alt="">
-                    </div>
+                    </div> --}}
+
                 </div>
                 <div class="swiper-button-prev" style="color: white;"></div>
                 <div class="swiper-button-next" style="color: white;"></div>
@@ -115,21 +122,24 @@
 
     <!-- Modal -->
     <div class="modal-text">
-        <div class="modal fade" id="animalSwiper1" tabindex="-1" aria-labelledby="animalSwiper1Label" aria-hidden="true">
+
+        @foreach ($animal as $item )
+            
+        <div class="modal fade" id="animal{{$item->id}}" tabindex="-1" aria-labelledby="animal{{$item->id}}Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper1Label">名字：一月</h5>
+                        <h5 class="modal-title" id="animal{{$item->id}}Label">名字：{{$item->name}}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
+                            <li>性別：{{$item->gender}}</li>
+                            <li>年齡：{{$item->age}}</li>
+                            <li>個性：{{$item->persona}}</li>
+                            <li>特色：{{$item->chara}}</li>
+                            <li>健康狀態：{{$item->health}}</li>
+                            <li>所在地：{{$item->location}}</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
@@ -138,6 +148,9 @@
                 </div>
             </div>
         </div>
+
+        @endforeach
+{{-- 
         <div class="modal fade" id="animalSwiper2" tabindex="-1" aria-labelledby="animalSwiper2Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -161,6 +174,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="animalSwiper3" tabindex="-1" aria-labelledby="animalSwiper3Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -184,6 +198,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="animalSwiper4" tabindex="-1" aria-labelledby="animalSwiper4Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -207,6 +222,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="animalSwiper5" tabindex="-1" aria-labelledby="animalSwiper5Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -230,6 +246,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="animalSwiper6" tabindex="-1" aria-labelledby="animalSwiper6Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -253,6 +270,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="animalSwiper7" tabindex="-1" aria-labelledby="animalSwiper7Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -276,6 +294,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="animalSwiper8" tabindex="-1" aria-labelledby="animalSwiper8Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -299,6 +318,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="animalSwiper9" tabindex="-1" aria-labelledby="animalSwiper9Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -321,7 +341,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
+
     </div>
 </section>
 
@@ -432,19 +453,24 @@
             <div class="animal-law" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1500">
                 <div class="content">
                     <div class="left-content">
-                        <a href="">
-                            <h2 class="law fw-bolder">動保修法專題</h2>
+                        {{-- Aos包起來後 好像不能點下面連結 --}}
+                        <a href="{{route('news.lawrescue')}}">
+                            <h2 class="law fw-bolder">動保相關新聞</h2>
                         </a>
                     </div>
                     <ul class="right-content">
+
+                        @foreach ($law as $item)
+                            
                         <li>
-                            <span class="badge rounded-circle">1</span>
-                            飼主的定義 ?
+                            <span class="badge rounded-circle">▶</span>
+                            {{$item->title}}
                         </li>
-                        <li>
+                        @endforeach
+                        {{-- <li>
                             <span class="badge rounded-circle">2</span>
                             誰需要負擔動保法上的飼主責任?
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -464,9 +490,10 @@
         <div class="row">
             <div class="left-news col-12 col-md-6 d-flex flex-column align-items-center mb-5 mb-md-0">
                 <div class="content m-auto">
+                    {{-- <p class="fw-bolder fs-2">{{$news->title}}</p> --}}
                     <p class="fw-bolder fs-2">我家的貓每天都偷偷跑去和隔壁鄰居家的狗幽會</p>
-                    <button type="button" class="btn px-3"
-                        style="background-color: #647D5C;color: azure;">more</button>
+                    <a href="" type="button" class="btn px-3"
+                        style="background-color: #647D5C;color: azure;">more</a>
                 </div>
             </div>
             <div class="right-news col-12 col-md-6">
