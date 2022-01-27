@@ -19,7 +19,7 @@
 @endsection
 
 @section('main')
-    
+
 <section class="mach_story_title">
     <div class="container">
         <h1 style="color: #85550E;font-size: 80px;font-weight: 600;text-align: center;">關於"一起回家"的故事</h1>
@@ -105,7 +105,7 @@
             <div class="col-md-12 col-lg-6  picture05">
                 <div class="card p-4">
                     <div class="pic">
-                        <img src="./team-img/mach_story/07.png" class="card-img-top" alt="...">
+                        <img src="./team-img/mach_story/071.png" class="card-img-top" alt="...">
                     </div>
                     <div class="card-body" style="background-color: #fff;height: 60px;">
                     </div>
@@ -141,5 +141,5 @@
 @endsection
 
 @section('js')
-    
+
 @endsection

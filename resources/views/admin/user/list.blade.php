@@ -65,9 +65,9 @@
                             </form>
                         </td>
                         {{-- <td>{{($item->role)}}</td> --}}
-                        <td>
+                        <td class="d-flex justify-content-end">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-outline-warning mb-1" data-bs-toggle="modal"
                                 data-bs-target="#catch{{ $item->id }}">
                                 重設密碼
                             </button>
@@ -100,7 +100,7 @@
                                 </div>
                             </form>
                             {{-- Modal end --}}
-                            <button type="button" class="btn btn-outline-info disabled" aria-disabled="true"
+                            <button type="button" class="btn btn-outline-info disabled mx-3" aria-disabled="true"
                                 disable>凍結</button>
                             <button type="button" class="delete-btn btn btn-outline-danger">刪除</button>
                             <form action="{{ route('user.destroy', ['id' => $item->id]) }}" method="post"
