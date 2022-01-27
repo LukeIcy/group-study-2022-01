@@ -27,8 +27,8 @@ class PostController extends Controller
     {
         $news = News::find($id);
         // 我想排除本篇內容的id
-        // $post = News::where('id',!=,$news->id)->orderbydesc('id')->take(3)->get();
-        $post = News::orderbydesc('id')->take(3)->get();
+        $post = News::where('id','!=',$news->id)->orderbydesc('id')->take(3)->get();
+        // $post = News::orderbydesc('id')->take(3)->get();
         return view('frontpage.post.article',compact('news','post'));
     }
 
