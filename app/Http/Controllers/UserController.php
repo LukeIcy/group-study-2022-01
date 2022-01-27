@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\FilesController;
 
@@ -20,6 +21,12 @@ class UserController extends Controller
     // 後台使用者列表編輯更新使用者權限專用
     public function updaterole($id, Request $request)
     {
+        if(Auth::user()->role == '管理者'){
+            if($request->role == '工程師'){
+                return redirect()->route('user.list');
+            };
+        };
+        
         $user = User::find($id);
         $user->role = $request->role;
         $user->save();
