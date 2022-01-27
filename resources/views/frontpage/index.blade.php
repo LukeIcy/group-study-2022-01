@@ -463,6 +463,7 @@
                         @foreach ($law as $item)
                             
                         <li>
+                            {{-- 這邊如果要1、2、3排序 要另外處理 所以先隨意改個icon --}}
                             <span class="badge rounded-circle">▶</span>
                             {{$item->title}}
                         </li>
@@ -490,9 +491,9 @@
         <div class="row">
             <div class="left-news col-12 col-md-6 d-flex flex-column align-items-center mb-5 mb-md-0">
                 <div class="content m-auto">
-                    {{-- <p class="fw-bolder fs-2">{{$news->title}}</p> --}}
-                    <p class="fw-bolder fs-2">我家的貓每天都偷偷跑去和隔壁鄰居家的狗幽會</p>
-                    <a href="" type="button" class="btn px-3"
+                    <p class="fw-bolder fs-2">{{$news[0]->title}}</p>
+                    {{-- <p class="fw-bolder fs-2">我家的貓每天都偷偷跑去和隔壁鄰居家的狗幽會</p> --}}
+                    <a href="{{route('news.article',['id'=> $news[0]->id])}}" type="button" class="btn px-3"
                         style="background-color: #647D5C;color: azure;">more</a>
                 </div>
             </div>
