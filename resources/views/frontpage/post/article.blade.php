@@ -45,8 +45,6 @@
             width: 45px;
             height: 45px;
             display: inline-block;
-            /* 千萬不要外連別人網站的東西，記得改 */
-            background-image: url(https://www.taiwan.net.tw/images/icon/album.svg);
             background-position: center;
             background-size: contain;
         }
@@ -94,7 +92,9 @@
     <section class="newspicture" style="margin-bottom: 120px;">
         <div class="container">
             <div class="picturetext">
-                <div class="icon"></div>
+                <div class="icon">
+                    <i class="fas fa-camera" style="color: #d56246;"></i>
+                </div>
                 <h2 class="icontext fw-bold">為您推薦</h2>
             </div>
             <div class="row">
