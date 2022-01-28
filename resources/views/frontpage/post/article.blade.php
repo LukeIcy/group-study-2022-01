@@ -95,7 +95,7 @@
                 <div class="icon">
                     <i class="fas fa-camera" style="color: #d56246;"></i>
                 </div>
-                <h2 class="icontext fw-bold">為您推薦</h2>
+                <h2 class="icontext fw-bold" style="font-size: 20px;">為您推薦</h2>
             </div>
             <div class="row">
                 <!-- 下面這些我會引入別的最新消息 以後做要有個習慣 這種一定要有地方可以按按鈕連結去別的網頁 -->
