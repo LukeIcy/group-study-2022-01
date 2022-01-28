@@ -47,6 +47,13 @@ main {
   border-radius: unset;
 }
 
+.email_input:focus {
+  outline: unset;
+  background-color: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
 @media (max-width: 992px) {
   label {
     padding: unset;
