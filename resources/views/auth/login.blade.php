@@ -71,7 +71,7 @@
                                 @if (Route::has('password.request'))
                                 <a href="{{ route('password.request') }}" class="text-decoration-none label-form fs-4 fw-bold " >忘記密碼</a>
                                 @endif
-                                <a href="./register.html" class="text-decoration-none label-form fs-4 fw-bold " >還沒註冊</a>
+                                <a href="{{ route('register') }}" class="text-decoration-none label-form fs-4 fw-bold " >還沒註冊</a>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-dark w-25 login_btn fs-5">登入</button>
