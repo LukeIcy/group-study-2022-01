@@ -47,9 +47,9 @@
 {{-- @if (session('msg'))
 <script>
     alert('{{session("msg")}}')
-</script> --}}
+</script>
+@endif --}}
 
-@endif
 @endsection
 
 @section('js')
