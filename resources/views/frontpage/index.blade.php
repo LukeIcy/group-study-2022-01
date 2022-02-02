@@ -78,34 +78,7 @@
 
                     @endforeach
 
-                    {{-- <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/2.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper2" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/10.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper3" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/11.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper4" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/3.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper5" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/12.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper6" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/13.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper7" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./team-img/450 x 600 px/4.png"
-                            style="box-shadow:3px 3px 12px gray;padding:3px;" data-bs-toggle="modal" data-bs-target="#animalSwiper8" alt="">
-                    </div> --}}
+
 
                 </div>
                 <div class="swiper-button-prev" style="color: white;"></div>
@@ -150,198 +123,6 @@
         </div>
 
         @endforeach
-{{-- 
-        <div class="modal fade" id="animalSwiper2" tabindex="-1" aria-labelledby="animalSwiper2Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper2Label">名字：二月</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="animalSwiper3" tabindex="-1" aria-labelledby="animalSwiper3Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper3Label">名字：三月</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="animalSwiper4" tabindex="-1" aria-labelledby="animalSwiper4Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper4Label">名字：四月</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="animalSwiper5" tabindex="-1" aria-labelledby="animalSwiper5Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper5Label">名字：五月</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="animalSwiper6" tabindex="-1" aria-labelledby="animalSwiper6Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper6Label">名字：六月</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="animalSwiper7" tabindex="-1" aria-labelledby="animalSwiper7Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper7Label">名字：七月</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="animalSwiper8" tabindex="-1" aria-labelledby="animalSwiper8Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper8Label">名字：八月</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="animalSwiper9" tabindex="-1" aria-labelledby="animalSwiper9Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="animalSwiper9Label">燈箱標題9</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li>性別：男生</li>
-                            <li>年齡：4歲</li>
-                            <li>個性：活力充沛、小搗蛋、聰明、不挑食</li>
-                            <li>特色：黑底虎斑</li>
-                            <li>健康狀態：良好</li>
-                            <li>所在地：台中</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
 
     </div>
 </section>
@@ -464,14 +245,11 @@
                             
                         <li>
                             {{-- 這邊如果要1、2、3排序 要另外處理 所以先隨意改個icon --}}
-                            <span class="badge rounded-circle">▶</span>
+                            <span class="badge rounded-circle">NEW</span>
                             {{$item->title}}
                         </li>
                         @endforeach
-                        {{-- <li>
-                            <span class="badge rounded-circle">2</span>
-                            誰需要負擔動保法上的飼主責任?
-                        </li> --}}
+
                     </ul>
                 </div>
             </div>
@@ -491,16 +269,32 @@
         <div class="row">
             <div class="left-news col-12 col-md-6 d-flex flex-column align-items-center mb-5 mb-md-0">
                 <div class="content m-auto">
-                    {{-- 這邊要思考一下解法 --}}
+                    {{-- 如果$news沒有資料則用??''轉為空--}}
                     {{-- <p class="fw-bolder fs-2">{{$news[0]->title ?? ''}}</p> --}}
-                    <p class="fw-bolder fs-2">我家的貓每天都偷偷跑去和隔壁鄰居家的狗幽會</p>
-                    {{-- <a href="{{route('news.article',['id'=> $news[0]->id ?? ''])}}" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a> --}}
-                    <a href="#" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a>
+                    {{-- 或者用下面這個方式，在資料變數前加上@ --}}
+                    <p class="fw-bolder fs-2">{{@$news[0]->title}}</p>
+
+                    {{-- <a href="{{route('news.index')}}" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a> --}}
+                    {{-- 上面是直接連到最新消息的列表頁，下面則是連到這一篇最新消息的內容頁 但用@會讓連結失效--}}
+                    {{-- <a href="@{{route('news.article',['id'=>$news[0]->id])}}" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a> --}}
+                    @if (!$news->isEmpty())
+                    <a href="{{route('news.article',['id'=>$news[0]->id])}}" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a>
+                    @else
+                    <a href="{{route('news.index')}}" type="button" class="btn px-3" style="background-color: #647D5C;color: azure;">more</a>
+                    @endif
+
                 </div>
             </div>
             <div class="right-news col-12 col-md-6">
                 <div class="pic">
-                    <img class="w-100" src="./team-img/pic1030px/23.png" alt="">
+                    {{-- 加上@後，如果$news沒資料，在html時會顯示src"未知" --}}
+                    {{-- <img class="w-100" src="@{{$news[0]->image}}" alt=""> --}}
+                    @if (!$news->isEmpty())
+                    <img class="w-100" src="{{$news[0]->image}}" alt="">
+                    @else
+                    <img class="w-100" src="{{asset('team-img/pic1030px/23.png')}}" alt="">
+                    @endif
+
                 </div>
             </div>
         </div>
