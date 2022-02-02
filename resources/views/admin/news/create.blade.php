@@ -15,8 +15,9 @@
                         <input type="text" id="title" name="title" class="form-control">
                     </div>
                     {{-- 文章類型 原本忘記把新增的type欄位加進model裡的fillabel 經過大神處理已可以傳值--}}
-                    <select class="form-select" aria-label="Default select example" name="type">
-                        <option selected>文章類型</option>
+                    <select class="form-select" aria-label="Default select example" name="type" required>
+                        <option selected value="{{null}}">文章類型</option>
+                        {{-- <option selected>文章類型</option> --}}
                         <option value="最新消息">最新消息</option>
                         <option value="寵物保姆">寵物保姆</option>
                         <option value="動物新聞">動物新聞</option>
@@ -41,11 +42,21 @@
         </div>
 
     </div>
+
+{{-- 已經直接用select防呆，所以下面捨棄 --}}
+{{-- @if (session('msg'))
+<script>
+    alert('{{session("msg")}}')
+</script> --}}
+
+@endif
 @endsection
 
-{{-- @section('js')
-    <script>
+@section('js')
+
+    {{-- <script>
         const typeElements = document.querySelectorAll('.form-select option');
         console.log(typeElements);
-    </script>
-@endsection --}}
+    </script> --}}
+
+@endsection

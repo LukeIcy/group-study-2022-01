@@ -99,6 +99,12 @@ class PostController extends Controller
         if ($request->image){
             $path = FilesController::imgUpload($request->image,'posts');
         };
+
+        // 已經直接用select防呆，所以下面捨棄
+        // if ($request->type == '文章類型') {
+        //     return view('admin.news.create')->with('msg','請選擇文章類型');
+        // }
+
         // 下面是老方法  本來要淘汰了 沒想到還是回來用他了...
         News::create([
             'title' => $request->title,
